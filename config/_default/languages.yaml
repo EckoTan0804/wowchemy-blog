@@ -7,38 +7,37 @@ en:
   languageCode: en-us
   # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
   #contentDir: content/en
-
 # Uncomment the lines below to configure your website in a second language.
-zh:
-  languageCode: zh-Hans
-  contentDir: content/zh
-  title: 有个博客
-  params:
-    description: 不积跬步，无以至千里
-  menu:
-    main:
-      - name: 关于我
-        url: "#about"
-        weight: 10
-      - name: 帖
-        url: "post/"
-        weight: 20
-      - name: AI
-        url: "ai/"
-        identifier: ai
-        weight: 30
-      - name: 编程
-        url: "programming/"
-        identifier: programming
-        weight: 40
-      - name: 内功
-        url: "cs/"
-        identifier: cs
-        weight: 50
-      - name: 笔记
-        url: "notes/"
-        identifier: notes
-        weight: 60
-      - name: 简历
-        url: uploads/resume.pdf
-        weight: 70
+# zh:
+#   languageCode: zh-Hans
+#   contentDir: content/zh
+#   title: 有个博客
+#   params:
+#     description: 不积跬步，无以至千里
+#   menu:
+#     main:
+#       - name: 关于我
+#         url: "#about"
+#         weight: 10
+#       - name: 帖
+#         url: "post/"
+#         weight: 20
+#       - name: AI
+#         url: "ai/"
+#         identifier: ai
+#         weight: 30
+#       - name: 编程
+#         url: "programming/"
+#         identifier: programming
+#         weight: 40
+#       - name: 内功
+#         url: "cs/"
+#         identifier: cs
+#         weight: 50
+#       - name: 笔记
+#         url: "notes/"
+#         identifier: notes
+#         weight: 60
+#       - name: 简历
+#         url: uploads/resume.pdf
+#         weight: 70
