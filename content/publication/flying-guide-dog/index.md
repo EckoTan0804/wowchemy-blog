@@ -37,7 +37,7 @@ publication_short: IEEE ROBIO21
 abstract: "Lacking the ability to sense ambient environments effectively, blind and visually impaired people (BVIP) face difficulty in walking outdoors, especially in urban areas. Therefore, tools for assisting BVIP are of great importance. In this paper, we propose a novel \"flying guide dog\" prototype for BVIP assistance using drone and street view semantic segmentation. Based on the walkable areas extracted from the segmentation prediction, the drone can adjust its movement automatically and thus lead the user to walk along the walkable path. By recognizing the color of pedestrian traffic lights, our prototype can help the user to cross a street safely. Furthermore, we introduce a new dataset named Pedestrian and Vehicle Traffic Lights (PVTL), which is dedicated to traffic light recognition. The result of our user study in real-world scenarios shows that our prototype is effective and easy to use, providing new insight into BVIP assistance."
 
 # Summary. An optional shortened abstract.
-# summary: 
+summary: " "
 
 tags: []
 
