@@ -5,26 +5,116 @@
 
 main:
   - name: Home
-    url: '#about'
+    url: "#about"
     weight: 10
   - name: Posts
-    url: '#posts'
+    url: "post/"
     weight: 20
-  - name: Projects
-    url: '#projects'
-    weight: 30
-  - name: Talks
-    url: '#talks'
-    weight: 40
-  - name: Publications
-    url: '#featured'
-    weight: 50
-  - name: Contact
-    url: '#contact'
-    weight: 60
 
-# Link to a PDF of your resume/CV from the menu.
-# To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
-#  - name: CV
-#    url: uploads/resume.pdf
-#    weight: 70
+  # =========== AI ===========
+  - name: AI
+    url: "ai/"
+    identifier: ai
+    weight: 30
+
+  - name: Machine Learning
+    url: ai/machine-learning
+    identifier: ml
+    parent: ai
+    weight: 31
+
+  - name: Deep Learning
+    url: ai/deep-learning
+    identifier: dl
+    parent: ai
+    weight: 32
+
+  - name: Computer Vision
+    url: ai/computer-vision
+    identifier: cv
+    parent: ai
+    weight: 33
+
+  - name: Computer Vision
+    url: ai/computer-vision
+    identifier: cv
+    parent: ai
+    weight: 33
+
+  - name: Natural Language Processing
+    url: ai/natural-language-processing
+    identifier: mlp
+    parent: ai
+    weight: 34
+
+  - name: PyTorch
+    url: ai/pytorch
+    identifier: pytorch
+    parent: ai
+    weight: 35
+
+  # ==========================
+
+  # =========== Programming ===========
+  - name: Programming
+    url: "programming/"
+    identifier: programming
+    weight: 40
+
+  - name: Python
+    url: "programming/python"
+    identifier: python
+    parent: programming
+    weight: 41
+
+  - name: Docker
+    url: "programming/docker"
+    identifier: docker
+    parent: programming
+    weight: 42
+
+  - name: Linux
+    url: "programming/linux"
+    identifier: linux
+    parent: programming
+    weight: 43
+
+  - name: Git
+    url: "programming/git"
+    identifier: git
+    parent: programming
+    weight: 44
+  # ===================================
+
+  # =========== CS ===========
+  - name: CS
+    url: "cs/"
+    identifier: cs
+    weight: 50
+
+  - name: Algorithm
+    url: "cs/algorithm"
+    identifier: algo
+    parent: cs
+    weight: 51
+
+  - name: Software Engineering
+    url: "cs/software-engineering"
+    identifier: software-engineering
+    parent: cs
+    weight: 52
+
+  # ==========================
+
+  # =========== Notes ===========
+  - name: Notes
+    url: "notes/"
+    identifier: notes
+    weight: 60
+  # =============================
+
+  # Link to a PDF of your resume/CV from the menu.
+  # To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
+  - name: CV
+    url: uploads/resume.pdf
+    weight: 70
