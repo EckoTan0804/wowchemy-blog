@@ -3,11 +3,14 @@
 # Documentation: https://wowchemy.com/docs/page-builder/
 widget: experience
 
+# Activate this widget? true/false
+active: true
+
 # This file represents a page section.
 headless: true
 
 # Order that this section appears on the page.
-weight: 40
+weight: 50
 
 title: Experience
 subtitle:
@@ -22,28 +25,20 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
-  - title: CEO
-    company: GenCoin
-    company_url: ''
-    company_logo: org-gc
-    location: California
-    date_start: '2021-01-01'
-    date_end: ''
-    description: |2-
-        Responsibilities include:
+  - title: Working Student
+    company: abas Software GmbH
+    company_url: 'https://abas-erp.com/de'
+    company_logo: abas
+    location: Karlsruhe, Germany
+    date_start: '2018-06-25'
+    date_end: '2020-01-20'
+    description: >-
+        * Development of a cloud-based Document Management System (DMS) using Polymer, Vue.js, TypeScript, JavaScript, and Amazon Web Services (AWS)
+
+        * Creation of automated tests with Jest and Cypress
         
-        * Analysing
-        * Modelling
-        * Deploying
+        * Collaboration in an internationally distributed Scrum team
         
-  - title: Professor of Semiconductor Physics
-    company: University X
-    company_url: ''
-    company_logo: org-x
-    location: California
-    date_start: '2016-01-01'
-    date_end: '2020-12-31'
-    description: Taught electronic engineering and researched semiconductor physics.
 
 design:
   columns: '2'
