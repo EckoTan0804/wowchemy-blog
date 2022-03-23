@@ -32,11 +32,9 @@ experience:
     location: Karlsruhe, Germany
     date_start: '2018-06-25'
     date_end: '2020-01-20'
-    description: >-
+    description: |2-
         * Development of a cloud-based Document Management System (DMS) using Polymer, Vue.js, TypeScript, JavaScript, and Amazon Web Services (AWS)
-
         * Creation of automated tests with Jest and Cypress
-        
         * Collaboration in an internationally distributed Scrum team
         
 
