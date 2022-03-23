@@ -9,7 +9,7 @@ appearance:
   theme_day: minimal
   theme_night: minimal
   font: mr-robot
-  font_size: L
+  font_size: M
 
 # SEO
 
