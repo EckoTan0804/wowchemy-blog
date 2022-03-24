@@ -49,7 +49,7 @@ social:
   link: https://github.com/EckoTan0804
 - icon: linkedin
   icon_pack: fab
-  link: www.linkedin.com/in/haobin-tan
+  link: https://www.linkedin.com/in/haobin-tan/
 - icon: twitter
   icon_pack: fab
   link: https://twitter.com/GeorgeCushen
