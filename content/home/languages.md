@@ -23,11 +23,11 @@ feature:
   icon: ":cn:"
   icon_pack: emoji
   name: Chinese & Cantonese
-- description: Fluent
+- description: Proficient
   icon: ":us:"
   icon_pack: emoji
   name: English
-- description: Fluent
+- description: Proficient
   icon: ":de:"
   icon_pack: emoji
   name: German
