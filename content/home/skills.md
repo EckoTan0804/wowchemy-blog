@@ -55,9 +55,9 @@ feature:
   name: LaTex
   # description: 90%
 
-- icon: csharp
+- icon: c-sharp
   icon_pack: custom
-  name: C\#
+  name: "C#"
   # description: 90%
 
 # - icon: ros
