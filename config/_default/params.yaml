@@ -57,7 +57,6 @@ locale:
   address_format: en-us
 
 # Site features
-
 features:
   syntax_highlighter:
     enable: true
@@ -67,6 +66,7 @@ features:
       - bash
       - r
       - latex
+    theme: "nord"
   math:
     enable: true
   diagram:
