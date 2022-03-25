@@ -19,7 +19,7 @@ toc: true # Show table of contents
 # ========== Advanced metadata ========== 
 profile: false  # Show author profile?
 reading_time: true # Show estimated reading time?
-share: false  # Show social sharing links?
+share: true  # Show social sharing links?
 featured: true
 comments: true  # Show comments?
 disable_comment: false
@@ -31,3 +31,16 @@ header:
   caption: ""
   image: ""
 ---
+
+
+
+This section helps you to quickly get your hands dirty on PyTorch.
+
+{{% callout note %}} 
+
+Some content may be out of the date. Please refer to the newest official PyTorch documentation.
+
+{{% /callout %}}
+
+{{< list_children >}}
+
