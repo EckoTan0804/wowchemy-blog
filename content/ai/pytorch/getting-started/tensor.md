@@ -23,8 +23,8 @@ share: true  # Show social sharing links?
 featured: true
 comments: true  # Show comments?
 disable_comment: false
-commentable: true  # Allow visitors to comment? Supported by the Page, Post, and Docs content types.
-editable: false  # Allow visitors to edit the page? Supported by the Page, Post, and Docs content types.
+commentable: true  # Allow visitors to comment?  
+editable: false  # Allow visitors to edit the page?  
 
 # Optional header image (relative to `static/img/` folder).
 header:
