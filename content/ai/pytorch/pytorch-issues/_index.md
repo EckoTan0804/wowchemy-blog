@@ -31,3 +31,5 @@ header:
   caption: ""
   image: ""
 ---
+
+This section summaries some issues and gotchas which may occur in practice.

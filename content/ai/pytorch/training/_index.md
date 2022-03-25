@@ -31,3 +31,6 @@ header:
   caption: ""
   image: ""
 ---
+
+This section includes some pratical tips and tools for training of neural networks with PyTorch.
+

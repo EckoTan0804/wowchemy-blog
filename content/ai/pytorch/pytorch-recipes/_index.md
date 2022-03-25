@@ -31,3 +31,5 @@ header:
   caption: ""
   image: ""
 ---
+
+This section provides a lot of useful recipes that make use of specific PyTorch features.
