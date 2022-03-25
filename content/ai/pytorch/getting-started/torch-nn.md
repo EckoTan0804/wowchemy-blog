@@ -1,11 +1,11 @@
 ---
 # Title, summary, and position in the list
 # linktitle: ""
-summary: ""
+summary: "Important PyTorch modules and classes for creating and training neural networks."
 weight: 140
 
 # Basic metadata
-title: "torch.nn"
+title: "PyTorch Modules and Classes"
 date: 2020-09-10
 draft: false
 type: book # page type
@@ -18,7 +18,7 @@ toc: true # Show table of contents?
 profile: false  # Show author profile?
 
 reading_time: true # Show estimated reading time?
-share: false  # Show social sharing links?
+share: true  # Show social sharing links?
 featured: true
 
 comments: true  # Show comments?
@@ -36,7 +36,7 @@ header:
 
 ## TL;DR
 
-- torch.nn
+- `torch.nn`
   - `Module`: creates a callable which behaves like a function, but can also contain state(such as neural net layer weights). It knows what `Parameter` (s) it contains and can zero all their gradients, loop through them for weight updates, etc.
   - `Parameter`: a wrapper for a tensor that tells a `Module` that it has weights that need updating during backprop. Only tensors with the requires_grad attribute set are updated
   - `functional`: a module (usually imported into the `F` namespace by convention) which contains activation functions, loss functions, etc, as well as non-stateful versions of layers such as convolutional and linear layers.

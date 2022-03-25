@@ -1,7 +1,7 @@
 ---
 # ===== Title, summary, and position in the left list =====
 linktitle: ""
-summary: ""
+summary: "A specialized data structure that are very similar to arrays and matrices. In PyTorch, tensors are used to encode the inputs and outputs of a model, as well as the model’s parameters."
 weight: 110
 # =========================================================
 

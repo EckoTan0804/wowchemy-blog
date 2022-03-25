@@ -1,11 +1,11 @@
 ---
 # Title, summary, and position in the list
-linktitle: "NN Construction"
-summary: ""
+linktitle: "Build & Train NN"
+summary: "A simple yet typical workflow of building and traing a neural network using PyTorch"
 weight: 130
 
 # Basic metadata
-title: "Neural Network Construction"
+title: "Build and Train a Neural Network"
 date: 2020-09-07
 draft: false
 type: book # page type
@@ -18,7 +18,7 @@ toc: true # Show table of contents?
 profile: false  # Show author profile?
 
 reading_time: true # Show estimated reading time?
-share: false  # Show social sharing links?
+share: true  # Show social sharing links?
 featured: true
 
 comments: true  # Show comments?

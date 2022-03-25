@@ -1,7 +1,7 @@
 ---
 # Title, summary, and position in the list
-# linktitle: ""
-summary: ""
+linktitle: ""
+summary: "Log and visualize neural network training with TensorBoard."
 weight: 170
 
 # Basic metadata
@@ -18,7 +18,6 @@ toc: true # Show table of contents?
 profile: false  # Show author profile?
 
 reading_time: true # Show estimated reading time?
-summary: ""
 share: false  # Show social sharing links?
 featured: true
 

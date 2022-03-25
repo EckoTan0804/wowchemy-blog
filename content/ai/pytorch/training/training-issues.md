@@ -18,7 +18,7 @@ toc: true # Show table of contents?
 profile: false  # Show author profile?
 
 reading_time: true # Show estimated reading time?
-share: false  # Show social sharing links?
+share: true  # Show social sharing links?
 featured: true
 
 comments: true  # Show comments?
