@@ -17,3 +17,7 @@ header:
   image: "pytorch.png"
 
 ---
+
+![pytorch](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/pytorch.jpeg)
+
+{{< list_children >}}

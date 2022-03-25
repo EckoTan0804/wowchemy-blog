@@ -1,7 +1,7 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
 linktitle: ""
-summary: ""
+summary: "Practical tips and tools for training of neural networks with PyTorch."
 weight: 400
 # =========================================================
 
@@ -32,5 +32,5 @@ header:
   image: ""
 ---
 
-This section includes some pratical tips and tools for training of neural networks with PyTorch.
+This section includes some practical tips and tools for training of neural networks with PyTorch.
 

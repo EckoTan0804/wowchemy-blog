@@ -1,7 +1,7 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
 linktitle: ""
-summary: ""
+summary: "Issues and gotchas which may occur in practice."
 weight: 500
 # =========================================================
 

@@ -1,7 +1,7 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
 linktitle: ""
-summary: ""
+summary: Get your hands dirty on PyTorch quickly.
 weight: 100
 # =========================================================
 
@@ -38,7 +38,7 @@ This section helps you to quickly get your hands dirty on PyTorch.
 
 {{% callout note %}} 
 
-Some content may be out of the date. Please refer to the newest official PyTorch documentation.
+Some content may be out of date. Please refer to the newest official PyTorch documentation.
 
 {{% /callout %}}
 

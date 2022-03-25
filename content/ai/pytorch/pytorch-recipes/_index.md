@@ -1,7 +1,7 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
 linktitle: ""
-summary: ""
+summary: "Useful recipes that make use of specific PyTorch features."
 weight: 300
 # =========================================================
 

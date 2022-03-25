@@ -1,7 +1,7 @@
 ---
 # Title, summary, and position in the list
 linktitle: "📖 DL with PyTorch"
-summary: ""
+summary: Summary of the book 'Deep Learning with PyTorch' officially released by PyTorch.
 weight: 200
 
 # Basic metadata
@@ -18,7 +18,6 @@ toc: true # Show table of contents?
 profile: false  # Show author profile?
 
 reading_time: true # Show estimated reading time?
-summary: ""
 share: true  # Show social sharing links?
 featured: true
 
@@ -32,12 +31,6 @@ editable: false  # Allow visitors to edit the page? Supported by the Page, Post,
 header:
   caption: ""
   image: ""
-
-# Menu
-menu: 
-    pytorch:
-        parent: dl-with-pytorch
-        weight: 1
 ---
 
 ## Book
