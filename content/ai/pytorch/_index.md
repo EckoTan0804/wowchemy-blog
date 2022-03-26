@@ -1,21 +1,35 @@
 ---
-# Course title, summary, and position in the list.
-linktitle: " "
-weight: 5
+# ===== Title, summary, and position in the left sidebar =====
+linktitle: ""
+summary: "An open source machine learning framework that accelerates the path from research prototyping to production deployment."
+weight: 
+# =========================================================
 
-# Page metadata.
+# ========== Basic metadata ==========
 title: PyTorch
-date: "2020-09-07"
-draft: false  # Is this a draft? true/false
-toc: true  # Show table of contents? true/false
-type: book  # Do not modify.
-editable: false
+date: 2020-09-07
+draft: false
+type: book # page type
+authors: ["admin"]
+tags: ["Deep Learning", "PyTorch"]
+categories: ["Deep Learning"]
+toc: true # Show table of contents
+# ====================================
+
+# ========== Advanced metadata ========== 
+profile: false  # Show author profile?
+reading_time: true # Show estimated reading time?
+share: true  # Show social sharing links?
+featured: true
+comments: true  # Show comments?
+disable_comment: false
+commentable: true  # Allow visitors to comment? Supported by the Page, Post, and Book content types.
+editable: false  # Allow visitors to edit the page? Supported by the Page, Post, and Book content types.
 
 # Optional header image (relative to `assets/media/` folder).
 header:
-  caption: "PyTorch"
-  image: "pytorch.png"
-
+  caption: ""
+  image: ""
 ---
 
 ![pytorch](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/pytorch.jpeg)
