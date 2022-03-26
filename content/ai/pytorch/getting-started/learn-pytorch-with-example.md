@@ -135,7 +135,7 @@ header:
 
 ### Diagramm Summary
 
-{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/pytorch_train.png" title="Training in PyTorch overview" numbered="true" >}}
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/pytorch_train.png"  caption="Training in PyTorch overview" numbered="true" >}}
 
 ## From `numpy` to `pytorch`
 

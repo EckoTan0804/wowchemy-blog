@@ -67,7 +67,7 @@ However, we have two options here:
 
 Sometimes not all augmentation techniques make sense for a dataset. Consider the following car example:
 
-{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*vW3KGPp_w0wN6k3gYVlVHA.jpeg" title="The first image (from the left) is the original, the second one is flipped horizontally, the third one is rotated by 180 degrees, and the last one is rotated by 90 degrees (clockwise)." numbered="true" >}}
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*vW3KGPp_w0wN6k3gYVlVHA.jpeg"  caption="The first image (from the left) is the original, the second one is flipped horizontally, the third one is rotated by 180 degrees, and the last one is rotated by 90 degrees (clockwise)." numbered="true" >}}
 
 They are pictures of the same car, but our target application may NEVER see cars presented in these orientations. For example, if we're gonna classify random cars on the road, only the second image would make sense to be in the dataset.
 

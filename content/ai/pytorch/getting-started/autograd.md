@@ -67,7 +67,7 @@ z = x * y
 
 The code above creates the following DCG under the hood:
 
-{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*jGo_2J9UQeynwG_3olUD4w.png" title="Each dotted outline box in the graph is a tensor (variable) and the purple rectangular box is an operation." numbered="true" >}}
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/1*jGo_2J9UQeynwG_3olUD4w.png"  caption="Each dotted outline box in the graph is a tensor (variable) and the purple rectangular box is an operation." numbered="true" >}}
 
 ### `Tensor`
 

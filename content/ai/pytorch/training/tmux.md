@@ -39,7 +39,7 @@ header:
 
   - You can start a Tmux session and then open multiple **windows** inside that **session**. Each window occupies the entire screen and can be split into rectangular **panes**.
 
-    {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/concept.jpg" title="tmux sessions, windows, panes" numbered="true" >}}
+    {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/concept.jpg"  caption="tmux sessions, windows, panes" numbered="true" >}}
 
     
 

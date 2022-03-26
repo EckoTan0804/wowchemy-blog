@@ -59,7 +59,7 @@ Here we will use the CIFAR10 dataset, which has the classes
 
 The images in CIFAR-10 are of size 3x32x32, i.e. 3-channel color images of 32x32 pixels in size.
 
-{{< figure src="https://pytorch.org/tutorials/_images/cifar10.png" title="CIFAR 10" numbered="true" >}}
+{{< figure src="https://pytorch.org/tutorials/_images/cifar10.png"  caption="CIFAR 10" numbered="true" >}}
 
 ## Train an Image Classifier
 
