@@ -10,7 +10,7 @@ layout: docs
 view: 3
 draft: false
 
-# Optional header image (relative to `static/img/` folder).
+# Optional header image (relative to `assets/media/` folder).
 header:
   caption: ""
   image: ""

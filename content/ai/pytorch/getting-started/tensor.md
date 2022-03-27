@@ -26,7 +26,7 @@ disable_comment: false
 commentable: true  # Allow visitors to comment?  
 editable: false  # Allow visitors to edit the page?  
 
-# Optional header image (relative to `static/img/` folder).
+# Optional header image (relative to `assets/media/` folder).
 header:
   caption: ""
   image: ""

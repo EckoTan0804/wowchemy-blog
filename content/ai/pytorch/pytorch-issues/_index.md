@@ -26,7 +26,7 @@ disable_comment: false
 commentable: true  # Allow visitors to comment? Supported by the Page, Post, and Book content types.
 editable: false  # Allow visitors to edit the page? Supported by the Page, Post, and Book content types.
 
-# Optional header image (relative to `static/img/` folder).
+# Optional header image (relative to `assets/media/` folder).
 header:
   caption: ""
   image: ""
