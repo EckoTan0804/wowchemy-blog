@@ -1,8 +1,8 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
-linktitle: ""
-summary: "An open source machine learning framework that accelerates the path from research prototyping to production deployment."
-weight: 
+linktitle: Overview
+summary: "PyTorch is an open source machine learning framework that accelerates the path from research prototyping to production deployment."
+weight: 5
 # =========================================================
 
 # ========== Basic metadata ==========

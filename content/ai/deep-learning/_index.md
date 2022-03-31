@@ -1,12 +1,12 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
-linktitle: 
-summary: 
-weight: 
+linktitle: Overveiw
+summary: Deep learning (also known as deep structured learning) is part of a broader family of machine learning methods based on artificial neural networks with representation learning.
+weight: 2
 # =========================================================
 
 # ========== Basic metadata ==========
-title: Overview
+title: Deep Learning (DL)
 date: 2020-07-31
 draft: false
 type: book # page type
