@@ -12,7 +12,7 @@ draft: false
 type: book # page type
 authors: ["admin"]
 tags: ["NLP"]
-categories: ["NLP"]
+categories: ["Natural Language Processing"]
 toc: true # Show table of contents
 # ====================================
 

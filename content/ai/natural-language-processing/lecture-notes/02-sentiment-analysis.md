@@ -11,7 +11,7 @@ draft: false
 type: book # page type
 authors: ["admin"]
 tags: ["NLP", "Lecture Notes"]
-categories: ["NLP"]
+categories: ["Natural Language Processing"]
 toc: true # Show table of contents?
 
 # Advanced metadata

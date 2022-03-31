@@ -6,13 +6,13 @@ weight: 4
 # =========================================================
 
 # ========== Basic metadata ==========
-title: Nature Language Processing (NLP)
+title: Natural Language Processing (NLP)
 date: 2020-08-03
 draft: false
 type: book # page type
 authors: ["admin"]
 tags: ["NLP"]
-categories: ["NLP"]
+categories: ["Natural Language Processing"]
 toc: true # Show table of contents
 # ====================================
 
