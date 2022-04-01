@@ -18,11 +18,11 @@ authors:
 # - "Equal contribution"
 # - "Equal contribution"
 
-date: "2013-07-01T00:00:00Z"
-doi: ""
+date: "2021-12-27"
+doi: "10.1109/ROBIO54168.2021.9739520"
 
 # Schedule page publish date (NOT publication's date).
-publishDate: "2017-01-01T00:00:00Z"
+publishDate: "2022-03-28"
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
@@ -49,7 +49,7 @@ featured: true
 # - name: Custom Link
 #   url: http://example.org
 
-url_pdf: ''
+url_pdf: 'https://ieeexplore.ieee.org/document/9739520'
 url_code: 'https://github.com/eckotan0804/flying-guide-dog'
 url_dataset: ''
 url_poster: 'uploads/flying_guide_dog_ROBIO2021_poster.pdf'
