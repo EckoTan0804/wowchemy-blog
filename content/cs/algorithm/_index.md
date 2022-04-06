@@ -1,7 +1,7 @@
 ---
 linktitle: Overview
 summary: ''
-weight: 5
+weight: 1
 title: Algorithm
 date: '2021-04-04'
 draft: false

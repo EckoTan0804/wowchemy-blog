@@ -19,7 +19,7 @@ menu:
     name: Overview
     weight: 1
 
-# Optional header image (relative to `static/img/` folder).
+# Optional header image (relative to `assets/media/` folder).
 # header:
 #   caption: ""
 #   image: ""
