@@ -111,6 +111,43 @@ main:
     url: "notes/"
     identifier: notes
     weight: 60
+
+  - name: Gestaltungsgrundsätze für interaktive Echtzeitsysteme
+    url: "notes/gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme"
+    identifier: gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme
+    parent: notes
+    weight: 61
+
+  - name: Rechnerstruktur
+    url: "notes/rechner-struktur"
+    identifier: rechner-struktur
+    parent: notes
+    weight: 62
+
+  - name: Telematics
+    url: "notes/telematics"
+    identifier: telematics
+    parent: notes
+    weight: 63
+
+  - name: MMWAB
+    url: "notes/mmwab"
+    identifier: mmwab
+    parent: notes
+    weight: 64
+
+  - name: Thesis
+    url: "notes/thesis"
+    identifier: thesis
+    parent: notes
+    weight: 65
+
+  - name: Jobs
+    url: "notes/jobs"
+    identifier: jobs
+    parent: notes
+    weight: 66
+
   # =============================
 
   # Link to a PDF of your resume/CV from the menu.
