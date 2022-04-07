@@ -1,14 +1,17 @@
 ---
 linktitle: Overview
-summary: ''
+summary: Linux is a family of open-source Unix-like operating systems based on the Linux kernel.
 weight: 4
 title: Linux
 date: '2020-12-17'
 draft: false
 type: book
-authors: ''
-tags: ''
-categories: ''
+authors: 
+- admin
+tags: 
+- Linux
+categories: 
+- Programming
 toc: true
 profile: false
 reading_time: true

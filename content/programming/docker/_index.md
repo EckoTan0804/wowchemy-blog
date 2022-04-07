@@ -1,14 +1,17 @@
 ---
-linktitle: Docker
-summary: ''
+linktitle: Overview
+summary: Docker is a set of platform as a service (PaaS) products that use OS-level virtualization to deliver software in packages called containers.
 weight: 3
-title: Overview
+title: Docker
 date: '2020-12-11'
 draft: false
 type: book
-authors: ''
-tags: ''
-categories: ''
+authors: 
+- admin
+tags: 
+- docker
+categories: 
+- Programming
 toc: true
 profile: false
 reading_time: true

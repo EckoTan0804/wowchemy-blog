@@ -1,6 +1,6 @@
 ---
 linktitle: Overview
-summary: ''
+summary: Git is a free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiency.
 weight: 1
 title: Git
 date: 2022-03-21
@@ -9,10 +9,9 @@ type: book
 authors:
 - admin
 tags:
-- Programming
 - Git
 categories:
-- Coding
+- Programming
 toc: true
 profile: false
 reading_time: true
