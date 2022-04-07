@@ -6,9 +6,12 @@ title: Algorithm
 date: '2021-04-04'
 draft: false
 type: book
-authors: ''
-tags: ''
-categories: ''
+authors: 
+- admin
+tags: 
+- Algorithm
+categories: 
+- Algorithm
 toc: true
 profile: false
 reading_time: true
