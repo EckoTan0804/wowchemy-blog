@@ -1,17 +1,17 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
 linktitle: 
-summary: A cover letter, also known as an application letter, is a three- to four-paragraph memo to employers that explains your interest in the job and company as well as your fitness for the role.
-weight: 200
+summary: Cover letter for application in Germany.
+weight: 300
 # =========================================================
 
 # ========== Basic metadata ==========
-title: Cover Letter
-date: 2022-03-29
+title: Anschreiben
+date: 2022-04-08
 draft: false
 type: book # page type
 authors: ["admin"]
-tags: ["Jobs", "Cover Letter"]
+tags: ["Jobs", "Anschreiben"]
 categories: ["Jobs"]
 toc: true # Show table of contents
 # ====================================
@@ -31,3 +31,4 @@ header:
   caption: ""
   image: ""
 ---
+

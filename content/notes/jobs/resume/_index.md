@@ -1,7 +1,7 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
 linktitle: 
-summary: 
+summary: A résumé, aka resume or CV, is a document created and used by a person to present their background, skills, and accomplishments.
 weight: 100
 # =========================================================
 

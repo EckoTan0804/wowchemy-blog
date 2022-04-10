@@ -1,8 +1,8 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
-linktitle:  # Title shown in the left sidebar menu
+linktitle: Anschreiben Tutorials # Title shown in the left sidebar menu
 summary:  # Summary of this post
-weight: 240 # Order in the chapter
+weight: 310 # Order in the chapter
 # =========================================================
 
 # ========== Basic metadata ==========
