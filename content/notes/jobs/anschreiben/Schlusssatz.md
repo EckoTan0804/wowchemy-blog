@@ -186,8 +186,6 @@ Sie können das Eintrittsdatum schon in der [Betreffzeile](https://karrierebibel
 
 {{< /spoiler >}}
 
-### 
-
 {{< spoiler text="Praktikum" >}} 
 
 - „Für ein Bewerbungsgespräch ebenso wie zu einem Probearbeiten komme ich gerne zu Ihnen und freue mich über eine Einladung.“
