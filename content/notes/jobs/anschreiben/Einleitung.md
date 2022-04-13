@@ -123,7 +123,7 @@ Der Einleitungssatz
 
 ## Ideen/Strategien für gute Einleitungssätze
 
-### Stelle einen persönlichen Bezug her
+#### Stelle einen persönlichen Bezug her
 
 - Ein persönlicher Bezug täuscht Vertrautheit vor und **spricht den Arbeitgeber auf emotionaler Ebene an.** 
 
@@ -135,7 +135,7 @@ Der Einleitungssatz
   - bei einer Initiativbewerbung
   - Jemanden im Unternehmen
 
-### Unterstreiche deine Eignung
+#### Unterstreiche deine Eignung
 
 - Erfüllt dein Profil genau die Anforderungen, kannst du **direkt mit deinen Erfahrungen und Qualifikationen einsteigen**.
 
@@ -147,7 +147,7 @@ Der Einleitungssatz
 
     > *„Drei Gründe, weshalb ich der perfekte Bewerber bin. Erstens:… Zweitens:… Drittens:…“*
 
-### Betone deine Leidenschaft
+#### Betone deine Leidenschaft
 
 - Hast du noch wenig Erfahrung, bringst aber dafür viel Motivation und Leidenschaft mit, kannst du **mit Emotionen und Charakter punkten**.
 
@@ -157,7 +157,7 @@ Der Einleitungssatz
 
   > *„Fitnesstrainer zu sein war schon immer mein Traum. Nicht nur bin ich ein leidenschaftlicher Sportler, ich brenne auch für die Themen Gesundheit und Ernährung…”*
 
-### Zeige deinen Wertekompass
+#### Zeige deinen Wertekompass
 
 - Wenn dein **Wertekompass zum Unternehmen passt**, kannst du ihn als Aufhänger nutzen
 
@@ -165,7 +165,7 @@ Der Einleitungssatz
 
   > *„Schon seit meiner Schulzeit engagiere ich mich begeistert für den Umweltschutz. Das Wohlergehen unseres Planeten, der Menschen und Tiere liegt mir sehr am Herzen. Als Umweltingenieur möchte ich nun zur Nachhaltigkeit beitragen…”*
 
-### Selbstbewusstsein kommt immer gut
+#### Selbstbewusstsein kommt immer gut
 
 - Mit deiner Bewerbung bietest du dem Arbeitgeber deine Kompetenzen und einen Leistungswillen an
 
@@ -177,7 +177,7 @@ Der Einleitungssatz
 
   > *„Suchen Sie eine erfahrene, organisierte und belastbare Steuerfachangestellte, müssen wir uns unbedingt kennenlernen…”*
 
-### Beziehe dich auf aktuelle Geschehnisse
+#### Beziehe dich auf aktuelle Geschehnisse
 
 - Beziehst du dich auf Aktuelles, das Unternehmen direkt betrifft, fühlt sich der Arbeitgeber sofort angesprochen.
 
@@ -189,7 +189,7 @@ Der Einleitungssatz
 
   > „In einem aktuellen Zeitungsbericht habe ich gelesen, dass Sie nach Frankreich expandieren. Mit meinen exzellenten Französischkenntnissen und meiner Erfahrung im Marketing unterstütze ich Sie gerne bei diesem Vorhaben…”
 
-### Nutze Storytelling
+#### Nutze Storytelling
 
 - Storytelling ist ein ungewöhnlicher Aufhänger, der viel Charakter zeigt. 
 
@@ -250,6 +250,8 @@ Für Fach- und Führungskräfte eignet sich vor allem ein Einstieg nach der soge
 - *„In drei Monaten werde ich meine Ausbildung zum Gärtner beenden und kann es kaum erwarten, in den Beruf zu starten. Weshalb Sie die Firma meiner Wahl sind? Ich bin überzeugt davon, dass unsere Sorge um die Umwelt und die Nachhaltigkeit sowie die Liebe zur Natur uns verbindet.”*
 - *„Nach erfolgreichem BWL-Studium sowie Praktika und Auslandserfahrungen, möchte ich mein Know-how nun in der Praxis für Sie einsetzen und ein engagierter Teil Ihres hervorragenden Teams werden. Vor allem mit meinen Erfahrungen im Bereich ____ will ich einen persönlichen Beitrag zu Ihrem Unternehmenserfolg leisten.“*
 - *„Nachhaltigkeit ist Ihre Mission – meine ist es auch! Seit meines Studiums begeistern mich der verantwortungsvolle und nachhaltige Umgang mit natürlichen Ressourcen. Dazu habe ich einige Praktika absolviert und ehrenamtliche Projekte geleitet. Mit dieser Erfahrung und Expertise möchte ich nun für Sie individuelle Kundenlösungen erarbeiten und Ihr Unternehmen bereichern.“*
+- *nachdem ich mein BWL-Studium erfolgreich abgeschlossen und diverse Praktika in der Automobilbranche absolviert habe, möchte ich nun mit meinen erworbenen Fähigkeiten und Kenntnissen voll im Berufsleben durchstarten. Als [Junior Business Analyst](https://www.absolventa.de/jobs/channel/business-development/job/business-analyse) im Bereich [Automotive](https://www.absolventa.de/jobs/channel/fahrzeugtechnik/job/automotiv) möchte ich zukünftig zum Erfolg Ihres Unternehmens beitragen.“*
+- *meine berufliche Perspektive sehe ich bei Ihnen, dem Weltmarktführer im Bereich Gesundheit und Ernährung. Daher möchte ich meine Chance nutzen und mich als Projektmanagerin im Bereich [Finance und Controlling](https://www.absolventa.de/jobs/channel/finance) bei Ihnen zu bewerben.*
 
 {{< /spoiler >}}
 
@@ -257,6 +259,7 @@ Für Fach- und Führungskräfte eignet sich vor allem ein Einstieg nach der soge
 
 - *„Das Thema Asyl liegt mir als Migrantenkind sehr am Herzen. Ich nutze jede Chance, um mich für Asylsuchende einzusetzen, weshalb Ihre Projekte sofort meine Aufmerksamkeit auf sich gezogen haben. Durch meine praktische Veranlagung, meine Erfahrung als Ehrenamtlicher in verschiedenen Einrichtungen und mein ehrliches Interesse passe ich perfekt in Ihr Praktikantenprogramm.“*
 - *„Meine berufliche Zukunft sehe ich im Gesundheitsbereich, weil ich sehr sozial veranlagt bin, nah am Menschen arbeiten möchte und mich sehr für Pflege und Gesundheitsthemen begeistere. Zurzeit befinde ich mich im 4. Semester meines Studiums des Pflegemanagements. Ein Praktikum in Ihrer Einrichtung reizt mich besonders wegen Ihres umfangreichen Betreuungsangebotes für Schwerbehinderte.“*
+- *im Laufe meines Informatikstudiums habe ich große Begeisterung fürs [Web Development](https://www.absolventa.de/jobs/channel/webentwicklung) entwickelt. Meine erworbenen Theoriekenntnisse und meine Fähigkeiten in [JavaScript](https://www.absolventa.de/jobs/channel/webentwicklung/job/javascript) warten nur darauf, endlich in der Praxis angewendet zu werden. Darüber hinaus möchte ich mich von der innovativen Arbeitsumgebung eines Start-ups aus erster Hand überzeugen. Aus diesen Gründen bewerbe ich mich auf ein [Praktikum](https://www.absolventa.de/praktikum/bereich/webentwicklung) bei Ihnen.“*
 
 {{< /spoiler >}}
 
@@ -331,3 +334,4 @@ Für Fach- und Führungskräfte eignet sich vor allem ein Einstieg nach der soge
 
 - [Einleitungssätze für die Bewerbung](https://lebenslaufdesigns.de/einleitungssaetze-bewerbung)
 - [Einleitungssatz Bewerbung: 45 pfiffige Formulierungen](https://karrierebibel.de/anschreiben-einstieg-einleitungssatz/)
+- [Einleitungssatz Bewerbung: Die 20 besten Beispiele und Tipps vom HR-Profi.](https://www.absolventa.de/karriereguide/bewerbung/einleitungssatz-bewerbung)
