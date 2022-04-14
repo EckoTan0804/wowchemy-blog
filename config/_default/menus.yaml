@@ -8,12 +8,12 @@ main:
   #   url: "#about"
   #   weight: 10
 
-  - name: Posts
+  - name: 🗒 Posts
     url: "post/"
     weight: 20
 
   # =========== AI ===========
-  - name: AI
+  - name: 🤖 AI
     url: "ai/"
     identifier: ai
     weight: 30
@@ -57,7 +57,7 @@ main:
   # ==========================
 
   # =========== Programming ===========
-  - name: Programming
+  - name: 🧑‍💻 Programming
     url: "programming/"
     identifier: programming
     weight: 40
@@ -88,7 +88,7 @@ main:
   # ===================================
 
   # =========== CS ===========
-  - name: CS
+  - name: 💻 CS
     url: "cs/"
     identifier: cs
     weight: 50
@@ -108,7 +108,7 @@ main:
   # ==========================
 
   # =========== Notes ===========
-  - name: Notes
+  - name: 📝 Notes
     url: "notes/"
     identifier: notes
     weight: 60
@@ -153,6 +153,6 @@ main:
 
   # Link to a PDF of your resume/CV from the menu.
   # To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
-  - name: CV
+  - name: 🧾 CV
     url: uploads/resume.pdf
     weight: 70
