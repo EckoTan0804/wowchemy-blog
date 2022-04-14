@@ -275,7 +275,6 @@ Für Fach- und Führungskräfte eignet sich vor allem ein Einstieg nach der soge
 {{< spoiler text="Einleitungssätze nach Telefonat" >}} 
 
 - *„Vielen Dank für das offene und freundliche Telefonat am vergangenen Dienstag. Unser Gespräch hat meinen Wunsch, als Hausmeister ein Teil Ihres Teams zu sein, nur verstärkt, weshalb ich Ihnen nun meine Unterlagen einsende.”*
-
 - *„Für das angenehme und aufschlussreiche Gespräch am 24.1.2021 danke ich Ihnen sehr herzlich. Nicht nur wurden meine Fragen geklärt, es hat sich auch herausgestellt, dass meine Kompetenzen und Erfahrungen als Bürokauffrau in Ihrem Unternehmen Anwendung finden können. Daher sende ich Ihnen nun, wie besprochen, meine Unterlagen.”*
 - *„Vielen Dank für das aufschlussreiche Telefonat am TT.MM.JJJJ. Unser angenehmes Gespräch hat mich noch einmal darin bekräftigt, dass ich für Ihr Unternehmen arbeiten und mein ganzes Können und Herzblut bei Ihnen einbringen möchte. Deshalb erhalten Sie hiermit meine Bewerbungsunterlagen…“*
 - *„Haben Sie herzlichen Dank, dass Sie sich am TT.MM.JJJJ kurz Zeit für mich und unser Telefonat genommen haben. Wie besprochen übersende ich Ihnen hiermit meine Bewerbungsunterlagen.“*
@@ -283,7 +282,7 @@ Für Fach- und Führungskräfte eignet sich vor allem ein Einstieg nach der soge
 
 {{< /spoiler >}}
 
-{{< spoiler text="Einleitungssätze nach Telefonat" >}} 
+{{< spoiler text="Einleitungssätze nach Stellenanzeige" >}} 
 
 - *„Ihre Stellenanzeige vom TT.MM.JJJJ hat mich sofort angesprochen. Nachdem ich schon Erfahrungen im Bereich ____ sammeln konnte, wäre diese Position nun der nächste richtige Schritt. Ich bin überzeugt, dass Ihnen vor allem meine Fähigkeiten und mein Praxis-Know-how im Bereich ____ von großem Nutzen sein werden. Denn…“*
 - *„Ihrer Stellenanzeige in ____ ist zu entnehmen, dass Sie hohe Ansprüche an die Kundenorientierung und die Qualität Ihrer Produkte stellen. Genau das ist auch mein Anspruch an meine Arbeit. Zudem verfüge ich genau über die Erfahrungen, die Sie aktuell suchen…*
