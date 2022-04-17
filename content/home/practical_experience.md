@@ -33,11 +33,11 @@ experience:
     date_start: '2021-04-12'
     date_end: '2021-07-31'
     description: |2-
-        * Development of "flying guide dog" prototype for the visually impaired using drone and semantic segmentation
-        * Train SegFormer model on large-scale Mapillay Vistas dataset using PyTorch
+        * Development of "flying guide dog" prototype for visually impaired assistance based on DJI drones and semantic segmentation using Python
+        * Training of segmentation models on Cityscapes dataset and large-scale Mapillay Vistas dataset using PyTorch
         * Design of drone self-control algorithm
         * Build Pedestrian and Vehicle Traffic Lights (PVTL) dataset for traffic light recognition
-        * Design and train traffic light recognition model using PyTorch
+        * Design and training of traffic light recognition model using PyTorch
         
   - title: Hand Gesture Recognition
     company: KIT, Interactive Systems Lab (ISL)
