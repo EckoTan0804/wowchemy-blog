@@ -181,7 +181,9 @@ Kick off your cover letter with evidence that you’ve done your research – an
 
 {{< /spoiler >}}
 
+## Cover letter opening template
 
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-04-24%2023.35.25.png" caption="Cover letter opening template" numbered="true" >}}
 
 
 
