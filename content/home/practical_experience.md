@@ -28,7 +28,7 @@ experience:
   - title: Walkable Path Discovery Utilizing Drones
     company: KIT, Computer Vision for Human-Computer Interaction (CV:HCI) Lab
     company_url: 'https://cvhci.anthropomatik.kit.edu/587.php'
-    company_logo: kit-cvhci
+    company_logo: kit-cvhci-new
     location: Karlsruhe, Germany
     date_start: '2021-04-12'
     date_end: '2021-07-31'
