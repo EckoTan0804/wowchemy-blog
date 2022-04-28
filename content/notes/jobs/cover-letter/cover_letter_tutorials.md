@@ -98,7 +98,7 @@ Here are six simple steps to write a great cover letter:
 - If you’re unable to find the preferred gender pronouns (she/her, them/they), it is best to use a gender-neutral greeting such as “Dear [first and last name](https://www.indeed.com/career-advice/resumes-cover-letters/how-to-write-a-cover-letter)” or “Dear [position title](https://www.indeed.com/career-advice/resumes-cover-letters/how-to-write-a-cover-letter)”.
 
 - Example
-    
+  
     > - *Dear Hiring Manager,*
     > - *Hello Ms. Wallace,*
     > - *Dear Tyler Wallace,*
@@ -112,6 +112,12 @@ Here are six simple steps to write a great cover letter:
 - Example
   
     > *I'm excited to apply for the Graphic Designer position at Cloud Clearwater I found on Indeed. I understand you're currently adding several new product lines, and I believe my skills in video and animation provide a significant advantage for creating a successful launch. As a longtime fan of your products, I'm thrilled at the opportunity to bring my unique style and passion for beachwear to the company.*
+
+{{% callout note %}}
+
+More tips and examples for cover letter opening see: [How to start a cover letter]({{< relref "cover_letter_opening.md" >}})
+
+{{% /callout %}}
 
 ### 4. Follow with a second paragraph
 
@@ -136,6 +142,12 @@ The next paragraph should focus on another key achievement or skill that is rele
 - Example
   
     > *Achieving ambitious marketing goals is always a top priority, and I am always looking out for the best interests of the company. I enjoy delivering marketing presentations to potential clients and focusing on the strengths of an organization. My marketing skills at River Tech enabled the company to experience new levels of success and a 45% increase in customer engagement. I am never satisfied with the status quo, and I believe that a company should continually look for ways to improve and reach new clients through innovative campaigns.*
+
+{{% callout note %}}
+
+More tips and examples for cover letter closing see: [How to end a cover letter]({{< relref "cover_letter_closing.md" >}})
+
+{{% /callout %}}
 
 ### 6. End with a professional signoff
 
