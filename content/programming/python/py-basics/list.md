@@ -34,11 +34,11 @@ header:
 
 ## Change Value in List Based on Conditions
 
-### E.g. 1
+#### E.g. 1
 
 ```python
-a = ["a", "b", "c", "d", "e"]
-b = ["a", "c", "e"]
+>>> a = ["a", "b", "c", "d", "e"]
+>>> b = ["a", "c", "e"]
 ```
 
 We want a list vector with the same length as `a`. If the element also occurs in `b`, value in the corresponding position is `1`, else `0`.
@@ -48,35 +48,121 @@ I.e., target output should be `[1, 0, 1, 0, 1]`
 Solution:
 
 ```python
-l = [1 if el in b else 0 for el in a]
-l
+>>> l = [1 if el in b else 0 for el in a]
+>>> l
 ```
 
 ```
 [1, 0, 1, 0, 1]
-
 ```
 
 (See also: [https://stackoverflow.com/questions/40769428/how-to-replace-elements-in-list-when-condition-is-met](https://stackoverflow.com/questions/40769428/how-to-replace-elements-in-list-when-condition-is-met)) 
 
-### E.g. 2
+#### E.g. 2
 
 ```python
-a = np.arange(5)
-a
+>>> a = np.arange(5)
+>>> a
 ```
 
 ```
 array([0, 1, 2, 3, 4])
-
 ```
 
 ```python
-a[a > 2] = 5
-a
+>>> a[a > 2] = 5
+>>> a
 ```
 
 ```
 array([0, 1, 2, 5, 5])
+```
+
+## List Comprehension
+
+Define the list and its contents at the same time by following this format:
+
+```python
+new_list = [expression for member in iterable]
+```
+
+- **expression**: the member itself, a call to a method, or any other valid expression that returns a value.
+- **member**: the object or value in the list or iterable
+- **iterable**: a list, [set](https://realpython.com/python-sets/), sequence, [generator](https://realpython.com/introduction-to-python-generators/), or any other object that can return its elements one at a time
+
+#### Example
+
+Get the even numbers in 0 to 10 (10 is not inlcuded):
+
+```python
+>>> even_nums = [el for el in range(10) if el % 2 == 0]
+>>> even_nums
+```
+
+```txt
+[0, 2, 4, 6, 8]
+```
+
+#### Advantages
+
+- More pythonic
+- More declarative than loops: list comprehensions are easier to read and understand
+
+#### Combined with conditional logic
+
+- **Simple filtering**: Place the conditional to the *end*
+
+  ```python
+  new_list = [expression for member in iterable (if conditional)]
+  ```
+
+  Here, the conditionals allow list comprehensions to filter out unwanted values.
+
+- **Change a member value**: Place the conditional *near the beginning*
+
+  ```python
+  new_list = [expression (if conditional) for member in iterable]
+  ```
+
+  - Example: Change all odd numbers in 0 - 10 to 0
+
+    ```python
+    >>> arr = [el if el % 2 == 0 else 0 for el in range(10)]
+    >>> arr
+    [0, 0, 2, 0, 4, 0, 6, 0, 8, 0]
+    ```
+
+#### Nested list comprehension
+
+Nested List Comprehensions are nothing but a list comprehension within another list comprehension which is quite similar to nested for loops.
+
+{{< spoiler text="Example" >}} 
+
+Let's say we want to obtain all possible combination of two lists: `a = [1, 2, 3]` and `b = [4, 5]`.
+
+Use list comprehension:
+
+```python
+>>> combinations = [[i, j] for j in b for i in a]
+>>> combinations
+[[1, 4], [2, 4], [3, 4], [1, 5], [2, 5], [3, 5]]
+```
+
+This is equvalent to nested loops:
+
+```python
+combinations = []
+
+for i in a:
+    for j in b:
+        combinations.append([i, j])
 
 ```
+
+Apparently, using list comprehension is more succinct and more pythonic.
+
+{{< /spoiler >}}
+
+#### Reference
+
+- [When to Use a List Comprehension in Python](https://realpython.com/list-comprehension-python/)
