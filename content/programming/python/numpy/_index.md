@@ -1,7 +1,7 @@
 ---
 linktitle: ''
 summary: ''
-weight: 300
+weight: 1300
 title: Numpy
 date: 2020-08-16
 draft: false

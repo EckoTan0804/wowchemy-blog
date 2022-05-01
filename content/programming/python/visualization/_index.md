@@ -1,7 +1,7 @@
 ---
 linktitle: ''
 summary: ''
-weight: 500
+weight: 1500
 title: Visualization
 date: 2020-08-31
 draft: false

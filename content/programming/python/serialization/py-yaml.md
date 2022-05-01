@@ -1,7 +1,7 @@
 ---
 linktitle: YAML
 summary: ''
-weight: 22
+weight: 420
 title: YAML in Python
 date: 2020-12-09
 draft: false
@@ -12,6 +12,7 @@ tags:
 - Python
 - Basics
 - YAML
+- serialization
 categories:
 - Coding
 toc: true

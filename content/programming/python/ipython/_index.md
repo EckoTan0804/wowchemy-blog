@@ -1,7 +1,7 @@
 ---
 linktitle: ''
 summary: ''
-weight: 600
+weight: 1600
 title: Ipython
 date: 2020-11-07
 draft: false

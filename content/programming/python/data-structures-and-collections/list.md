@@ -2,7 +2,7 @@
 # ===== Title, summary, and position in the left sidebar =====
 linktitle: 
 summary: 
-weight: 13
+weight: 210
 # =========================================================
 
 # ========== Basic metadata ==========
@@ -11,7 +11,7 @@ date: 2020-07-08
 draft: false
 type: book # page type
 authors: ["admin"]
-tags: ["Python", "Basics"]
+tags: ["Python", "Basics", "Data Structure"]
 categories: ["Coding"]
 toc: true # Show table of contents
 # ====================================

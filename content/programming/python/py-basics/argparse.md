@@ -1,7 +1,7 @@
 ---
 linktitle: argparse
 summary: ''
-weight: 20
+weight: 14
 title: 'argparse: Command line arguments parsing'
 date: 2020-11-19
 draft: false

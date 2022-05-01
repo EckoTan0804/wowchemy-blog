@@ -1,7 +1,7 @@
 ---
 linktitle: ''
 summary: ''
-weight: 24
+weight: 330
 title: pathlib
 date: 2020-12-26
 draft: false

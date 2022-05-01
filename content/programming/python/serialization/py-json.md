@@ -1,7 +1,7 @@
 ---
 linktitle: ''
 summary: ''
-weight: 21
+weight: 410
 title: JSON
 date: 2020-12-09
 draft: false
@@ -12,6 +12,7 @@ tags:
 - Python
 - Basics
 - JSON
+- serialization
 categories:
 - Coding
 toc: true

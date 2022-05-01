@@ -1,7 +1,7 @@
 ---
 linktitle: ''
 summary: ''
-weight: 16
+weight: 18
 title: f-string
 date: 2020-10-21
 draft: false
@@ -11,6 +11,7 @@ authors:
 tags:
 - Python
 - Basics
+- String
 categories:
 - Coding
 toc: true

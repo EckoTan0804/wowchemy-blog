@@ -1,7 +1,7 @@
 ---
-linktitle: ''
+linktitle: 'Collections: Namedtuple'
 summary: ''
-weight: 26
+weight: 240
 title: Namedtuple
 date: 2020-05-02
 draft: false
@@ -11,6 +11,7 @@ authors:
 tags:
 - Python
 - Basics
+- Collection
 categories:
 - Coding
 toc: true

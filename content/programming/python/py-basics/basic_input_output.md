@@ -1,8 +1,8 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
-linktitle: Input & Output # Title shown in the left sidebar menu
+linktitle: Terminal Input & Output # Title shown in the left sidebar menu
 summary:  # Summary of this post
-weight: 27 # Order in the chapter
+weight: 16 # Order in the chapter
 # =========================================================
 
 # ========== Basic metadata ==========

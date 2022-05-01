@@ -1,7 +1,7 @@
 ---
 linktitle: Underscores
 summary: ''
-weight: 25
+weight: 15
 title: Underscores in Python
 date: 2020-05-01
 draft: false
