@@ -53,7 +53,7 @@ experience:
         * Hyperparameter tuning using Ray-Tune
 
   - title: Real World Person Detection on Jetson GPU
-    company: KIT, High Performance Humanoid Technologies (H²T)
+    company: KIT, Vision and Fusion Laboratory
     company_url: 'https://h2t.anthropomatik.kit.edu/english/index.php'
     company_logo: kit-ies
     location: Karlsruhe, Germany
@@ -65,7 +65,7 @@ experience:
         * Performance optimization using Nvidia Nsight
 
   - title: Lego Mindstorms
-    company: KIT, Vision and Fusion Laboratory
+    company: KIT, High Performance Humanoid Technologies (H²T)
     company_url: 'https://ies.anthropomatik.kit.edu/english/index.php'
     company_logo: kit
     location: Karlsruhe, Germany
