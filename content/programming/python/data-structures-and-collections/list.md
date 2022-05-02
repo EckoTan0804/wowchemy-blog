@@ -166,3 +166,66 @@ Apparently, using list comprehension is more succinct and more pythonic.
 #### Reference
 
 - [When to Use a List Comprehension in Python](https://realpython.com/list-comprehension-python/)
+
+## Print Lists
+
+#### Using `for`-loop
+
+```python
+a = [1, 2, 3, 4, 5]
+for x in a:
+    print(x)
+```
+
+Output:
+
+```txt
+1
+2
+3
+4
+5
+```
+
+#### Using `* ` symbol
+
+```python
+>>> a = [1, 2, 3, 4, 5]
+>>> print(*a)
+1 2 3 4 5
+```
+
+Using this way, we can also easily control the separator and ending.
+
+```python
+>>> print(*a, sep=", ") # print list separted by comma
+1, 2, 3, 4, 5
+```
+
+```python
+print(*a, sep="\n") # print list in new line
+```
+
+Output:
+
+```txt
+1
+2
+3
+4
+5
+```
+
+#### Convert list to string for display
+
+If it is a list of strings we can simply join them using [join()](https://www.geeksforgeeks.org/python-string-methods-set-2-len-count-center-ljust-rjust-isalpha-isalnum-isspace-join/) function.
+
+```python
+>>> a = ["Hello", "World"]
+>>> print(" ".join(a))
+Hello World
+```
+
+#### Reference
+
+- [Print lists in Python (4 Different Ways)](https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/)
