@@ -909,8 +909,72 @@ Behaves exactly like `s.rsplit()`, except that if `<maxsplit>` is specified, spl
   |    `\u2028`     |   Unicode Line Separator    |
   |    `\u2029`     | Unicode Paragraph Separator |
 
+## Advanced
+
+### Substring count with overlapping occurrences
+
+Let's say we want to count the occurrence of substring `11` in the string `1011101111`.
+
+Note that in Python, the `count()` method returns the number of substrings in a given string, but it does not give correct results when two occurrences of the substring overlap. However, we still have different solution for this problem.
+
+```python
+string = "1011101111"
+sub_string = "11"
+```
+
+#### Use built-in `re` module
+
+```python
+import re
+```
+
+Use `[re.findall()](https://docs.python.org/3/library/re.html#re.findall)`:
+
+```python
+>>> len(re.findall(f"(?={sub_string})", string))
+5
+```
+
+Use [`re.subn`](https://docs.python.org/3/library/re.html#re.subn) :
+
+```python
+>>> re.subn(f"(?={sub_string})", "", string)[1]
+5
+```
+
+#### Use built-in string methods
+
+Use `startswith()`:
+
+```python
+def count_substring(string, sub_string):
+    count = 0
+    for pos in range(len(string)):
+        if string[pos:].startswith(sub_string):
+            count += 1
+    return count
+```
+
+```python
+>>> count_substring(string, sub_string)
+5
+```
+
+Or in a more pythonic way, use list comprehension:
+
+```python
+sum([string.startswith(sub_string, i) for i in range(len(string))])
+```
+
+#### Reference
+
+- [String count with overlapping occurrences](https://stackoverflow.com/questions/2970520/string-count-with-overlapping-occurrences)
+
+
+
 
 
 ## Reference
 
 - [Strings and Character Data in Python](https://realpython.com/python-strings/#built-in-string-methods)
+
