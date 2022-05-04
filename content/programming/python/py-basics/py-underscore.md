@@ -29,20 +29,65 @@ header:
 
 ## TL;DR
 
-| Pattern                                    | Example   | Meaning                                                      |
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky">Pattern</th>
+    <th class="tg-0pky">Example</th>
+    <th class="tg-0pky">Meaning</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:bold">Single Leading Underscore</span></td>
+    <td class="tg-0pky"><code>_var</code></td>
+    <td class="tg-0pky">Naming convention indicating a name is meant for internal use. Generally not enforced by the Python interpreter (except in wildcard imports) and meant as a hint to the programmer only.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:bold">Single Trailing Underscore</span></td>
+    <td class="tg-0pky"><code>var_</code></td>
+    <td class="tg-0pky">Used by convention to avoid naming conflicts with Python keywords.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:bold">Double Leading Underscore</span></td>
+    <td class="tg-0pky"><code>__var</code></td>
+    <td class="tg-0pky">Triggers name mangling when used in a class context. Enforced by the Python interpreter.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:bold">Double Leading and Trailing Underscore</span></td>
+    <td class="tg-0pky"><span style="font-weight:bold"><code>__var__</code></span></td>
+    <td class="tg-0pky">Indicates special methods defined by the Python language. Avoid this naming scheme for your own attributes.</td>
+  </tr>
+  <tr>
+    <td class="tg-0pky"><span style="font-weight:bold">Single Underscore</span></td>
+    <td class="tg-0pky"><code>_</code></td>
+    <td class="tg-0pky">Sometimes used as a name for temporary or insignificant variables (“don’t care”). Also: The result of the last expression in a Python REPL.</td>
+  </tr>
+</tbody>
+</table>
+
+<!-- | Pattern                                    | Example   | Meaning                                                      |
 | ------------------------------------------ | --------- | ------------------------------------------------------------ |
 | **Single Leading Underscore**              | `_var`    | Naming convention indicating a name is meant for internal use. Generally not enforced by the Python interpreter (except in wildcard imports) and meant as a hint to the programmer only. |
 | **Single Trailing Underscore**             | `var_`    | Used by convention to avoid naming conflicts with Python keywords. |
 | **Double Leading Underscore**              | `__var`   | Triggers name mangling when used in a class context. Enforced by the Python interpreter. |
 | **Double Leading and Trailing Underscore** | `__var__` | Indicates special methods defined by the Python language. Avoid this naming scheme for your own attributes. |
-| **Single Underscore**                      | `_`       | Sometimes used as a name for temporary or insignificant variables (“don’t care”). Also: The result of the last expression in a Python REPL. |
+| **Single Underscore**                      | `_`       | Sometimes used as a name for temporary or insignificant variables (“don’t care”). Also: The result of the last expression in a Python REPL. | -->
 
 ## Single Leading Underscore: `_var`
 
 When it comes to variable and method names, the single underscore prefix has a meaning by convention only.
 
 - It is meant as a **hint** to another programmer that a variable or method starting with a single underscore is intended for internal use.
-- It does not affect the behavior of your programs and this isn't enforced by Python.
+- It does *NOT* affect the behavior of your programs and this isn't enforced by Python.
 
 Example
 
