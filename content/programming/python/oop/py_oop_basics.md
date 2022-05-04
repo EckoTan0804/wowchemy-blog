@@ -123,6 +123,31 @@ Blu is singing 'Happy'.
 
 Inheritance enables us to define a class that takes all the functionality from a parent class and allows us to add more.
 
+```python
+class SuperClass:
+    
+    def __init__(self):
+        pass
+    
+    def super_method(self):
+        pass
+    
+ 
+class SubClass(SuperClass):
+    
+    def __init__(self):
+        super().__init__()
+        pass
+    
+    def super_method(self):
+        """Override method of SuperClass"""
+        pass
+    
+    def sub_method(self):
+        """Method that only belongs to SubClass"""
+        pass
+```
+
 Example
 
 ```python
@@ -283,3 +308,5 @@ Penguin can't fly
 ## Reference
 
 - [Python Object Oriented Programming](https://www.programiz.com/python-programming/object-oriented-programming)
+
+- [Object-Oriented Programming (OOP) in Python 3](https://realpython.com/python3-object-oriented-programming/#what-is-object-oriented-programming-in-python)
