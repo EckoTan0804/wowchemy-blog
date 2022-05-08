@@ -61,7 +61,7 @@ header:
     \hat{X}=\frac{X-\mu}{\sqrt{\sigma^{2}+\epsilon}}
     $$
 
-  - Scale and shift
+  - Scale and shift ($\gamma$ and $\beta$ are network parameters)
     $$
     X^{N}=\gamma \circ X+\beta
     $$
@@ -217,6 +217,10 @@ Alternative: **Layer Normalization**
   over the *feature dimension*
 
 - Not as effective as Batch Normalization, but still widely used because of better efficiency.
+
+## Normalization Techniques Comparison
+
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/normalization.png" caption="Normalization techniques. (Source: [In-layer normalization techniques for training very deep neural networks](https://theaisummer.com/normalization/))" numbered="true" >}}
 
 ## Reference
 
