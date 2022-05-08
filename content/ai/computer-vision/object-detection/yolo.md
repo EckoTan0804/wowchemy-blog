@@ -277,7 +277,7 @@ With the idea of **anchor boxes**, we are going to
 **To summarise, with a number of pre-defined anchor boxes: Each object in training image is assigned to** 
 
 - **the grid cell that contains object's midpoint and** 
-- **anchor box for the grid cell with the highest IoU with the ground truch bounding box**
+- **anchor box for the grid cell with the highest IoU with the ground truth bounding box**
 
 **In other words, now the object is assigned to a $(\text{grid cell}, \text{anchor box})$ pair.**
 
