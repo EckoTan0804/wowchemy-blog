@@ -38,7 +38,7 @@ Furthermore, we use One-Hot encoding to represent the groundtruth $y$, which mea
 $$
 \sum\_{k=1}^n y\_k = 1
 $$
-Loss function:
+Loss function (Cross-Entropy):
 $$
 \begin{aligned}
 L &= -\sum\_{k=1}^n y\_k \log(p\_k) \\\\
