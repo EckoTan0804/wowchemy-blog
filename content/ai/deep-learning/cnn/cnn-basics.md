@@ -309,7 +309,7 @@ After the convolution + pooling layers we add a couple of fully connected layers
 
 ![img](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/Screen-Shot-2017-07-27-at-12.07.11-AM.png)
 
-The Fully Connected layer is a traditional Multi Layer Perceptron that uses a softmax activation function in the output layer (other classifiers like SVM can also be used). The term “Fully Connected” implies that every neuron in the previous layer is connected to every neuron on the next layer.
+The Fully Connected layer is a traditional MultiLayer Perceptron (MLP) that uses a softmax activation function in the output layer (other classifiers like SVM can also be used). The term “Fully Connected” implies that every neuron in the previous layer is connected to every neuron on the next layer.
 
 The output from the convolutional and pooling layers represent high-level features of the input image. The purpose of the Fully Connected layer is to **use these features for classifying the input image into various classes based on the training dataset.**
 
