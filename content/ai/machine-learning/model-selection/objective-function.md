@@ -63,11 +63,49 @@ $$
     - $L_1$ norm (Lasso): $\omega(w) = \lambda \|w\|$
     
 
-|                         | Objective Function                                           | Linear model? | Loss     | Regularization |
-| ----------------------- | ------------------------------------------------------------ | ------------- | -------- | -------------- |
-| **Ridge** regression    | $\sum_{i=1}^{n}\left(y_{i}-w^{\top} x_{i}\right)^{2}+\lambda\|w\|^{2}$ | ✅             | square   | $L_2$          |
-| **Lasso** regression    | $\sum_{i=1}^{n}\left(y_{i}-w^{\top} x_{i}\right)^{2}+\lambda\|w\|$ | ✅             | square   | $L_2$          |
-| **Logistic** regression | $\sum_{i=1}^{n}\left[y_{i} \cdot \ln \left(1+e^{-w^{\top} x_{i}}\right)+\left(1-y_{i}\right) \cdot \ln \left(1+e^{w^{\top} x_{i}}\right)\right]+\lambda\|w\|^{2}$ | ✅             | logistic | $L_1$          |
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-0pky{border-color:inherit;text-align:left;vertical-align:top}
+.tg .tg-fymr{border-color:inherit;font-weight:bold;text-align:left;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0pky"></th>
+    <th class="tg-fymr">Objective Function</th>
+    <th class="tg-fymr">Linear model?</th>
+    <th class="tg-fymr">Loss</th>
+    <th class="tg-fymr">Regularization</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-fymr">Ridge regression</td>
+    <td class="tg-0pky">$\sum_{i=1}^{n}\left(y_{i}-w^{\top} x_{i}\right)^{2}+\lambda\|w\|^{2}$</td>
+    <td class="tg-0pky">✅</td>
+    <td class="tg-0pky">square</td>
+    <td class="tg-0pky">$L_2$</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Lasso regression</td>
+    <td class="tg-0pky">$\sum_{i=1}^{n}\left(y_{i}-w^{\top} x_{i}\right)^{2}+\lambda\|w\|$</td>
+    <td class="tg-0pky">✅</td>
+    <td class="tg-0pky">square</td>
+    <td class="tg-0pky">$L_1$</td>
+  </tr>
+  <tr>
+    <td class="tg-fymr">Logistic regression</td>
+    <td class="tg-0pky">$\sum_{i=1}^{n}\left[y_{i} \cdot \ln \left(1+e^{-w^{\top} x_{i}}\right)+\left(1-y_{i}\right) \cdot \ln \left(1+e^{w^{\top} x_{i}}\right)\right]+\lambda\|w\|^{2}$</td>
+    <td class="tg-0pky">✅</td>
+    <td class="tg-0pky">logistic</td>
+    <td class="tg-0pky">$L_2$</td>
+  </tr>
+</tbody>
+</table>
 
 
 
