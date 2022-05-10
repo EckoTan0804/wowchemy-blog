@@ -229,3 +229,95 @@ Hello World
 #### Reference
 
 - [Print lists in Python (4 Different Ways)](https://www.geeksforgeeks.org/print-lists-in-python-4-different-ways/)
+
+## List Comprehension Vs. `*`-operator
+
+List comprehension and using the `*`-operator are two common methods to create list containing repeating elements. However, there is a minor difference between them, which is often overlooked and may cause unexpected bug.
+
+- The `*`-operator can NOT make independent objects 
+  - Reason:  the multiplication operator `*` operates on objects, without seeing expressions.
+  - *E.g.*: `[x] * 3` creates a list `[x, x, x]`, which is essentially a list with 3 references to the **same** `x`. *I.e.,* when you modify one single `x`, all references will be modified.
+- List comprehension can make independent objects
+  - It re-evaluates the element expression on every iteration. Every evaluation generates a new **independent** object. *I.e.*, Modifying one of them will not affect the others.
+  - *E.g.*: `[x for _ in range(3)]` creates a like `[x, copy.copy(x), copy.copy(x)]`
+
+Using the `*`-operator may be inconsistent. In contrast, list comprehension would be a safer option.
+
+#### Example 1: List containing objects
+
+```python
+class Student:
+
+    def __init__(self, age):
+        self.age = age
+```
+
+Create list with `*`:
+
+```python
+>>> students = [Student(12)] * 3
+>>> _ = [print(student.age) for student in students]
+12
+12
+12
+```
+
+As is essentially a list with 3 references to the **same** `Student`, modifying one of them will affect others.
+
+```python
+>>> students[0].age = 15
+>>> _ = [print(student.age) for student in students]
+15
+15
+15
+```
+
+In contrast, using list comprehension will create a list containing three independent `Student`s.
+
+```python
+>>> students = [Student(12) for _ in range(3)]
+>>> _ = [print(student.age) for student in students]
+12
+12
+12
+```
+
+Modifying one of them will NOT affect others:
+
+```python
+>>> students[0].age = 15
+>>> _ = [print(student.age) for student in students]
+15
+12
+12
+```
+
+#### Example 2: Multidimensional Array/List
+
+Using `*`-operator:
+
+```python
+>>> matrix = [[0, 0]] * 2
+>>> matrix
+[[0, 0], [0, 0]] # Two reference to the same [0, 0]
+>>> matrix[0][1] = 1
+>>> matrix
+[[0, 1], [0, 1]]
+```
+
+Using list comprehension:
+
+```python
+>>> matrix = [[0] * 2 for _ in range(2)]
+>>> matrix
+[[0, 0], [0, 0]] # Two independent [0, 0]
+>>> matrix[0][1] = 1
+>>> matrix
+[[0, 1], [0, 0]]
+```
+
+
+
+#### Reference
+
+- [List of lists changes reflected across sublists unexpectedly](https://stackoverflow.com/questions/240178/list-of-lists-changes-reflected-across-sublists-unexpectedly)
