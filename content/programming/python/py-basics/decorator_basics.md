@@ -420,3 +420,9 @@ Hello Alice
 ```
 
 👍 Main benefit: **You do not need to maintain a list of which plugins exist**. That list is created when the plugins register themselves. This makes it trivial to add a new plugin: just define the function and decorate it with `@register`.
+
+
+
+## Reference
+
+- [Primer on Python Decorators](https://realpython.com/primer-on-python-decorators/#fancy-decorators)
