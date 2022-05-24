@@ -243,6 +243,35 @@ for index, value in enumerate(a):
 - We will use a width of 4-character to print `value`
 - The precision of `value` is 4: we will keep 4 decimal places
 
+### `!r`, `!s`, and `!a`
+
+The conversions `!r`, `!s`, and `!a` are equivalent to calling `repr()`, `str()`, and `ascii()`, respectively. 
+
+Example:
+
+```
+>> a = 'some string'
+>>> f'{a!r}'
+"'some string'"
+```
+
+is identical to
+
+```python
+>>> f'{repr(a)}'
+"'some string'"
+```
+
+The usage of these conversion are not strictly required, because explicitly calling the corresponding functions is arguably more clear in its intent. In other words, they are redundant.
+
+`!r` (`repr`), `!s` (`str`) and `!a` (`ascii`) are kept around just to ease compatibility with the `str.format()` alternative,  because it does not allow the execution of arbitrary expressions. You don't need to use them with f-strings.
+
+Reference:
+
+- [In Python format (f-string) strings, what does !r mean?](https://stackoverflow.com/questions/44800801/in-python-format-f-string-strings-what-does-r-mean)
+
+- [`!s`, `!r`, and `!a` are redundant](https://peps.python.org/pep-0498/#s-r-and-a-are-redundant)
+
 ## Reference
 
 - [Python f-string tutorial](http://zetcode.com/python/fstring/)
