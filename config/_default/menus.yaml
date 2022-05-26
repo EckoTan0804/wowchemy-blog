@@ -10,49 +10,49 @@ main:
 
   - name: 🗒 Posts
     url: "post/"
-    weight: 20
+    weight: 200
 
   # =========== AI ===========
   - name: 🤖 AI
     url: "ai/"
     identifier: ai
-    weight: 30
+    weight: 300
 
   - name: Machine Learning
     url: ai/machine-learning
     identifier: ml
     parent: ai
-    weight: 31
+    weight: 310
 
   - name: Deep Learning
     url: ai/deep-learning
     identifier: dl
     parent: ai
-    weight: 32
+    weight: 320
 
   - name: Computer Vision
     url: ai/computer-vision
     identifier: cv
     parent: ai
-    weight: 33
+    weight: 330
 
   - name: Computer Vision
     url: ai/computer-vision
     identifier: cv
     parent: ai
-    weight: 33
+    weight: 330
 
   - name: Natural Language Processing
     url: ai/natural-language-processing
     identifier: mlp
     parent: ai
-    weight: 34
+    weight: 340
 
   - name: PyTorch
     url: ai/pytorch
     identifier: pytorch
     parent: ai
-    weight: 35
+    weight: 350
 
   # ==========================
 
@@ -60,50 +60,50 @@ main:
   - name: 🧑‍💻 Programming
     url: "programming/"
     identifier: programming
-    weight: 40
+    weight: 400
 
   - name: Python
     url: "programming/python"
     identifier: python
     parent: programming
-    weight: 41
+    weight: 410
 
   - name: Docker
     url: "programming/docker"
     identifier: docker
     parent: programming
-    weight: 42
+    weight: 420
 
   - name: Linux
     url: "programming/linux"
     identifier: linux
     parent: programming
-    weight: 43
+    weight: 430
 
   - name: Git
     url: "programming/git"
     identifier: git
     parent: programming
-    weight: 44
+    weight: 440
   # ===================================
 
   # =========== CS ===========
   - name: 💻 CS
     url: "cs/"
     identifier: cs
-    weight: 50
+    weight: 500
 
   - name: Algorithm
     url: "cs/algorithm"
     identifier: algo
     parent: cs
-    weight: 51
+    weight: 510
 
   - name: Software Engineering
     url: "cs/software-engineering"
     identifier: software-engineering
     parent: cs
-    weight: 52
+    weight: 520
 
   # ==========================
 
@@ -111,43 +111,49 @@ main:
   - name: 📝 Notes
     url: "notes/"
     identifier: notes
-    weight: 60
+    weight: 600
 
-  - name: Gestaltungsgrundsätze für interaktive Echtzeitsysteme
+  - name: GIE
     url: "notes/gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme"
     identifier: gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme
     parent: notes
-    weight: 61
+    weight: 610
 
   - name: Rechnerstruktur
     url: "notes/rechner-struktur"
     identifier: rechner-struktur
     parent: notes
-    weight: 62
+    weight: 620
 
   - name: Telematics
     url: "notes/telematics"
     identifier: telematics
     parent: notes
-    weight: 63
+    weight: 630
 
   - name: MMWAB
     url: "notes/mmwab"
     identifier: mmwab
     parent: notes
-    weight: 64
+    weight: 640
 
   - name: Thesis
     url: "notes/thesis"
     identifier: thesis
     parent: notes
-    weight: 65
+    weight: 650
 
   - name: Jobs
     url: "notes/jobs"
     identifier: jobs
     parent: notes
-    weight: 66
+    weight: 660
+
+  - name: SI
+    url: "notes/stochastische_informationsverarbeitung"
+    identifier: si
+    parent: notes
+    weight: 670
 
   # =============================
 
@@ -155,4 +161,4 @@ main:
   # To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
   - name: 🧾 CV
     url: uploads/resume.pdf
-    weight: 70
+    weight: 700
