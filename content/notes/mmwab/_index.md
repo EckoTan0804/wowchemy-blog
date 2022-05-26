@@ -9,7 +9,7 @@ type: book
 authors: 
 - admin
 tags: 
-- - MMWAB
+- MMWAB
 categories: 
 - Lecture
 toc: true

@@ -9,7 +9,7 @@ type: book
 authors: 
 - admin
 tags: 
-- - Telematics
+- Telematics
 categories: 
 - Lecture
 toc: true
