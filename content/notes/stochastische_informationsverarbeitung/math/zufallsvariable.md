@@ -41,7 +41,7 @@ header:
 
 {{% callout warning %}}
 
-Zufallsvariablen werden auf den SI-Übungsblättern durch kleine, fettgedruckte Buchstaben gekennzeichnet, z.B. $\boldsymbol{x}$. 
+Zufallsvariablen werden auf den SI-Übungsblättern durch kleine, fettgedruckte Buchstaben gekennzeichnet, z.B. $X$. 
 
 Diese Notation wird nicht auf den handschriftlichen Mitschrieben umgesetzt, sodass Zufallsvariablen und „normale“ Variablen meistens aus dem Kontext heraus unterschieden werden müssen. 🤪
 
@@ -104,9 +104,16 @@ $$
 $$
 {{< /math >}} 
 
+> Man schreibt für die „Dichte“ einer diskreten Zufallsvariablen, deren Einzelwahrscheinlichkeiten $p_n = P(X = x_n)$ gegeben sind, auch
+> $$
+> f_{X}(x)=\sum_{n=1}^{\infty} \mathrm{P}\left(X=x_{n}\right) \delta\left(x-x_{n}\right)=\sum_{n=1}^{\infty} p_{n} \delta\left(x-x_{n}\right)
+> $$
+>
+> - $\delta(\cdot)$: [Delta-Distribution]({{< relref "dirac_funktion" >}})
+
 #### Verteilungsfunktion
 
-Die {{< hl >}}**Verteilungsfunktion (Engl,. Cumulative Distribution Function (CDF))**{{< /hl >}} gibt an, mit welcher Wahrscheinlichkeit das Ergebnis des Zufallsexperiments *kleiner oder gleich* eines bestimmten Wertes ist.
+Die {{< hl >}}**Verteilungsfunktion (aka. Kumulative Wahrscheinlichkeitsdichte, Engl,. Cumulative Distribution Function (CDF))**{{< /hl >}} gibt an, mit welcher Wahrscheinlichkeit das Ergebnis des Zufallsexperiments *kleiner oder gleich* eines bestimmten Wertes ist.
 
 - Dafür werden alle Ergebnisse bis zu diesem Wert aggregiert, also „aufaddiert“. Deshalb spricht man auch oft von einer **kumulativen Verteilungsfunktion**.
 
@@ -114,7 +121,7 @@ Um die diskrete Verteilungsfunktion zu erhalten, werden schrittweise alle Wahrsc
 
 {{< math >}}
 $$
-F(x): \boldsymbol{\Omega} \rightarrow[\mathbf{0}, \mathbf{1}], \boldsymbol{x} \in \mathbb{N}_{\mathbf{0}}
+F(x): \boldsymbol{\Omega} \rightarrow[\mathbf{0}, \mathbf{1}], X \in \mathbb{N}_{\mathbf{0}}
 $$
 {{< /math >}} 
 
@@ -129,6 +136,11 @@ $$
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-05-31%2022.43.01.png" alt="截屏2022-05-31 22.43.01" style="zoom:40%; float:right" />
 
 
+
+Eigenschaften
+
+- {{< math >}}$\lim _{x \rightarrow-\infty} F_{X}(x)=0 ; \lim _{x \rightarrow \infty} F_{X}(x)=1${{< /math >}} 
+- $F(X)$ ist monoton steigend und rechtseitig stetig
 
 {{< spoiler text="Beispiel" >}}
 Würfelwurf:
@@ -155,7 +167,7 @@ $$
 
 {{% callout note %}}
 
-In der SI Vorlesung sowie Übung wird die Verteilungsfunktion der Zufallsvariable $\boldsymbol{x}$ als $F_{\boldsymbol{x}}(x)$ schreiben.
+In der SI Vorlesung sowie Übung wird die Verteilungsfunktion der Zufallsvariable $X$ als $F_{X}(x)$ schreiben.
 
 {{% /callout %}}
 
@@ -233,7 +245,7 @@ $$
 
 {{% callout note %}}
 
-In der SI Vorlesung sowie Übung wird die Dichtefunktion der Zufallsvariable $\boldsymbol{x}$ als $f_{\boldsymbol{x}}(x)$ schreiben.
+In der SI Vorlesung sowie Übung wird die Dichtefunktion der Zufallsvariable $X$ als $f_{X}(x)$ schreiben.
 
 {{% /callout %}}
 
@@ -324,7 +336,7 @@ $$
   </tr>
   <tr>
     <td class="tg-c3ow"><span style="font-style:normal">Verteilungsfunktion</span></td>
-    <td class="tg-c3ow">$F(x): \boldsymbol{\Omega} \rightarrow[\mathbf{0}, \mathbf{1}], \boldsymbol{x} \in \mathbb{N}_{\mathbf{0}}$<br>$F(x)= P(X \leq x) = \sum_{x_{i} \leq x} f\left(x_{i}\right)$</td>
+    <td class="tg-c3ow">$F(x): \boldsymbol{\Omega} \rightarrow[\mathbf{0}, \mathbf{1}], X \in \mathbb{N}_{\mathbf{0}}$<br>$F(x)= P(X \leq x) = \sum_{x_{i} \leq x} f\left(x_{i}\right)$</td>
     <td class="tg-c3ow">$F(x): \Omega \rightarrow[0,1], x \in \mathbb{R}$<br>$F(x)=\int f(x) \mathrm{d} x, \quad f(x)=\frac{F(x)}{\mathrm{d} x}$</td>
   </tr>
 </tbody>
@@ -332,20 +344,114 @@ $$
 
 
 
-## Erwartungswert, Varianz und Standardabweichung
+## Kenntwerte von Zufallsvariablen
 
 ### Erwartungswert
 
-**Erwartungswert**: der Durchschnitt, wenn ein Versuch unendlich oft durchgeführt wird
+{{< hl >}}**Erwartungswert**{{< /hl >}} (auch **Mittelwert**) : der Durchschnitt, wenn ein Versuch unendlich oft durchgeführt wird
 
-- Notation: $\mu$, $E(x)$, $E\[x\]$, $E\\{x\\}$
+{{< math >}}
+$$
+E_{f_X}\{X\} = \hat{X} = \mu_{X} = \int_{-\infty}^{\infty} x f_{X}(x) d x
+$$
+
+
+{{< /math >}} 
+
+- Notation: $\mu$, $E(X)$, $E\[X\]$, $E\\{X\\}$
+
+#### Rechenregeln
+
+{{< math >}}$\mathrm{E}_{f_{X}}\{aX + b\}=a \mathrm{E}_{f_{X}}\{X\}+b${{< /math >}} 
+
+{{< spoiler text="Beweis" >}}
+$$
+\begin{array}{ll}
+&\mathrm{E}\_{f\_{X}}\\{a X+b\\} \\\\
+=&\int\_{-\infty}^{\infty}(a x+b) f\_{X}(x) \mathrm{d} x \\\\
+=&a \int\_{-\infty}^{\infty} x f\_{X}(x) \mathrm{d} x+b \int\_{-\infty}^{\infty} f\_{X}(x) \mathrm{d} x \\\\
+=&a \cdot \mathrm{E}\_{f_{X}}\\{X\\}+b \cdot 1
+\end{array}
+$$
+{{< /spoiler >}}
+
+### $k$-te Moment
+
+Der Erwartungswert 
+
+{{< math >}}
+$$
+\mathrm{E}_{f_X}\left\{X^{k}\right\}=\int_{-\infty}^{\infty} x^{k} f_{X}(x) \mathrm{d} x
+$$
+{{< /math >}} 
+
+das {{< hl >}}**$k$-te Moment**{{< /hl >}} der Zufallsvariable $X$.
+
+Der Erwartungswert 
+
+{{< math >}}
+$$
+\mathrm{E}_{f_X}\left\{\left(X-\mathrm{E}\{X\}\right)^{k}\right\}=\int_{-\infty}^{\infty}\left(x-\mu_{X}\right)^{k} f_{X}(x) \mathrm{d} x
+$$
+{{< /math >}} 
+
+ist das {{< hl >}}**$k$-te zentrale Moment**{{< /hl >}} der Zufallsvariable $X$.
 
 ### Varianz 
 
 **Varianz** := die erwartete *quadratische* Abweichung vom Erwartungswert
 
+{{< math >}}
+$$
+E_{f_X}\{(X - \mu_X)^2\} = \operatorname{Var}(X) = \sigma_X^2
+$$
+
+
+{{< /math >}} 
+
+- das zweite zentrale Moment
+
 - Je größer die Varianz, desto weiter streuen die Werte um $E(X)$
 - Notationen: $\sigma^2$, $\operatorname{Var}(X)$, $\operatorname{Var}\[X\]$
+
+#### Rechenregeln
+
+{{< math >}}$\operatorname{Var}_{f_X}\{aX+b\} = a^2 \operatorname{Var}_{f_X}\{X\}${{< /math >}} 
+
+{{< spoiler text="Beweis" >}}
+$$
+\begin{array}{l}
+&\operatorname{Var}\_{f\_{X}}\\{a X+b\\} \\\\
+=&\mathrm{E}\_{f\_{X}}\left\\{\left(a X+b-\mathrm{E}\_{f\_{X}}\\{a X+b\\}\right)^{2}\right\\} \\\\
+=&\mathrm{E}\_{f\_{X}}\left\\{\left(a X+b-\left(a \mu\_{X}+b\right)\right)^{2}\right\\}\\\\
+=&\mathrm{E}\_{f\_{X}}\left\\{\left(a\left(X-\mu\_{X}\right)\right)^{2}\right\\} \\\\
+=&\int\_{-\infty}^{\infty}\left(a\left(X-\mu\_{X}\right)\right)^{2} f\_{X}(x) \mathrm{d} x \\\\
+=&a^{2} \int\_{-\infty}^{\infty}\left(X-\mu\_{X}\right)^{2} f\_{X}(x) \mathrm{d} x \\\\
+=&a^{2} \mathrm{E}\_{f\_{X}}\left\\{\left(X-\mu\_{X}\right)^{2}\right\\} \\\\
+=&a^{2} \operatorname{Var}\_{f\_{X}}\\{X\\}
+\end{array}
+$$
+{{< /spoiler >}}
+
+</br>
+
+{{< math >}}$\operatorname{Var}_{f_{\boldsymbol{x}}}\{\boldsymbol{x}\}=\mathrm{E}_{f_{\boldsymbol{x}}}\left\{\boldsymbol{x}^{2}\right\}-\left(\mathrm{E}_{f_{\boldsymbol{x}}}\{\boldsymbol{x}\}\right)^{2}${{< /math >}} 
+
+{{< spoiler text="Beweis" >}}
+$$
+\begin{aligned}
+    \operatorname{Var}\_{f\_{X}}\\\{X\\}=& \int\_{-\infty}^{\infty}\left(x-\mathrm{E}\_{f\_{X}}\\{X\\}\right)^{2} f\_{X}(x) \mathrm{d} x \\\\
+    =& \int\_{-\infty}^{\infty}\left(x-\mu\_{X}\right)^{2} f\_{X}(x) \mathrm{d} x \\\\
+    =& \int\_{-\infty}^{\infty}\left(x^{2}-2 x \mu\_{X}+\mu\_{X}^{2}\right) f\_{X}(x) \mathrm{d} x \\\\
+    =& \int\_{-\infty}^{\infty} x^{2} f\_{X}(x) \mathrm{d} x-2 \mu\_{X} \int\_{-\infty}^{\infty} x f\_{X}(x) \mathrm{d} x+\mu\_{X}^{2} \int\_{-\infty}^{\infty} f\_{X}(x) \mathrm{d} x \\\\
+    =& \mathrm{E}\_{f\_{X}}\left\\{X^{2}\right\\}-2 \mu\_{X} \mathrm{E}\_{f\_{X}}\\{X\\}+\mu\_{X}^{2} \cdot 1 \\\\
+    =& \mathrm{E}\_{f\_{X}}\left\\{X^{2}\right\\}-2 \mu\_{X} \mu\_{X}+\mu\_{X}^{2} \cdot 1 \\\\
+    =& \mathrm{E}\_{f\_{X}}\left\\{X^{2}\right\\}-\mu\_{X}^{2}
+    \end{aligned}
+$$
+{{< /spoiler >}}
+
+
 
 ### Standardabweichung
 
@@ -360,8 +466,6 @@ $$
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/Section2Module7HighLowStandardDeviation.jpg" alt="Standard Deviation" style="zoom:75%;" />
 
 
-
-### Summary
 
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
@@ -384,7 +488,7 @@ $$
   <tr>
     <td class="tg-7btt">Erwartungswert<br>($\mu$, $E(x)$)</td>
     <td class="tg-c3ow">$\sum_{i \in \Omega} x_{i} \cdot p_{i}$</td>
-    <td class="tg-c3ow">$\int_{-\infty}^{+\infty} x^{1} \cdot f(x) \mathrm{d} x$</td>
+    <td class="tg-c3ow">$\int_{-\infty}^{+\infty} x \cdot f(x) \mathrm{d} x$</td>
   </tr>
   <tr>
     <td class="tg-7btt">Varianz<br>($\sigma^2$, $Var(x)$)</td>
@@ -399,6 +503,58 @@ $$
 </tbody>
 </table>
 
+### Normalverteilte Zufallsvariable
+
+Ein {{< hl >}}**normalverteilte Zufallsvariable**{{< /hl >}} $X$ hat die Dichte
+
+{{< math >}}
+$$
+f_{X}(x)=\mathcal{N}\left(x-\mu, \sigma^{2}\right)=\frac{1}{\sqrt{2 \pi} \sigma} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}}
+$$
+{{< /math >}} 
+
+Ihr $k$-tes zentrales Moment ist allgemein
+
+{{< math >}}
+$$
+\left.\mathrm{E}_{f_{X}\left\{(X-\mu)^{k}\right.}\right\}=\left\{\begin{array}{ll}
+1 \cdot 3 \cdot 5 \cdots(k-1) \sigma^{k} & \text { falls } k \text { gerade } \\
+0 & \text { falls } k \text { ungerade }
+\end{array}\right.
+$$
+{{< /math >}}
+
+Die Normalverteilung ist also vollständig durch $\mu$ und $\sigma$ charakterisiert. 
+
+### Standardisierte Zufallsvariable
+
+Eine Zufallsvariable $X$ mit dem Erwartungswert $\mu_X = E_{f_X}\{X\}$ und der Varianz $\sigma_X^2$ wird durch
+
+{{< math >}}
+$$
+Y = \frac{X - \mu_X}{\sigma_X}
+$$
+{{< /math >}} 
+
+in eine {{< hl >}}**standardisierte Zufallsvariable**{{< /hl >}} $Y$, die den Erwartungswert 0 und die Varianz 1 besitzt, transformiert.
+
+### Modalwert, Quantil, Median
+
+Ein Wert, für den die Dichtefunktion $f_X(x)$ ein lokales Maximum annimmt, heißt {{< hl >}}**Modalwert**{{< /hl >}} der stetigen Zufallsvariablen $X$.
+
+Ein Wert $x_p$, der den Ungleichungen
+
+{{< math >}}
+$$
+P(X < x_p) \leq p, \quad P(X > x_p) \leq 1 - p \quad (0 < p < 1)
+$$
+{{< /math >}} 
+
+genügt, heißt {{< hl >}}**$p$-tes Quantil**{{< /hl >}}. 
+
+- Für eine stetige Zufallsvariable X ist ein $p$-tes Quantil $x_p$ gegeben durch $F_X(x_p) = p$
+- Ein Quantil der Ordnung $p=\frac{1}{2}$ heißt {{< hl >}}**Median**{{< /hl >}} der Zufallsvariable $X$
+- Für normalverteilte Zufallsvariablen fallen Erwartungswert, Modalwert und Median zusammen.
 
 ## Reference
 
