@@ -6,7 +6,7 @@ weight: 590
 # ============================================================
 
 # ========== Basic metadata ==========
-title: Post-interview Thank-You Email 
+title: "Post-interview: Thank-You Email"
 date: 2022-05-09
 draft: false
 type: book # page type
