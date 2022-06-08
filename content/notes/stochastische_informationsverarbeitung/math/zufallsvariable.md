@@ -435,7 +435,7 @@ $$
 
 </br>
 
-{{< math >}}$\operatorname{Var}_{f_{\boldsymbol{x}}}\{\boldsymbol{x}\}=\mathrm{E}_{f_{\boldsymbol{x}}}\left\{\boldsymbol{x}^{2}\right\}-\left(\mathrm{E}_{f_{\boldsymbol{x}}}\{\boldsymbol{x}\}\right)^{2}${{< /math >}} 
+{{< math >}}$\operatorname{Var}_{f_{X}}\{X\}=\mathrm{E}_{f_{X}}\left\{X^{2}\right\}-\left(\mathrm{E}_{f_{X}}\{X\}\right)^{2}${{< /math >}} 
 
 {{< spoiler text="Beweis" >}}
 $$
@@ -517,7 +517,7 @@ Ihr $k$-tes zentrales Moment ist allgemein
 
 {{< math >}}
 $$
-\left.\mathrm{E}_{f_{X}\left\{(X-\mu)^{k}\right.}\right\}=\left\{\begin{array}{ll}
+\mathrm{E}_{f_{X}}\left\{(X-\mu)^{k}\right\}=\left\{\begin{array}{ll}
 1 \cdot 3 \cdot 5 \cdots(k-1) \sigma^{k} & \text { falls } k \text { gerade } \\
 0 & \text { falls } k \text { ungerade }
 \end{array}\right.
