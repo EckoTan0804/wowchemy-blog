@@ -303,3 +303,8 @@ Template
 - [No Response After an Interview? Here’s How to Follow Up By Email](https://careersidekick.com/follow-up-after-interview-no-response/)
 
 - [How to Write a Follow-up Email After No Response (Examples Included)](https://theinterviewguys.com/follow-up-email-after-no-response/)
+
+- German templates
+  - [Nach dem Vorstellungsgespräch: Nachfragen per E-Mail – ein Muster](https://www.ionos.de/startupguide/produktivitaet/nach-vorstellungsgespraech-nachfragen-per-e-mail-mit-muster/)
+  - [DIE RÜCKMELDUNG NACH DEM VORSTELLUNGSGESPRÄCH](https://www.youngcapital.de/bewerbungstipps/vorstellungsgespraech/rueckmeldung)
+  - [Keine Antwort nach dem Vorstellungsgespräch? – Das kannst du tun](https://www.workwise.io/karriereguide/vorstellungsgespraech/keine-antwort-nach-vorstellungsgespraech)
