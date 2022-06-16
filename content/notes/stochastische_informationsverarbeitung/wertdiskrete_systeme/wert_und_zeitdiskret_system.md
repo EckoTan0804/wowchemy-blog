@@ -153,7 +153,7 @@ $u_k$ und $y_k$ sind wertdiskret, wobei o.B.d.A
 $$
 \begin{array}{l}
 u_{k} \in\{1,2, \cdots, p\} \\
-y_{k} \in\{1,2, \ldots M\}
+y_{k} \in\{1,2, \ldots, M\}
 \end{array}
 $$
 {{< /math >}} 
@@ -258,7 +258,7 @@ $$
 
 #### Systemabbildung
 
-- Zufallsvariable $x_k, k \in \mathbb{N}_0$ mit $x_k \ in \{1, 2, \dots, N\}$
+- Zufallsvariable $x_k, k \in \mathbb{N}_0$ mit {{< math >}}$x_k \in \{1, 2, \dots, N\}${{< /math >}} 
 
 - Entwicklung des Zustands $x_k$ bescrhieben ducrch
 
@@ -268,8 +268,7 @@ $$
   $$
   {{< /math >}} 
 
-  $u_k$ oft explizit forgelassen
-
+  ($u_k$ oft explizit forgelassen)
 
 {{% callout note %}}
 **Definition**
@@ -324,13 +323,13 @@ $$
 {{% callout note %}}
 **Definition**
 
-Eine quadratische Matrix $\boldsymbol{A}$ heißt {{< hl >}}**Markov-Matrix**{{< /hl >}}, falls 
+Eine quadratische Matrix $\mathbf{A}$ heißt {{< hl >}}**Markov-Matrix**{{< /hl >}}, falls 
 
 - Alle Elemente **nicht-negative** sind
 
   {{< math >}}
   $$
-  \mathbf{A}(i, j) \geq 0 \quad \text{ für } i, j \in \\{1, \dots, N\\}
+  A(i, j) \geq 0 \quad \text{ für } i, j \in \\{1, \dots, N\\}
   $$
   
 
@@ -410,13 +409,12 @@ Graphische Darstellung
 
 - Ausgerollte zeitliche Abhängigkeit der Zufallsvariablen
 
-  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/wertdiskrete_systeme-Markov_kette_ausgerollt.png" caption="Markot-Kette (ausgerollte Darstellung)" numbered="true" >}}
+  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/wertdiskrete_systeme-Markov_kette_ausgerollte.png" caption="Markot-Kette (ausgerollte Darstellung)" numbered="true" >}}
 
 - Rekursive Darstellung der zeitliche Abbildung der Zufallsvariablen
 
-  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/wertdiskrete_systeme-Markov_kette_rekursive.drawio.png" caption="Markot-Kette (rekursive Darstellung)" numbered="true" >}}
+  {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/wertdiskrete_systeme-rekursiv_Markov_kettee.png" caption="Markot-Kette (rekursive Darstellung)" numbered="true" >}}
 
 - Betont Übergange und Wahrscheinlichkeit 
 
   {{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/wertdiskrete_systeme-Markov_kette_uebergaenge_und_wahrscheinlichkeit.drawio.png" caption="Markot-Kette (betont Übergange und Wahrscheinlichkeit)" numbered="true" >}}
-  
