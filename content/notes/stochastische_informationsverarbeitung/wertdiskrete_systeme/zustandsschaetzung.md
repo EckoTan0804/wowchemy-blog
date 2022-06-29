@@ -257,7 +257,7 @@ Rekursive Prädiktion:
     $$
     {{< /math >}} 
 
-    > Remind: $A(i, j):=P\left(x_{k+1}=j \mid x_{k}=i\right)$
+    > Reminder: $A(i, j):=P\left(x_{k+1}=j \mid x_{k}=i\right)$
 
   - Messeabbildung
 
@@ -270,7 +270,7 @@ Rekursive Prädiktion:
     $$
     {{< /math >}} 
 
-    > Remind: $B(i, j):=P\left(y_{k}=j \mid x_{k}=i\right)$
+    > Reminder: $B(i, j):=P\left(y_{k}=j \mid x_{k}=i\right)$
 
 ​	
 
@@ -374,7 +374,7 @@ $$
 \begin{aligned}
 \eta_{3}^{x} &=\mathbf{A}_{u_{2}}^{\top} \cdot \underbrace{\eta_{2}^{x}}_{=\mathbf{A}_{u_{1}}^{\top} \cdot \eta_{1}^{x}} \\
 &=\mathbf{A}_{u_{2}}^{\top} \cdot (\mathbf{A}_{u_{1}}^{\top} \cdot \underbrace{\eta_{1}^{x}}_{=\mathbf{A}_{u_{0}}^{\top} \cdot \eta_{0}^{x}})\\
-&=\mathbf{A}_{u_{2}}^{\top} \cdot \mathbf{A}_{u_{1}}^{\top} \cdot \mathbf{A}_{u_{0}}^{\top} \cdot \eta_{0}^{x} \quad \text { (rekursive Berechnung) }
+&=\mathbf{A}_{u_{2}}^{\top} \cdot (\mathbf{A}_{u_{1}}^{\top} \cdot (\mathbf{A}_{u_{0}}^{\top} \cdot \eta_{0}^{x})) \quad \text { (rekursive Berechnung) }
 \end{aligned}
 $$
 {{< /math >}} 
@@ -414,7 +414,7 @@ Wie sieht $P\left(x_{k} \mid y_{1: k}, u_{0: k-1}\right)$ auf Basis der Prädikt
 ![wertdiskrete_systeme-Filterung.drawio](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/wertdiskrete_systeme-Filterung.drawio.png)
 
 {{% callout note %}}
-**Remind**
+**Reminder**
 
 {{< math >}}
 $$
@@ -429,7 +429,7 @@ $$
 & P\left(x_{k} \mid y_{1: k}, u_{0: k-1}\right) \\
 =&\quad P(\underbrace{x_{k}}_{b} \mid \underbrace{y_{k}}_{a}, \underbrace{\left.y_{1: k-1}, u_{0: k-1}\right)}_{c}\\\\
 \overset{(\triangle)}{=}& \frac{P\left(y_{k} \mid x_{k}, y_{1: k-1}, u_{0: k-1}\right) \cdot P\left(x_{k} \mid y_{1: k-1}, u_{0: k-1}\right)}{P\left(y_{k} \mid y_{1: k-1}, u_{0: k-1}\right)}\\\\
-= & \frac{\overbrace{P\left(y_{k} \mid x_{k}\right)}^{\text{Likelihood}} \cdot \overbrace{P\left(x_{k} \mid y_{(: k-1}, u_{0: k-1}\right)}^{\text{Einschritt-Prädiktion}}}{\underbrace{P\left(y_{k} \mid y_{1: k-1}, u_{0: k-1}\right)}_{\text{Normalisierungskonstant}}}
+= & \frac{\overbrace{P\left(y_{k} \mid x_{k}\right)}^{\text{Likelihood}} \cdot \overbrace{P\left(x_{k} \mid y_{1: k-1}, u_{0: k-1}\right)}^{\text{Einschritt-Prädiktion}}}{\underbrace{P\left(y_{k} \mid y_{1: k-1}, u_{0: k-1}\right)}_{\text{Normalisierungskonstant}}}
 \end{aligned}
 $$
 {{< /math >}} 
@@ -450,7 +450,7 @@ $$
 & P\left(y_{k} \mid y_{1: k-1}, u_{o: k-1}\right) \\\\
 \stackrel{\text { Margin. }}{=} & \sum_{x_{k}=1}^{N} P\left(y_{k}, x_{k} \mid y_{1: k-1}, u_{0: k-1}\right) \\\\
 \overset{(\ast)}{=}& \sum_{x_{k}=1}^{N} P\left(y_{k} \mid x_{k}, y_{1: k-1}, u_{0: k-1}\right) \cdot P\left(x_{k} \mid y_{1: k-1}, u_{0: k-1}\right) \\\\
-=& \sum_{x_{k=1}}^{N} P\left(y_{k} \mid x_{k}\right) \cdot P\left(x_{k} \mid y_{1: k-1}, u_{0: k-1}\right)
+=& \sum_{x_{k} = 1}^{N} P\left(y_{k} \mid x_{k}\right) \cdot P\left(x_{k} \mid y_{1: k-1}, u_{0: k-1}\right)
 \end{aligned}
 $$
 {{< /math >}} 
@@ -471,7 +471,7 @@ Filterung in Vektor-Matrix-Form:
   $$
   \begin{aligned}
   \eta_{k \mid l: k}^{x} &=\frac{\operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}} \\\\
-  &=\frac{\mathbf{B}(:, m) \odot \eta_{k \mid: k \cdot-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1:k-1}^{x}}
+  &=\frac{\mathbf{B}(:, m) \odot \eta_{k \mid 1: k-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1:k-1}^{x}}
   \end{aligned}
   $$
   {{< /math >}} 
