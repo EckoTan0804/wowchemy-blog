@@ -127,9 +127,14 @@ $$
 
 - Paradigma: Nutzung aller Daten
 
-- Zwei wichtige Fälle
-  - [Prädiktion](#prädiktion): $k_u + 1 = k_x > k_y$
-  - [Filterung](#filterung): $k_u + 1 = k_x = k_y$
+- Zwei wichtige Fälle/Phasen
+  - [Prädiktion](#prädiktion) ($k_u + 1 = k_x > k_y$)
+  
+    Eine Prädiktion für den aktuellen Zustand basierend auf den letzten Zustand machen
+  
+  - [Filterung](#filterung) ($k_u + 1 = k_x = k_y$)
+  
+    Mit der beobachtbaren Messungen die Prädiktion updaten/verfeinern
 
 ### Prädiktion
 
@@ -407,7 +412,7 @@ $$
 $$
 {{< /math >}} 
 
-### Filterung
+### Filterung (Wonham Filter)
 
 Wie sieht $P\left(x_{k} \mid y_{1: k}, u_{0: k-1}\right)$ auf Basis der Prädiktion $P\left(x_{k} \mid y_{1: k-1}, u_{0: k-1}\right)$ aus?
 
@@ -463,14 +468,14 @@ $$
 $$
 {{< /math >}} 
 
-Filterung in Vektor-Matrix-Form:
+Filterung in Vektor-Matrix-Form:	
 
 - Für $y_k = m$, Bilde eine Diagonalematrix $\operatorname{diag}(\mathbf{B}(:, m))$ mit Spalte des Messmatrix $\mathbf{B}(:, m)$
 
   {{< math >}}
   $$
   \begin{aligned}
-  \eta_{k \mid l: k}^{x} &=\frac{\operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}} \\\\
+  \eta_{k \mid 1: k}^{x} &=\frac{\operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}} \\\\
   &=\frac{\mathbf{B}(:, m) \odot \eta_{k \mid 1: k-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1:k-1}^{x}}
   \end{aligned}
   $$
@@ -480,3 +485,5 @@ Filterung in Vektor-Matrix-Form:
   - $\odot$: Elementwise-Multiplikation
 
 Das ist ein komplett rekursives Filter $\rightarrow$ {{< hl >}}**Wonham Filter**{{< /hl >}} 
+
+Beispiel siehe [hier]({{< relref "../math/HMM_und_Wonham_filter" >}}).
