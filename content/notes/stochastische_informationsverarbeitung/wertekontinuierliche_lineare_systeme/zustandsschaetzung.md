@@ -259,17 +259,38 @@ $$
 
 Trick: Auf **Skalares Gütemaß** zurückzuführen
 
-- Projektion auf beliebigen Einheitsvektor $\underline{e}$
+D.h., um Kovarianzmatrizen generell vergleichen zu können, verwende man die Funktionen, die von einer $n \times n$ Matrix in $\mathbb{R}^1$ abbilden. Anders gesagt, die einer Kovarianzmatrix einen Skalar zuordnen, denn man kann nur Skalare direkt miteinander vergleichen.
+
+Z.B., Projektion mit beliebigen Einheitsvektor $\underline{e}$
+
+{{< math >}}
+$$
+P(\mathbf{K}) = \underline{e}^\top \cdot \mathbf{C}_c(\mathbf{K}) \cdot \underline{e}
+$$
+
+{{< /math >}} 
+
+MINIMAL kovarianz $\Leftrightarrow$ $P(\mathbf{K})$ soll minimal sein für $\underline{e}$.
+
+Andere mögliche skalare Gütemaße für eine diagonale Kovarianzmatrix (z.B. $\mathbf{C}=\left[\begin{array}{cc}\sigma_{x}^{2} & 0 \\ 0 & \sigma_{y}^{2}\end{array}\right]$):
+
+- $\operatorname{Spur}(\cdot)$: Summe der Diagonalelemente
 
   {{< math >}}
   $$
-  P(\mathbf{K}) = \underline{e}^\top \cdot \mathbf{C}_c(\mathbf{K}) \cdot \underline{e}
+  \begin{equation}
+  \operatorname{Spur}(\mathbf{C})=\sigma\_{x}^{2}+\sigma\_{y}^{2}
+  \end{equation}
   $$
-  
-
   {{< /math >}} 
 
-- $P(\mathbf{K})$ soll minimal sein für $\underline{e}$
+- $\operatorname{det}(\cdot)$: Determinante, also Produkt der Eigenwerte
+
+  {{< math >}}
+  $$
+  \operatorname{det}(\mathbf{C})=\sigma\_{x}^{2} \cdot \sigma\_{y}^{2}
+  $$
+  {{< /math >}} 
 
 {{% /callout %}}
 
