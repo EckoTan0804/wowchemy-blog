@@ -83,7 +83,7 @@ Zwei Bedingungen der Linearität
 
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/wertekontinuierliche_lineare_systeme-statische_systeme.drawio.png" alt="wertekontinuierliche_lineare_systeme-statische_systeme.drawio" style="zoom:80%;" />
 
-  - $\underline{u}_k \in \mathbb{R}^P$ und $\underline{y}_k \in \mathbb{R}^M$ sind wertkonstant
+  - $\underline{u}_k \in \mathbb{R}^P$ und $\underline{y}_k \in \mathbb{R}^M$ sind wertekontinuierlich
 
 - Abbildung von $\underline{u}_k$ und $\underline{y}_k$ durch lineare Abbildung
 
@@ -127,7 +127,7 @@ Zwei Bedingungen der Linearität
 
 ## Dynamische Systeme
 
-- Anregung hängt nicht nur vom aktuellen Eingang $\underline{u}_k$ ab (analog wie wertdiskrete Systeme)
+- Anregung hängt nicht nur vom aktuellen Eingang $\underline{u}_k$ ab (analog wie wertdiskrete Systeme), sondern auch vom aktuellen Zustand
 - Zustände werden in internen Speichern gespeichert
 - Gesamtsystem ("**Gauß-Markov-Modell**") besteht aus
   - Systemabbildung
