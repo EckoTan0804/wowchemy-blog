@@ -219,7 +219,7 @@ Source und Bsp: [Wiki](https://de.wikipedia.org/wiki/Erwartungstreue)
   E\left\{\underline{x}_{k \mid 1: k}\right\}&=\mathbf{K}_{k}^{(1)} E\left\{\underline{x}_{k \mid 1: k-1}\right\}+\mathbf{K}_{k}^{(2)} E\left\{\mathbf{H}_{k} \cdot x_{k}+\underline{y}_{k}\right\} \\
   E\left\{\underline{x}_{k \mid 1: k}\right\}&=\mathbf{K}_{k}^{(1)} E\left\{\underline{x}_{k \mid 1: k-1}\right\}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k} E\left\{\underline{x}_{k}\right\} \quad \mid \text { Erwartungstreu } \\
   \underline{\tilde{x}}&=\mathbf{K}_{k}^{(1)} \underline{\tilde{x}}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k} \cdot \underline{\tilde{x}} \\
-  \Rightarrow \boldsymbol{I} &=\mathbf{K}_{k}^{(1)}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k}
+  \Rightarrow  &=\mathbf{K}_{k}^{(1)}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k}
   \end{aligned}
   $$
   {{< /math >}} 
@@ -229,7 +229,7 @@ Source und Bsp: [Wiki](https://de.wikipedia.org/wiki/Erwartungstreue)
   {{< math >}}
   $$
   \begin{aligned}
-  \mathbf{K}_{k}^{(1)} &= \boldsymbol{I} - \mathbf{K}_{k}\mathbf{H}_{k} \\
+  \mathbf{K}_{k}^{(1)} &= \mathbf{I} - \mathbf{K}_{k}\mathbf{H}_{k} \\
   \mathbf{K}_{k}^{(2)} &= \mathbf{K}_{k}
   \end{aligned}
   $$
@@ -239,7 +239,7 @@ Setze in $(\ast)$ ein:
 
 {{< math >}}
 $$
-\underbrace{\underline{x}_{k \mid 1: k}}_{=: \underline{x}_{k}^{e}}=\left(\boldsymbol{I}-\mathbf{K}_{k}\mathbf{H}_{k} \right) \underbrace{\underline{x}_{k \mid 1: k-1}}_{=: \underline{x}_{k}^{p}}+\mathbf{K}_{k} \underline{y}_{k} \qquad(* *)
+\underbrace{\underline{x}_{k \mid 1: k}}_{=: \underline{x}_{k}^{e}}=\left(\mathbf{I}-\mathbf{K}_{k}\mathbf{H}_{k} \right) \underbrace{\underline{x}_{k \mid 1: k-1}}_{=: \underline{x}_{k}^{p}}+\mathbf{K}_{k} \underline{y}_{k} \qquad(* *)
 $$
 {{< /math >}} 
 
@@ -251,7 +251,7 @@ Nehme an, dass Messung unkorreliert mit priorer Schätzung. Aus $(\ast\ast)$ gil
 
 {{< math >}}
 $$
-\underbrace{\mathbf{C}_{k \mid 1: k}\left(\mathbf{K}_{k}\right)}_{=: \mathbf{C}_{k}^{e}\left(\mathbf{K}_{k}\right)}=\left(\boldsymbol{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right) \underbrace{\mathbf{C}_{k \mid 1: k-1}^{x}}_{=: \mathbf{C}_{k}^{p}}\left(\boldsymbol{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right)^{\top}+\mathbf{K}_{k} C_{k}^{y} \mathbf{K}_{k}^{\top} \qquad(\ast\ast\ast)
+\underbrace{\mathbf{C}_{k \mid 1: k}\left(\mathbf{K}_{k}\right)}_{=: \mathbf{C}_{k}^{e}\left(\mathbf{K}_{k}\right)}=\left(\mathbf{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right) \underbrace{\mathbf{C}_{k \mid 1: k-1}^{x}}_{=: \mathbf{C}_{k}^{p}}\left(\mathbf{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right)^{\top}+\mathbf{K}_{k} C_{k}^{y} \mathbf{K}_{k}^{\top} \qquad(\ast\ast\ast)
 $$
 {{< /math >}} 
 
@@ -299,7 +299,7 @@ Ableitung mit der [Matrizen Differenzregeln]({{< relref "../math/matrix_differen
 {{< math >}}
 $$
 \begin{aligned}
-\frac{\partial}{\partial K} P(\mathbf{K}) &=\frac{\partial}{\partial \mathbf{K}}\left\{\underline{e}^{\top}\left[(\boldsymbol{I}-\mathbf{K} \mathbf{H}) \mathbf{C}_{p}(\boldsymbol{I}-\mathbf{K} \mathbf{H})^{\top}+\mathbf{K} \mathbf{C}_{y} \mathbf{K}^{\top}\right] \underline{e}^{\top}\right\} \\
+\frac{\partial}{\partial K} P(\mathbf{K}) &=\frac{\partial}{\partial \mathbf{K}}\left\{\underline{e}^{\top}\left[(\mathbf{I}-\mathbf{K} \mathbf{H}) \mathbf{C}_{p}(\mathbf{I}-\mathbf{K} \mathbf{H})^{\top}+\mathbf{K} \mathbf{C}_{y} \mathbf{K}^{\top}\right] \underline{e}^{\top}\right\} \\
 &=\frac{\partial}{\partial \mathbf{K}}\left\{\underline{e}^{\top}\left[\mathbf{C}_{p}-\mathbf{C}_{p} \mathbf{H}^{\top} \mathbf{K}^{\top}-\mathbf{K} \mathbf{H} \mathbf{C}_{p}+\mathbf{K} \mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top} \mathbf{K}^{\top}+\mathbf{K} \mathbf{C}_{y} \mathbf{K}^{\top}\right] \underline{e}\right\} \\
 &=-\left[\mathbf{H} \mathbf{C}_{p} \underline{e} \underline{e}^{\top}\right]^{\top}-\underline{e} \underline{e}^{\top}\left(\mathbf{H} \mathbf{C}_{p}\right)^{\top}+2 \underline{e} \underline{e}^{\top} \mathbf{K} \mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}+2 \underline{e} \underline{e}^{\top} \cdot \mathbf{K} \mathbf{C}_{y} \\
 &\overset{!}{=} \mathbf{0}
@@ -312,7 +312,7 @@ Also
 {{< math >}}
 $$
 \begin{array}{l}
--\mathbf{C}_{p} \cdot \mathbf{\mathbf{H}}^{\top}-\mathbf{C}_{p} \mathbf{H}^{\top}+2 \mathbf{K} \mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}+2 \mathbf{K} \mathbf{C}_{y} \stackrel{!}{=} 0 \\
+-\mathbf{C}_{p} \cdot \mathbf{\mathbf{H}}^{\top}-\mathbf{C}_{p} \mathbf{H}^{\top}+2 \mathbf{K} \mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}+2 \mathbf{K} \mathbf{C}_{y} \stackrel{!}{=} \mathbf{0} \\
 \mathbf{K}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}\right)^{\top}=\mathbf{C}_{p} \mathbf{H}^{\top} \\
 \mathbf{K}=\mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{\mathbf{H}}^{\top}\right)^{-1} \quad \text { (Kalman gain) }
 \end{array}
@@ -324,7 +324,7 @@ Setze $\mathbf{K}$ in $(\ast \ast)$ ein
 {{< math >}}
 $$
 \begin{aligned}
-\underline{\hat{x}}_{e} &=(\boldsymbol{I}-\mathbf{K} \mathbf{H}) \underline{\hat{x}}_{p}+\mathbf{K} \cdot \underline{\hat{y}} \qquad \text { (combination form) } \\
+\underline{\hat{x}}_{e} &=(\mathbf{I}-\mathbf{K} \mathbf{H}) \underline{\hat{x}}_{p}+\mathbf{K} \cdot \underline{\hat{y}} \qquad \text { (combination form) } \\
 &=\underline{x}_{p}+\mathbf{K}\left(\underline{\hat{y}}-\mathbf{H} \cdot \underline{x}_{p}\right) \qquad \text { (feedback form) } \\
 &=\underline{\hat{x}}_{p}+\mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1}\left(\underline{y}-\mathbf{H} \cdot \underline{\hat{x}}_{p}\right)
 \end{aligned}
@@ -338,8 +338,8 @@ Nun Setze $\mathbf{K}$ in $(\ast \ast \ast)$ ein, um die Kovarianzmatrix zu bere
 {{< math >}}
 $$
 \begin{aligned}
-\mathbf{C}_{e}=& {\left[\boldsymbol{I}-\mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1} \mathbf{H}_{k}\right] \cdot \mathbf{C}_{p} } \\
-& \cdot\left[\boldsymbol{I}-\mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1} \mathbf{H}_{k}\right]^{-1} \\
+\mathbf{C}_{e}=& {\left[\mathbf{I}-\mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1} \mathbf{H}_{k}\right] \cdot \mathbf{C}_{p} } \\
+& \cdot\left[\mathbf{I}-\mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1} \mathbf{H}_{k}\right]^{-1} \\
 &+\mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1} \mathbf{C}_{y}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1} \mathbf{H} \mathbf{C}_{p} \\\\
 =& \mathbf{C}_{p}-2 \mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1} \mathbf{H} \mathbf{C}_{p} \\
 &+\mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1} \mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1} \mathbf{H} \mathbf{C}_{p} \\
@@ -349,3 +349,7 @@ $$
 \end{aligned}
 $$
 {{< /math >}} 
+
+{{% callout note %}}
+Die ausführliche Zusammenfassung für Kalman Filter siehe [hier]({{< relref "../understanding/kalman_filter.md" >}}).
+{{% /callout %}}
