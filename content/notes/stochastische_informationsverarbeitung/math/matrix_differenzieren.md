@@ -80,21 +80,25 @@ b_{1} & b_{2}
 $$
 {{< /math >}} 
 
-Mit $\underline{a}=\underline{e}$ und $\underline{b} = D \cdot \underline{e}$:
+Für eine symmetrische Matrix $\mathbf{C}$:
 
-{{< math >}}
-$$
-\frac{\partial}{\partial \mathbf{C}} (\underline{e}^\top \mathbf{C} D \underline{e}) = \underline{e} \cdot \underline{e}^\top \cdot D^\top
-$$
-{{< /math >}} 
+- Mit $\underline{a}=\underline{e}$ und $\underline{b} = D \cdot \underline{e}$:
 
-Mit $\underline{a}=D \cdot \underline{e}$ und $\underline{b} = \underline{e}$:
+  {{< math >}}
+  $$
+  \frac{\partial}{\partial \mathbf{C}} (\underline{e}^\top \mathbf{C} D \underline{e}) = \underline{e} \cdot \underline{e}^\top \cdot D^\top
+  $$
+  {{< /math >}} 
 
-{{< math >}}
-$$
-\frac{\partial}{\partial \mathbf{C}} (\underline{e}^\top D^\top \mathbf{C} \underline{e}) = D\cdot \underline{e}\cdot \underline{e}^\top 
-$$
-{{< /math >}} 
+- Mit $\underline{a}=D \cdot \underline{e}$ und $\underline{b} = \underline{e}$:
+
+  {{< math >}}
+  $$
+  \frac{\partial}{\partial \mathbf{C}} (\underline{e}^\top D^\top \mathbf{C} \underline{e}) = D\cdot \underline{e}\cdot \underline{e}^\top 
+  $$
+  {{< /math >}} 
+
+
 
 {{% callout note %}}
 {{< math >}}
