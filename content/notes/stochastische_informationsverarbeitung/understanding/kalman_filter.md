@@ -39,11 +39,15 @@ header:
 
 The Kalman filter is an efficient *recursive* filter estimating the internal-state of a [linear dynamic system](https://en.wikipedia.org/wiki/Linear_dynamical_system) from a series of noisy measurements.
 
-Applications include
+Applications of Kalman filter include
 
 - Guidance
 - Navigation
 - Control of vehicles, aircraft, spacecraft, and ships positioned dynamically
+
+💡 The basic idea of Kalman filter is to **achieve the optimal estimate of the (hidden) internal state by weightedly combining the state prediction and the measurement**.
+
+![截屏2022-07-01 23.04.50](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-01%2023.04.50.png)
 
 ## Kalman Filter Summary
 
@@ -219,7 +223,7 @@ A Kalman filter works by a two-phase process, including 5 main equations:
 - **Predict** phase: produces prediction of the current state, along with thier uncertainties
   - [State extrapolation equation](#state-extrapolation-equation)
   - [Covariance extrapolation equation](#covariance-extrapolation-equation)
-- **Update** phase: refines the prediction using a weighted average given measurements 
+- **Update** phase: checks how good the predicted result fits to the current measurement and refines the state prediction using a weighted average given measurements if necessary.
   - [Kalman Gain equation](#kalman-gain-equation)
   - [State update equation](#state-update-equation)
   - [Covariance update equation](#covariance-update-equation)
@@ -361,6 +365,8 @@ $$
 {{< /spoiler >}}
 
 ### Kalman Gain equation
+
+The Kalman Gain is calculated so that it minimizes the covariance of the *a posteriori* state estimate.
 
 {{< math >}}
 $$
@@ -645,6 +651,8 @@ $$
   - [Multidimensional Kalman filter](https://www.kalmanfilter.net/kalmanmulti.html)
   
 - 👍 [How a Kalman filter works, in pictures](https://www.bzarg.com/p/how-a-kalman-filter-works-in-pictures/#mjx-eqn-kalpredictfull): Kalman filter explained intuitively in pictures
+
+- [Understanding Kalman Filters](https://youtube.com/playlist?list=PLn8PRpmsu08pzi6EMiYnR-076Mh-q3tWr): a series of video tutorials that intuitively explains Kalman Filter step by step
 
 - [Kalman and Bayesian Filters in Python](https://nbviewer.org/github/rlabbe/Kalman-and-Bayesian-Filters-in-Python/blob/master/table_of_contents.ipynb): Kalman filter (in Python) explained using Jupyter Notebook
 
