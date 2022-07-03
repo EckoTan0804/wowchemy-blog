@@ -63,7 +63,7 @@ header:
 
 - Zustand {{< math >}}$\underline{x}_k, k \in \mathbb{N}_0${{< /math >}} mit {{< math >}}$\underline{x}_k \in \mathbb{R}^N${{< /math >}} 
 
-- Nichtlineare System
+- Nichtlineare System (allg.)
 
   {{< math >}}
   $$
@@ -88,7 +88,7 @@ header:
 
 ### Messabbildung
 
-- Nichtlineare Abbildung
+- Nichtlineare Abbildung (allg.)
 
   {{< math >}}
   $$
