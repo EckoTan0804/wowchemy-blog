@@ -219,7 +219,7 @@ Source und Bsp: [Wiki](https://de.wikipedia.org/wiki/Erwartungstreue)
   E\left\{\underline{x}_{k \mid 1: k}\right\}&=\mathbf{K}_{k}^{(1)} E\left\{\underline{x}_{k \mid 1: k-1}\right\}+\mathbf{K}_{k}^{(2)} E\left\{\mathbf{H}_{k} \cdot x_{k}+\underline{y}_{k}\right\} \\
   E\left\{\underline{x}_{k \mid 1: k}\right\}&=\mathbf{K}_{k}^{(1)} E\left\{\underline{x}_{k \mid 1: k-1}\right\}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k} E\left\{\underline{x}_{k}\right\} \quad \mid \text { Erwartungstreu } \\
   \underline{\tilde{x}}&=\mathbf{K}_{k}^{(1)} \underline{\tilde{x}}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k} \cdot \underline{\tilde{x}} \\
-  \Rightarrow  &=\mathbf{K}_{k}^{(1)}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k}
+  \Rightarrow \mathbf{I} &=\mathbf{K}_{k}^{(1)}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k}
   \end{aligned}
   $$
   {{< /math >}} 
@@ -255,6 +255,8 @@ $$
 $$
 {{< /math >}} 
 
+Wir betrachten nun die Filterkovarianz {{< math >}}$\mathbf{C}_{k}^{e}${{< /math >}} als Funktion von {{< math >}}$\mathbf{K}_{k}${{< /math >}}, d. h. {{< math >}}$\mathbf{C}_{k}^{e}(\mathbf{K}_k)${{< /math >}}. Ziel ist es, das {{< math >}}$\mathbf{K}_{k}${{< /math >}} so zu finden, dass die Filterkovarianz so klein wie möglich ist.
+
 {{% callout note %}}
 
 Trick: Auf **Skalares Gütemaß** zurückzuführen
@@ -270,9 +272,9 @@ $$
 
 {{< /math >}} 
 
-MINIMAL kovarianz $\Leftrightarrow$ $P(\mathbf{K})$ soll minimal sein für $\underline{e}$.
+MINIMAL Kovarianz $\Leftrightarrow$ $P(\mathbf{K})$ soll minimal sein für $\underline{e}$.
 
-Andere mögliche skalare Gütemaße für eine diagonale Kovarianzmatrix (z.B. $\mathbf{C}=\left[\begin{array}{cc}\sigma_{x}^{2} & 0 \\ 0 & \sigma_{y}^{2}\end{array}\right]$):
+Andere mögliche skalare Gütemaße:
 
 - $\operatorname{Spur}(\cdot)$: Summe der Diagonalelemente
 
@@ -292,6 +294,10 @@ Andere mögliche skalare Gütemaße für eine diagonale Kovarianzmatrix (z.B. $\
   $$
   {{< /math >}} 
 
+{{< spoiler text="Beispiel" >}}
+![截屏2022-07-03 10.33.08](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-03%2010.33.08.png)
+{{< /spoiler >}}
+
 {{% /callout %}}
 
 Ableitung mit der [Matrizen Differenzregeln]({{< relref "../math/matrix_differenzieren" >}}):
@@ -299,7 +305,7 @@ Ableitung mit der [Matrizen Differenzregeln]({{< relref "../math/matrix_differen
 {{< math >}}
 $$
 \begin{aligned}
-\frac{\partial}{\partial K} P(\mathbf{K}) &=\frac{\partial}{\partial \mathbf{K}}\left\{\underline{e}^{\top}\left[(\mathbf{I}-\mathbf{K} \mathbf{H}) \mathbf{C}_{p}(\mathbf{I}-\mathbf{K} \mathbf{H})^{\top}+\mathbf{K} \mathbf{C}_{y} \mathbf{K}^{\top}\right] \underline{e}^{\top}\right\} \\
+\frac{\partial}{\partial \mathbf{K}} P(\mathbf{K}) &=\frac{\partial}{\partial \mathbf{K}}\left\{\underline{e}^{\top}\left[(\mathbf{I}-\mathbf{K} \mathbf{H}) \mathbf{C}_{p}(\mathbf{I}-\mathbf{K} \mathbf{H})^{\top}+\mathbf{K} \mathbf{C}_{y} \mathbf{K}^{\top}\right] \underline{e}^{\top}\right\} \\
 &=\frac{\partial}{\partial \mathbf{K}}\left\{\underline{e}^{\top}\left[\mathbf{C}_{p}-\mathbf{C}_{p} \mathbf{H}^{\top} \mathbf{K}^{\top}-\mathbf{K} \mathbf{H} \mathbf{C}_{p}+\mathbf{K} \mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top} \mathbf{K}^{\top}+\mathbf{K} \mathbf{C}_{y} \mathbf{K}^{\top}\right] \underline{e}\right\} \\
 &=-\left[\mathbf{H} \mathbf{C}_{p} \underline{e} \underline{e}^{\top}\right]^{\top}-\underline{e} \underline{e}^{\top}\left(\mathbf{H} \mathbf{C}_{p}\right)^{\top}+2 \underline{e} \underline{e}^{\top} \mathbf{K} \mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}+2 \underline{e} \underline{e}^{\top} \cdot \mathbf{K} \mathbf{C}_{y} \\
 &\overset{!}{=} \mathbf{0}
