@@ -375,6 +375,10 @@ $$
 $$
 {{< /spoiler >}}
 
+Mehr Regeln:
+
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-04%2010.52.26.png" caption="Basic expectation rules. (Source: [kalmanfilter.net](https://www.kalmanfilter.net/background2.html))" numbered="true" >}}
+
 ### $k$-te Moment
 
 Der Erwartungswert 
@@ -451,6 +455,25 @@ $$
 $$
 {{< /spoiler >}}
 
+Mehr Regeln:
+
+{{< figure src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-04%2010.55.30.png" caption="Basic variance and covariance rules. (Source: [kalmanfilter.net](https://www.kalmanfilter.net/background2.html))" numbered="true" >}}
+
+{{< spoiler text="Beweis für Regel 10" >}}
+![截屏2022-07-04 10.57.26](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-04%2010.57.26.png)
+{{< /spoiler >}}
+
+{{< spoiler text="Beweis für Regel 11" >}}
+![截屏2022-07-04 10.57.54](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-04%2010.57.54.png)
+{{< /spoiler >}}
+
+{{< spoiler text="Beweis für Regel 13" >}}
+![截屏2022-07-04 10.59.10](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-04%2010.59.10.png)
+{{< /spoiler >}}
+
+{{< spoiler text="Beweis für Regel 14" >}}
+![截屏2022-07-04 10.59.30](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-04%2010.59.30.png)
+{{< /spoiler >}}
 
 
 ### Standardabweichung
@@ -462,6 +485,8 @@ $$
 \sigma=\sqrt{\operatorname{Var}(X)}
 $$
 {{< /math >}} 
+
+Groß $\sigma$ $\rightarrow$ große Streuung
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/Section2Module7HighLowStandardDeviation.jpg" alt="Standard Deviation" style="zoom:75%;" />
 
