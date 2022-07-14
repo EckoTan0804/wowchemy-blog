@@ -6,7 +6,7 @@ weight: 320
 # ============================================================
 
 # ========== Basic metadata ==========
-title: Zustandsschätzung
+title: "Zustandsschätzung: Kalman Filter"
 date: 2022-06-16
 draft: false
 type: book # page type
@@ -36,6 +36,10 @@ header:
   caption: 
   image:  
 ---
+
+{{% callout note %}}
+Die ausführliche Zusammenfassung für Kalman Filter siehe [hier]({{< relref "../understanding/kalman_filter.md" >}}).
+{{% /callout %}}
 
 ## Prädiktion
 
@@ -170,7 +174,9 @@ Rekursive Prädiktion
 
 - Rekursion mit $(+)$ und $(++)$ für $k > m$
 
-
+{{% callout note %}}
+Beispiele: Übungsblatt 5, Aufgabe 4
+{{% /callout %}}
 
 ## Filterung
 
@@ -331,7 +337,7 @@ Setze $\mathbf{K}$ in $(\ast \ast)$ ein
 $$
 \begin{aligned}
 \underline{\hat{x}}_{e} &=(\mathbf{I}-\mathbf{K} \mathbf{H}) \underline{\hat{x}}_{p}+\mathbf{K} \cdot \underline{\hat{y}} \qquad \text { (combination form) } \\
-&=\underline{x}_{p}+\mathbf{K}\left(\underline{\hat{y}}-\mathbf{H} \cdot \underline{x}_{p}\right) \qquad \text { (feedback form) } \\
+&=\underline{\hat{x}}_{p}+\mathbf{K}\left(\underline{\hat{y}}-\mathbf{H} \cdot \underline{\hat{x}}_{p}\right) \qquad \text { (feedback form) } \\
 &=\underline{\hat{x}}_{p}+\mathbf{C}_{p} \mathbf{H}^{\top}\left(\mathbf{C}_{y}+\mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}\right)^{-1}\left(\underline{y}-\mathbf{H} \cdot \underline{\hat{x}}_{p}\right)
 \end{aligned}
 $$
@@ -357,5 +363,15 @@ $$
 {{< /math >}} 
 
 {{% callout note %}}
-Die ausführliche Zusammenfassung für Kalman Filter siehe [hier]({{< relref "../understanding/kalman_filter.md" >}}).
+
+Schritt für Schritt Herleitung: Übungsblatt 6, Aufgabe 1 (Sehr ausführlich und hilfreich! 👍)
+
 {{% /callout %}}
+
+## Beispiel
+
+- Kompletter Kalman Filter: Übungsblatt 5, Aufgabe 3
+
+- Prädiktion: Übungsblatt 5, Aufgabe 4
+
+- Filterung: Übungsblatt 6, Aufgabe 1
