@@ -189,3 +189,112 @@ $$
 
   - $\underline{v}_{k}$: additives mittelwertfreien Messrauschen ({{< math >}}$E\{\underline{w}_k\} = \underline{0}, \operatorname{Cov}\{\underline{w}_k\} = c_k^w${{< /math >}} )
   - Messabbildung ist zeitinvaraint, falls $\mathbf{H}_{k} = \mathbf{H}$
+
+## Einschub: Systemeigenschaften zeitdiskreter Systeme
+
+Für Definitionen von Systemeigenschaften zeitdiskreter Systeme siehe **Signale und Systeme**[^1] Seite 312 - 314.
+
+### Linearität
+
+Ein zeitdiskretes System {{< math >}}$\mathcal{S}${{< /math >}} heißt **linear**, wenn für zwei beliebige Eingangssignale {{< math >}}$y_{\mathrm{e} 1, n}${{< /math >}} und {{< math >}}$y_{\mathrm{e} 2, n}${{< /math >}} und zwei beliebige Konstanten {{< math >}}$c_1, c_2 \in \mathbb{R}${{< /math >}} oder {{< math >}}$\mathbb{C}${{< /math >}} 
+
+{{< math >}}
+$$
+\mathcal{S}\left\{c_{1} y_{\mathrm{e} 1, n}+c_{2} y_{\mathrm{e} 2, n}\right\}=c_{1} \mathcal{S}\left\{y_{\mathrm{e} 1, n}\right\}+c_{2} \mathcal{S}\left\{y_{\mathrm{e} 2, n}\right\}
+$$
+{{< /math >}} 
+
+gilt.
+
+- Erweiterung auf auf $N$ Eingangssignale
+
+  {{< math >}}
+  $$
+  \mathcal{S}\left\{\sum_{i=1}^{N} c_{i} y_{\mathrm{e} i, n}\right\}=\sum_{i=1}^{N} c_{i} \mathcal{S}\left\{y_{\mathrm{e} i, n}\right\}
+  $$
+  {{< /math >}} 
+
+- Erweiterung auf unendlich viele Eingangssignale
+
+  {{< math >}}
+  $$
+  \mathcal{S}\left\{\sum_{i=-\infty}^{\infty} c_{i} y_{\mathrm{e} i, n}\right\}=\sum_{i=-\infty}^{\infty} c_{i} \mathcal{S}\left\{y_{\mathrm{e} i, n}\right\}
+  $$
+  {{< /math >}} 
+
+### Zeitinvarianz
+
+Ein zeitdiskretes System {{< math >}}$\mathcal{S}${{< /math >}} heißt **zeitinvariant**, wenn es auf ein zeitlich verschobenes Eingangssignal {{< math >}}$y_{\mathrm{e},} n-n_{0}${{< /math >}} mit dem entsprechend zeitlichverschobenen Ausgangssignal {{< math >}}$y \mathrm{a}, n-n_{0}${{< /math >}} antwortet
+
+{{< math >}}
+$$
+y_{\mathrm{a}, n}=\mathcal{S}\left\{y_{\mathrm{e}, n}\right\} \quad \Longrightarrow \quad y_{\mathrm{a}, n-n_{0}}=\mathcal{S}\left\{y_{\mathrm{e}, n-n_{0}}\right\}.
+$$
+{{< /math >}} 
+
+Sonst heißen die Systeme **zeitvariant**.
+
+### Kausalität
+
+Ein zeitdiskretes System S heißt **kausal**, wenn die Antwort NUR von *gegenwärtigen* oder *vergangenen*, nicht jedoch von zukünftigen Werten des Eingangssignals abhängt.
+
+Dies bedeutet, dass für ein System {{< math >}}$\mathcal{S}${{< /math >}} aus
+
+{{< math >}}
+$$
+y_{\mathrm{e} 1, n}=y_{\mathrm{e} 2, n} \quad \text { für } n \leq n_{1}
+$$
+{{< /math >}} 
+
+und 
+
+{{< math >}}
+$$
+y_{\mathrm{a} 1, n}=\mathcal{S}\left\{y_{\mathrm{e} 1, n}\right\}, \quad y_{\mathrm{a} 2, n}=\mathcal{S}\left\{y_{\mathrm{e} 2, n}\right\}
+$$
+{{< /math >}} 
+
+stets
+
+{{< math >}}
+$$
+y_{\mathrm{a} 1, n}=y_{\mathrm{a} 2, n} \quad \text { für } n \leq n_{1}
+$$
+{{< /math >}} 
+
+folgt.
+
+## Beispiel
+
+(Übungsblatt 5, Aufgabe 1)
+
+Ein zeidiskretes wertekontinuierliches System $S$ wird durch die Differenzengleichung
+
+{{< math >}}
+$$
+y_{k}-2^{k} \cdot y_{k+1}+3 \cdot y_{k+2}^{2}=4 \cdot u_{k}-2 \cdot u_{k+1}
+$$
+{{< /math >}} 
+
+beschrieben.
+
+1. Ist das System $S$ linear?
+
+   Das System $S$ ist aufgrund des Terms {{< math >}}$y_{k+2}^{2}${{< /math >}} NICHT linear.
+
+2. Ist das System $S$ zeitinvariant?
+
+   Das System $S$ ist wegen des zeitabhängigen Koeffizienten $2^k$ von $y_{k+1}$ zeitvariant.
+
+3. Ist das System $S$ kausal?
+
+   Das System $S$ ist kausal, da $y_{k+2}$ nur von vergangenen Eingangswerten abhängt.
+
+
+
+
+
+
+
+[^1]: F. P. León and H. Jäkel. Signale und Systeme. De Gruyter Oldenbourg, Berlin, Boston, 02 Sep. 2019. ISBN 978-3-11-062632-2. doi: https://doi.org/10.1515/9783110626322. URL https://www.degruyter.com/view/title/543041.
+
