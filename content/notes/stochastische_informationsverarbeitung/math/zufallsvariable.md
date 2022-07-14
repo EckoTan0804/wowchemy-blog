@@ -389,7 +389,7 @@ $$
 $$
 {{< /math >}} 
 
-das {{< hl >}}**$k$-te Moment**{{< /hl >}} der Zufallsvariable $X$.
+ist das {{< hl >}}**$k$-te Moment**{{< /hl >}} der Zufallsvariable $X$.
 
 Der Erwartungswert 
 
