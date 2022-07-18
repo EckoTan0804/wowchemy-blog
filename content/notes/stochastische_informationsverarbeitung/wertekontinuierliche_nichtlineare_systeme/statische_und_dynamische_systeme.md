@@ -82,9 +82,13 @@ header:
   {{< /math >}} 
 
   - Systemrauschen {{< math >}}$\underline{w}_k${{< /math >}} wird beschrieben durch Dichte {{< math >}}$f_k^w(\underline{w}_k)${{< /math >}} 
+  
   - Typische Annahme
     -  {{< math >}}$\underline{w}_k${{< /math >}} ist Gauß verteilt mit bekannten Parametern
+    
     -  {{< math >}}$\underline{w}_k${{< /math >}} ist weißes Rauschen
+    
+       > White noise: uncertainties taken at different time steps are independent
 
 ### Messabbildung
 
