@@ -139,7 +139,7 @@ $$
   {{< math >}}
   $$
   \begin{aligned}
-  C_{k+1 \mid 1 : m}^{x} &=E\left\{\left(\underline{x}_{k+1}-\hat{x}_{k+1}\right)\left(\begin{array}{l}
+  \mathbf{C}_{k+1 \mid 1 : m}^{x} &=E\left\{\left(\underline{x}_{k+1}-\hat{x}_{k+1}\right)\left(\begin{array}{l}
   x_{k+1} \\
   \hat{\underline{x}}_{k+1}
   \end{array}\right)\right\} \\
@@ -157,13 +157,13 @@ $$
   &=\left[\begin{array}{ll}
   \mathbf{A}_{k} & \mathbf{B}_{k}
   \end{array}\right] \cdot\left[\begin{array}{cc}
-  C_{k \mid 1:m} & 0 \\
-  0 & C_{k}^{w}
+  \mathbf{C}_{k \mid 1:m} & 0 \\
+  0 & \mathbf{C}_{k}^{w}
   \end{array}\right] \cdot\left[\begin{array}{l}
   \mathbf{A}_{k}^{\top} \\
   \mathbf{B}_{k}^{\top}
   \end{array}\right] \\
-  &=\mathbf{A}_{k} \cdot C_{k \mid 1: m}^{x} \mathbf{A}_{k}^{\top}+\mathbf{B}_{k} C_{k}^{w} \mathbf{B}_{k}^{\top} \qquad(++)
+  &=\mathbf{A}_{k} \cdot \mathbf{C}_{k \mid 1: m}^{x} \mathbf{A}_{k}^{\top}+\mathbf{B}_{k} \mathbf{C}_{k}^{w} \mathbf{B}_{k}^{\top} \qquad(++)
   \end{aligned}
   $$
   {{< /math >}} 
@@ -364,14 +364,14 @@ $$
 
 {{% callout note %}}
 
-Schritt für Schritt Herleitung: Übungsblatt 6, Aufgabe 1 (Sehr ausführlich und hilfreich! 👍)
+Schritt für Schritt Herleitung: {{% staticref "uploads/SI_Ub6.pdf" "newtab" %}}Übungsblatt 6{{% /staticref %}}, Aufgabe 1 (Sehr ausführlich und hilfreich! 👍)
 
 {{% /callout %}}
 
 ## Beispiel
 
-- Kompletter Kalman Filter: Übungsblatt 5, Aufgabe 3
+- Kompletter Kalman Filter: {{% staticref "uploads/SI_Ub5.pdf" "newtab" %}}Übungsblatt 5{{% /staticref %}}, Aufgabe 3
 
-- Prädiktion: Übungsblatt 5, Aufgabe 4
+- Prädiktion: {{% staticref "uploads/SI_Ub5.pdf" "newtab" %}}Übungsblatt 5{{% /staticref %}}, Aufgabe 4
 
-- Filterung: Übungsblatt 6, Aufgabe 1
+- Filterung: {{% staticref "uploads/SI_Ub6.pdf" "newtab" %}}Übungsblatt 6{{% /staticref %}}, Aufgabe 1
