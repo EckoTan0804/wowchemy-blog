@@ -61,8 +61,8 @@ Linearisierung der rechten Seite von $\text{(Systemmodell)}$ mit Taylor-Entwickl
 {{< math >}}
 $$
 \begin{array}{ll}
-&\underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right) = \underline{a}_{k}\left(\underline{\overline{x}}_k, \underline{\overline{u}}_k\right) &+ \overbrace{\left.\frac{\partial \underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right)}{\partial \underline{x}_{k}^{\top}}\right|_{\underline{x}_{k}=\underline{x}_{k}, \underline{u}_{k}=\overline{\bar{u}}_{k}}}^{=\mathbf{A}} \cdot \overbrace{(\underline{x}_{k} - \underline{\overline{x}}_k)}^{=\Delta \underline{x}_{k}} + \text{THO} \\\\
-& & + \underbrace{\left.\frac{\partial \underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right)}{\partial \underline{u}_{k}^{\top}}\right|_{\underline{x}_{k}=\underline{x}_{k}, \underline{u}_{k}=\overline{\bar{u}}_{k}}}_{=\mathbf{B}} \cdot (\underline{u}_{k} - \underline{\overline{u}}_k) + \text{THO}
+&\underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right) = \underline{a}_{k}\left(\underline{\overline{x}}_k, \underline{\overline{u}}_k\right) &+ \overbrace{\left.\frac{\partial \underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right)}{\partial \underline{x}_{k}^{\top}}\right|_{\underline{x}_{k}=\underline{\bar{x}}_{k}, \underline{u}_{k}=\underline{\bar{u}}_{k}}}^{=\mathbf{A}} \cdot \overbrace{(\underline{x}_{k} - \underline{\overline{x}}_k)}^{=\Delta \underline{x}_{k}} + \text{THO} \\\\
+& & + \underbrace{\left.\frac{\partial \underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right)}{\partial \underline{u}_{k}^{\top}}\right|_{\underline{x}_{k}=\underline{\bar{x}}_{k}, \underline{u}_{k}=\overline{\underline{\bar{u}}}_{k}}}_{=\mathbf{B}} \cdot (\underline{u}_{k} - \underline{\overline{u}}_k) + \text{THO}
 
 \end{array}
 $$
@@ -110,7 +110,7 @@ $$
 $$
 {{< /math >}} 
 
-Für {{< math >}}$\underline{u}_{k${{< /math >}} definiere man
+Für {{< math >}}$\underline{u}_{k}${{< /math >}} definiere man
 
 {{< math >}}
 $$
@@ -146,7 +146,7 @@ $$
   $$
   {{< /math >}} 
 
-- Differentieller Teil
+- Differentialteil
 
   {{< math >}}
   $$
@@ -214,7 +214,7 @@ $$
   $$
   {{< /math >}} 
 
-- Differentieller Teil
+- Differentialteil
 
   {{< math >}}
   $$
@@ -243,10 +243,19 @@ $$
     \mathbf{C}_{k}^{p} \approx \mathbf{A}_{k} \mathbf{C}_{k}^{e} \mathbf{A}_{k}^{\top}+\mathbf{C}_{k}^{w^{\prime}}=\mathbf{A}_{k} \mathbf{C}_{k}^{e} \mathbf{A}_{k}^{\top}+\mathbf{B}_{k}  \mathbf{C}_{k}^{w} \mathbf{B}_{k}^{\top}
     $$
     {{< /math >}} 
+    
+    mit 
+    
+    {{< math >}}
+    $$
+    \mathbf{A}_k = \left.\frac{\partial \underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right)}{\partial \underline{x}_{k}^{\top}}\right|_{\underline{x}_{k}=\underline{\hat{x}}_{k-1}^{e}, \underline{u}_{k}=\hat{\underline{u}}_{k}} \qquad
+    \mathbf{B}_k = \left.\frac{\partial \underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right)}{\partial \underline{u}_{k}^{\top}}\right|_{\underline{x}_{k}=\underline{\hat{x}}_{k-1}^{e}, \underline{u}_{k}=\hat{\underline{u}}_{k}}
+    $$
+    {{< /math >}} 
 
 - Filterung
 
-  - Berechnung von {{< math >}}$\underline{\bar{y}}_k${{< /math >}} (Messung, die aus dem letzten Schätzwert bekomme, als Nominalwert zum jetztigen Zeitpunkt)
+  - Berechnung von {{< math >}}$\underline{\bar{y}}_k${{< /math >}} (Messung, die aus dem prioren Schätzwert (also die Prädiktion) bekomme, als Nominalwert zum jetztigen Zeitpunkt)
 
     {{< math >}}
     $$
@@ -271,9 +280,18 @@ $$
     \Delta \underline{y}_{k} \approx \mathbf{H}_{k} \cdot\left(\underline{x}_{k}^{e}-\hat{x}_{k}^{p}\right)+\underline{v}_{k}^{\prime}
     $$
     {{< /math >}} 
-
+    
+    mit 
+    
+    {{< math >}}
+    $$
+    \mathbf{H}_{k}=\left.\frac{\partial \underline{h}_{k}\left(\underline{x}_{k}, \underline{v}_{k}\right)}{\partial \underline{x}_{k}^{\top}}\right|_{\underline{x}_{k}=\underline{\hat{x}}_{k}^{p}, \underline{v}_{k}=\underline{\hat{v}}_{k}} \qquad
+    \mathbf{L}_{k}=\left.\frac{\partial \underline{h}_{k}\left(\underline{x}_{k}, \underline{v}_{k}\right)}{\partial \underline{v}_{k}^{\top}}\right|_{\underline{x}_{k}=\underline{\hat{x}}_{k}^{p}, \underline{v}_{k}=\underline{\hat{v}}_{k}}
+    $$
+    {{< /math >}}  
+  
   Filterung Schritt
-
+  
   {{< math >}}
   $$
   \begin{aligned}
@@ -281,7 +299,7 @@ $$
   
   \hat{\underline{x}}_{k}^{e}&=\hat{\underline{x}}_{k}^{p}-\mathbf{K}_{k}\left[\hat{\underline{y}}_{k}-\underline{h}_{k}\left(\hat{\underline{x}}_{k}^{p}, \hat{\underline{v}}_{k}\right)\right] \\\\
   
-  \mathbf{C}_{k}^{e}&=\mathbf{C}_{k}^{\top}-\mathbf{K}_{k} \mathbf{H}_{k} \mathbf{C}_{k}^{p}
+  \mathbf{C}_{k}^{e}&=\mathbf{C}_{k}^{p}-\mathbf{K}_{k} \mathbf{H}_{k} \mathbf{C}_{k}^{p} = (\mathbf{I} - \mathbf{K}_{k} \mathbf{H}_{k})\mathbf{C}_{k}^{p}
   \end{aligned}
   $$
   {{< /math >}} 
