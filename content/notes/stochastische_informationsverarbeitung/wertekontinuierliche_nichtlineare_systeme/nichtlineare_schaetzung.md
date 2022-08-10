@@ -308,11 +308,9 @@ $$
 
 - Berechnung der posterirre Verteilung nur gut für "schwache" Nichtlinearität
 
-  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-03%2021.42.26.png" alt="截屏2022-07-03 21.42.26" style="zoom: 25%;" />
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-03%2021.43.45.png" alt="截屏2022-07-03 21.43.45" style="zoom: 20%;" />
 
 - Linearisierung nur um einen Punkt
-
-  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-03%2021.43.45.png" alt="截屏2022-07-03 21.43.45" style="zoom: 20%;" />
 
 - Linearisiertes System ist i.A. zeitvariant, auch wenn originalsytstem zeitinvariant ist, da Linearisierung vom Schätzwert abhängt.
 

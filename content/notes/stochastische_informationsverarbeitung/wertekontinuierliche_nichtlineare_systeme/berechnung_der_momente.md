@@ -107,7 +107,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-E\left\{\left(x-\hat{x}_{p}\right)(x)\right\} &= E\left\{\left(x-\hat{x}_{p}\right)\left(x^{3}-E_{3}\right)\right\} \\
+E\left\{\left(x-\hat{x}_{p}\right)\bar{h}(x)\right\} &= E\left\{\left(x-\hat{x}_{p}\right)\left(x^{3}-E_{3}\right)\right\} \\
 &= E\left\{x^{4}-\hat{x}_{p} x^{3}-E_{3} x+\hat{x}_{p} E_{3}\right\} \\
 &= E_4 - \hat{x}_p E_3 - E_3 \hat{x}_p + \hat{x}_p E_3 \\
 &= E_4 - \hat{x}_p E_3
@@ -142,8 +142,8 @@ In der Kalmanfilter Filterungsgleichung einsetzen ergibt sich
 {{< math >}}
 $$
 \begin{array}{l}
-\hat{x}_{e}=\hat{x}_{p}+\frac{c_{x y}}{C_{y y}}(\hat{y}-E\{h(x)\}) \\
-\sigma_{y}^{2}=\sigma_{p}^{2}-\frac{c_{x y}^{2}}{c_{y y}}
+\hat{x}_{e}=\hat{x}_{p}+C_{xy}C_{yy}^{-1}(\hat{y}-E\{h(x)\}) \overset{\text{skalar}}{=} \hat{x}_{p}+\frac{c_{x y}}{C_{y y}}(\hat{y}-E\{h(x)\}) \\
+\sigma_{y}^{2}= \sigma_{p}^{2}-C_{xy}C_{yy}^{-1}C_{yx} \overset{\text{skalar}}{=} \sigma_{p}^{2}-\frac{c_{x y}^{2}}{c_{y y}}
 \end{array}
 $$
 {{< /math >}} 
