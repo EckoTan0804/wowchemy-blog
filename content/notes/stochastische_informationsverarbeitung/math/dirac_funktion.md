@@ -122,7 +122,9 @@ Eine Delta-Funktion außerhlad der Integrationsgrenzen
 ![截屏2022-06-02 12.11.43](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-06-02%2012.11.43.png)
 {{< /spoiler >}}
 
-### Delta-Funktion ist symmetrisch (gerade)
+### Symmetrie
+
+Delta-Funktion ist symmetrisch (gerade)
 
 {{< math >}}
 $$
@@ -136,7 +138,9 @@ $$
 
 {{< /math >}} 
 
-### Skaliertes Argument der Delta-Funktion
+### Skalierung
+
+Skaliertes Argument der Delta-Funktion
 
 {{< math >}}
 $$
@@ -214,7 +218,7 @@ g(x_i + \varepsilon_i) < g(x_i - \varepsilon_i)
 $$
 {{< /math >}} 
 
-Daher❤️
+Daher
 
 {{< math >}}
 $$
@@ -232,7 +236,7 @@ Also
 
 {{< math >}}
 $$
-\int_{-\infty}^{\infty} f(x) \delta(g(x)) \mathrm{d} x=\sum_{i=1}^{n} \frac{f\left(x_{i}\right)}{\left|g^{\prime}\left(x_{i}\right)\right|} \quad (\square)
+\int_{-\infty}^{\infty} f(x) \delta(g(x)) \mathrm{d} x=\sum_{i=1}^{n} \frac{f\left(x_{i}\right)}{\left|g^{\prime}\left(x_{i}\right)\right|} \qquad (\square)
 $$
 {{< /math >}} 
 
@@ -240,6 +244,6 @@ $$
 
 Ref: [Dirac Delta Function of a Function](https://math.stackexchange.com/questions/276583/dirac-delta-function-of-a-function)
 
-# Reference
+## Reference
 
--  [Dirac'sche Delta-Funktion und ihre Eigenschaften](https://de.universaldenker.org/lektionen/235)
+-  [Dirac'sche Delta-Funktion und ihre Eigenschaften](https://de.universaldenker.org/lektionen/235) 👍👍👍

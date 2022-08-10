@@ -341,7 +341,21 @@ $$
   </tr>
 </tbody>
 </table>
+Note: Man schreibt für die *„Dichte“* einer diskreten Zufallsvariablen, deren Einzelwahrscheinlichkeiten {{< math >}}$p_n = P(\boldsymbol{x} = x_n)${{< /math >}} gegeben sind, auch
 
+{{< math >}}
+$$
+f_{\boldsymbol{x}}(x)=\sum_{n=1}^{\infty} \mathrm{P}\left(\boldsymbol{x}=x_{n}\right) \delta\left(x-x_{n}\right)=\sum_{n=1}^{\infty} p_{n} \delta\left(x-x_{n}\right),
+$$
+{{< /math >}}
+
+wobei $\delta(\cdot)$ die Delta-Distribution ist. Damit gilt sowohl für kontinuierliche als auch für diskrete Zufallsvariablen der Zusammenhang
+
+{{< math >}}
+$$
+\frac{d}{d_x} F_{\boldsymbol{x}}(x) = f_{\boldsymbol{x}}(x).
+$$
+{{< /math >}} 
 
 
 ## Kenntwerte von Zufallsvariablen
