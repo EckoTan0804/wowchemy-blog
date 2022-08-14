@@ -113,10 +113,9 @@ After writing, proofread several times to ensure error-free.
 
 *Sincerely,*
 
-*[Your Name]*
-*[Address[*
-*[Contact Number]*
-*[Email Address]*
+*[Your Name]*<br/>
+*[Address]*<br/>*[Contact Number]*<br/>
+*[Email Address]*<br/>
 
 
 
