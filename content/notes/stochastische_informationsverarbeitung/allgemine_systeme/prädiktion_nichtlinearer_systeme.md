@@ -37,7 +37,15 @@ header:
   image:  
 ---
 
+{{% callout note %}}
+Skript 10.2, 10.3
+{{% /callout %}}
+
 ## Chapman-Kolmogorov-Gleichung
+
+{{% callout note %}}
+Übungsblatt Aufg. 10.1
+{{% /callout %}}
 
 Verbunddichte
 

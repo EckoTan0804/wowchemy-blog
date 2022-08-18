@@ -41,8 +41,8 @@ header:
 
 2 Variante
 
-- Approximation der Zustandsdichten durch Gaussian Mixture $\rightarrow$ Bank von nichtlinearen Kalman Filter für Prädiktion und Filterung
-- Approximation aller Dichten durch wertdiskrete Repräsentation $\rightarrow$ Wertdiskreter Filter
+- Approximation der Zustandsdichten durch [Gaussian Mixture](#gaussian-mixture-filter) $\rightarrow$ Bank von nichtlinearen Kalman Filter für Prädiktion und Filterung
+- Approximation aller Dichten durch wertdiskrete Repräsentation $\rightarrow$ [Wertdiskreter Filter](#rasterbasierte-filter)
 
 
 

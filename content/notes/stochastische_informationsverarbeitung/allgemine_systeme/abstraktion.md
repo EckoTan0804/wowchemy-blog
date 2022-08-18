@@ -37,6 +37,10 @@ header:
   image:  
 ---
 
+{{% callout note %}}
+Skript 10.1, 10.2
+{{% /callout %}}
+
 ## Abstrahierte Systembeschreibung & Eigenschaften
 
 Alle Komponenten eines Systems können durch 
@@ -92,6 +96,10 @@ sogar nicht definiert.
 - Gesucht: $f(\underline{a})$
 
  ## Vorwärtsinferenz
+
+{{% callout note %}}
+Übungsblatt Aufg. 9.1
+{{% /callout %}}
 
 **Annahme: KEIN Vorwissen über $f(\underline{b})$**
 

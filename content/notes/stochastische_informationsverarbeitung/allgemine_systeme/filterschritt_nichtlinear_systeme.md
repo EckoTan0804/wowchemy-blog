@@ -38,7 +38,7 @@ header:
 ---
 
 {{% callout note %}}
-Corresponding script chapter: 10.4.2 and 10.4.3
+Skript 10.4
 {{% /callout %}}
 
 **Rückwärtsinferenz**: Inferenz **entgegen** der modellierter Abhängigkeit mit gegebenen Vorwissen
@@ -51,6 +51,11 @@ Zwei Fälle
 - [**Dichte** für Ausgang gegeben](#rückwärtsinferenz-mit-dichte)
 
 ## Rückwärtsinferenz mit Konkrektem Messwert 
+
+{{% callout note %}}
+- Skript 10.4.1
+- Übungsblatt Aufg. 9.2, 9.3
+{{% /callout %}}
 
 Stochastische Abbildung von $a \in \mathbb{R}^N$ auf $b \in \mathbb{R}^M$
 
@@ -86,7 +91,16 @@ $$
 
 ##  Rückwärtsinferenz mit Dichte
 
+{{% callout note %}}
+- Skript 10.4.2
+- Übungsblatt Aufg. 9.4
+{{% /callout %}}
+
 Spezialfall: Additives Rauschen
+
+{{% callout note %}}
+Skript 10.4.3
+{{% /callout %}}
 
 {{< math >}}
 $$
@@ -243,7 +257,7 @@ Beispiel:
 
 
 
-## Problem 2: Dichte wrid mit jedem Schritt komplexer
+### Problem 2: Dichte wrid mit jedem Schritt komplexer
 
 Beispiel
 
