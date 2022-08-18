@@ -41,6 +41,10 @@ header:
 
 ### Prädiktions- und Filterschritt
 
+{{% callout note %}}
+Übungsblatt Aufg. 13.2
+{{% /callout %}}
+
 #### Prädiktionsschritt 
 
 Zum Startzeitpunkt (z.B. $k=0$): Initiale Samples gegeben
@@ -177,7 +181,7 @@ Gewichte sind repräsentiert mit Kreise.
 ### Verschiedene Techniken für Resampling 
 
 - Gegeben: $L$ Partikel mit Gewichten $w_i$
-- GEsucht: $L$ Partikel mit Geweichte $\frac{1}{L}$ (gleichgewichtet)
+- Gesucht: $L$ Partikel mit Geweichte $\frac{1}{L}$ (gleichgewichtet)
 - Achtung
   - Hier nur Vervielfältigung
   - Positionen der Partikel *unverändert*
@@ -299,9 +303,13 @@ Konvergenz gegen $E$ für $L \to \infty$
 
 ### Sequential Importance Sampling
 
+{{% callout note %}}
+Übungsblatt Aufg. 13.3
+{{% /callout %}}
+
 **🎯 Ziel: Systematische und korrekte Positionierung der Samples an Stellen hoher Likkelihood vor Filterschritt**
 
-Verwendung con Proposal statt Systemmodell {{< math >}}$f(\underline{x}_{k+1} \mid \underline{x}_k)${{< /math >}} 
+Verwendung von Proposal statt Systemmodell {{< math >}}$f(\underline{x}_{k+1} \mid \underline{x}_k)${{< /math >}} 
 
 **💡Idee: Importance Sampling für {{< math >}}$f(\underline{x}_k, \underline{x}_{k-1} \mid \underline{y}_{1:k})${{< /math >}}** 
 
@@ -311,7 +319,7 @@ f_{k}^{e}\left(\underline{x}_{k}\right)=f\left(\underline{x}_{k} \mid \underline
 $$
 {{< /math >}} 
 
-Proposal: {{< math >}}$p(\left(\underline{x}_{1: k} \mid \underline{y}_{1 : k}\right))${{< /math >}} hängt auch von {{< math >}}$\underline{y}_k${{< /math >}} ab.
+Proposal: {{< math >}}$p\left(\underline{x}_{1: k} \mid \underline{y}_{1 : k}\right)${{< /math >}} hängt auch von {{< math >}}$\underline{y}_k${{< /math >}} ab.
 
 Damit:
 
