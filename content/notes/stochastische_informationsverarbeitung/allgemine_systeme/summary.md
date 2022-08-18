@@ -49,7 +49,7 @@ header:
 
 **Schritte**: 
 
-1. Umforme $f(b \mid a) = \delta(b - g(a))$ () mit
+1. Umforme $f(b \mid a) = \delta(b - g(a))$ mit
 
    {{< math >}}
    $$
