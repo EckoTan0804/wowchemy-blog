@@ -224,7 +224,7 @@ gilt.
 
 ### Zeitinvarianz
 
-Ein zeitdiskretes System {{< math >}}$\mathcal{S}${{< /math >}} heißt **zeitinvariant**, wenn es auf ein zeitlich verschobenes Eingangssignal {{< math >}}$y_{\mathrm{e},} n-n_{0}${{< /math >}} mit dem entsprechend zeitlichverschobenen Ausgangssignal {{< math >}}$y \mathrm{a}, n-n_{0}${{< /math >}} antwortet
+Ein zeitdiskretes System {{< math >}}$\mathcal{S}${{< /math >}} heißt **zeitinvariant**, wenn es auf ein zeitlich verschobenes Eingangssignal {{< math >}}$y_{\mathrm{e}, n-n_{0}}${{< /math >}} mit dem entsprechend zeitlichverschobenen Ausgangssignal {{< math >}}$y_{\mathrm{a}, n-n_{0}}${{< /math >}} antwortet
 
 {{< math >}}
 $$

@@ -131,12 +131,14 @@ $$
 \delta(x) = \delta(-x)
 $$
 
+{{< /math >}} 
+
 {{< spoiler text="Beweis" >}}
 ![截屏2022-06-02 12.47.40](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-06-02%2012.47.40.png)
 {{< /spoiler >}}
 
 
-{{< /math >}} 
+
 
 ### Skalierung
 

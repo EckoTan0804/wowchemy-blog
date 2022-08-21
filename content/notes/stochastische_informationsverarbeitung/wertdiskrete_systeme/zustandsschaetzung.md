@@ -217,7 +217,7 @@ Anordnen der Einzelwahrscheinlichkeit  in Vektoren:
 
 {{< math >}}
 $$
-\eta_{k \mid 1: m}^{x}\left(\begin{array}{c}
+\eta_{k \mid 1: m}^{x} = \left(\begin{array}{c}
 P\left(x_{k}=1 \mid y_{1: m}, u_{0: k-1}\right) \\
 \vdots \\
 P\left(x_{k}=N \mid y_{1: m}, u_{0: k-1}\right)
