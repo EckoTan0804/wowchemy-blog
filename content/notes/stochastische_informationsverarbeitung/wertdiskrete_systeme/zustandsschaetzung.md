@@ -204,8 +204,9 @@ Zum Zeitpunkt $k > m$:
 $$
 \begin{array}{l}
 &P\left(x_{k} \mid y_{0: m}, u_{0: k-1}\right)\\
-\overset{(\ast)}{=}&P\left(x_{k} \mid y_{0}, y_{1}, \cdots, y_{m}, u_{0}, u_{1}, \cdots u_{k-1}\right)\\
-=&\displaystyle \sum_{x_{k-1}=1}^{N} P\left(x_{k} \mid x_{k-1}, y_{0: m}, u_{0: k-1}\right) P\left(x_{k-1} \mid y_{0: m}, u_{0: k-1}\right)\\
+=&P\left(x_{k} \mid y_{0}, y_{1}, \cdots, y_{m}, u_{0}, u_{1}, \cdots u_{k-1}\right) \quad \mid \text{Marginalisierung}\\
+=& \displaystyle \sum_{x_{k-1}=1}^{N} P\left(x_{k}, x_{k-1} \mid y_{0: m}, u_{0: k-1}\right)\\
+\overset{(\ast)}{=}&\displaystyle \sum_{x_{k-1}=1}^{N} P\left(x_{k} \mid x_{k-1}, y_{0: m}, u_{0: k-1}\right) P\left(x_{k-1} \mid y_{0: m}, u_{0: k-1}\right) \quad \mid \text{Markov}\\
 =&\displaystyle \sum_{x_{k-1}=1}^{N} \underbrace{P\left(x_{k} \mid x_{k-1}, u_{k-1}\right)}_{\text {Übergangswachrshheinlicheit }} \cdot \underbrace{P\left(x_{k-1} \mid y_{0: m}, u_{0 : k-2}\right)}_{\text {Schätzung für } k-1} \quad \text { (Rekursiv nach vorne) }
 \end{array}
 $$
@@ -452,7 +453,7 @@ $$
 {{< math >}}
 $$
 \begin{aligned}
-& P\left(y_{k} \mid y_{1: k-1}, u_{o: k-1}\right) \\\\
+& P\left(y_{k} \mid y_{1: k-1}, u_{0: k-1}\right) \\\\
 \stackrel{\text { Margin. }}{=} & \sum_{x_{k}=1}^{N} P\left(y_{k}, x_{k} \mid y_{1: k-1}, u_{0: k-1}\right) \\\\
 \overset{(\ast)}{=}& \sum_{x_{k}=1}^{N} P\left(y_{k} \mid x_{k}, y_{1: k-1}, u_{0: k-1}\right) \cdot P\left(x_{k} \mid y_{1: k-1}, u_{0: k-1}\right) \\\\
 =& \sum_{x_{k} = 1}^{N} P\left(y_{k} \mid x_{k}\right) \cdot P\left(x_{k} \mid y_{1: k-1}, u_{0: k-1}\right)
@@ -475,8 +476,8 @@ Filterung in Vektor-Matrix-Form:
   {{< math >}}
   $$
   \begin{aligned}
-  \eta_{k \mid 1: k}^{x} &=\frac{\operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}} \\\\
-  &=\frac{\mathbf{B}(:, m) \odot \eta_{k \mid 1: k-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1:k-1}^{x}}
+  \eta_{k \mid 1: k}^{x} &\overset{y_k = m}{=}\frac{\operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}} \\\\
+  &=\frac{\mathbf{B}(:, m) \odot \eta_{k \mid 1: k-1}^{x}}{\mathbf{B}(:, m)^\top \cdot \eta_{k \mid 1:k-1}^{x}}
   \end{aligned}
   $$
   {{< /math >}} 
