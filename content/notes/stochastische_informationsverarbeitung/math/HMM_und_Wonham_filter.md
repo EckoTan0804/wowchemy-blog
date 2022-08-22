@@ -163,7 +163,7 @@ Das Wonham Filter besteht aus zwei Phasen
 
    {{< math >}}
    $$
-   \underline{\xi}_{k \mid 1: k}^{x} =\frac{\mathbf{B}(:, m) \odot \eta_{k \mid 1: k-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \eta_{k \mid 1: k-1}^{x}} =\frac{\mathbf{B}(:, m) \odot \eta_{k \mid 1: k-1}^{x}}{\mathbf{B}(:, m)^\top \cdot \eta_{k \mid 1: k-1}^{x}}
+   \underline{\xi}_{k \mid 1: k}^{x} =\frac{\mathbf{B}(:, m) \odot \xi_{k \mid 1: k-1}^{x}}{\mathbb{1}_{N}^{T} \operatorname{diag}(\mathbf{B}(:, m)) \cdot \xi_{k \mid 1: k-1}^{x}} =\frac{\mathbf{B}(:, m) \odot \xi_{k \mid 1: k-1}^{x}}{\mathbf{B}(:, m)^\top \cdot \xi_{k \mid 1: k-1}^{x}}
    $$
    {{< /math >}} 
 
