@@ -117,3 +117,37 @@ header:
 {{% callout note %}}
 Note: Das System ist gekapselt. Von außen können wir nur {{< math >}}$\underline{\hat{u}}_{k}${{< /math >}} und {{< math >}}$\underline{y}_k${{< /math >}} sehen.
 {{% /callout %}}
+
+## Lineare Vs. Nichtlineare Systeme
+
+<style type="text/css">
+.tg  {border-collapse:collapse;border-spacing:0;}
+.tg td{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg th{border-color:black;border-style:solid;border-width:1px;font-family:Arial, sans-serif;font-size:14px;
+  font-weight:normal;overflow:hidden;padding:10px 5px;word-break:normal;}
+.tg .tg-c3ow{border-color:inherit;text-align:center;vertical-align:top}
+.tg .tg-7btt{border-color:inherit;font-weight:bold;text-align:center;vertical-align:top}
+</style>
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-c3ow"></th>
+    <th class="tg-7btt">Linear</th>
+    <th class="tg-7btt">Nichtlinear</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td class="tg-7btt">Systemabbildung</td>
+    <td class="tg-c3ow">$\underline{x}_{k+1} = \mathbf{A}_k \underline{x}_k + \mathbf{B}_k (\underline{u}_k + \underline{w}_k)$</td>
+    <td class="tg-c3ow">$\underline{x}_{k+1} = \underline{a}_k(\underline{x}_k, \underline{u}_k, \underline{w}_k)$</td>
+  </tr>
+  <tr>
+    <td class="tg-7btt">Messabbildung</td>
+    <td class="tg-c3ow">$\underline{y}_{k} = \mathbf{H}_k \underline{x}_k + \underline{v}_k$</td>
+    <td class="tg-c3ow">$\underline{y}_k = \underline{h}_k (\underline{x}_k, \underline{v}_k)$</td>
+  </tr>
+</tbody>
+</table>
+
