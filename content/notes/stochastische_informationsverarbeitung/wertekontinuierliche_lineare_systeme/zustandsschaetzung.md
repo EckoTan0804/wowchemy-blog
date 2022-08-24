@@ -49,7 +49,7 @@ Modell:
 
 {{< math >}}
 $$
-\underline{x}_{k+1}=\mathbf{A}_{k} \cdot \underline{x}_{k}+\mathbf{B}_{k} \cdot\left(\underline{\tilde{u}}_{k}+\underline{w}_{k}\right)
+\underline{x}_{k+1}=\mathbf{A}_{k} \cdot \underline{x}_{k}+\mathbf{B}_{k} \cdot \underbrace{\left(\underline{\tilde{u}}_{k}+\underline{w}_{k}\right)}_{\underline{u_k}}
 $$
 {{< /math >}} 
 
@@ -104,12 +104,12 @@ $$
   \mathbf{A}_{k} & \mathbf{B}_{k}
   \end{array}\right]\left[\begin{array}{c}
   \underline{x}_{k}-\hat{\underline{x}}_{k} \\
-  u_{k}-\hat{u}_{k}
+  \underline{u}_{k}-\underline{\hat{u}}_{k}
   \end{array}\right] \\
   &=\left[\begin{array}{ll}
   \mathbf{A}_{k} & \mathbf{B}_{k}
   \end{array}\right]\left[\begin{array}{c}
-  \underline{x}_{k}-\hat{x}_{k} \\
+  \underline{x}_{k}-\underline{\hat{x}}_{k} \\
   \underline{w}_{k}
   \end{array}\right]
   \end{aligned}
@@ -139,10 +139,7 @@ $$
   {{< math >}}
   $$
   \begin{aligned}
-  \mathbf{C}_{k+1 \mid 1 : m}^{x} &=E\left\{\left(\underline{x}_{k+1}-\hat{x}_{k+1}\right)\left(\begin{array}{l}
-  x_{k+1} \\
-  \hat{\underline{x}}_{k+1}
-  \end{array}\right)\right\} \\
+  \mathbf{C}_{k+1 \mid 1 : m}^{x} &=E\left\{\left(\underline{x}_{k+1}-\hat{x}_{k+1}\right)\left(x_{k+1} - \hat{\underline{x}}_{k+1}\right)^\top\right\} \\
   &=\left[\begin{array}{ll}
   \mathbf{A}_{k} & \mathbf{B}_{k}
   \end{array}\right] \cdot E\left\{\left[\begin{array}{c}
@@ -222,7 +219,7 @@ Source und Bsp: [Wiki](https://de.wikipedia.org/wiki/Erwartungstreue)
   \begin{aligned}
   E\left\{\underline{x}_{k \mid 1: k}\right\}&=E\left\{\mathbf{K}_{k}^{(1)} \underline{x}_{k \mid 1: k-1}+\mathbf{K}_{k}^{(2)} \underline{y}_{k}\right\} \\
   E\left\{\underline{x}_{k \mid 1: k}\right\}&=\mathbf{K}_{k}^{(1)} E\left\{\underline{x}_{k \mid 1: k-1}\right\}+\mathbf{K}_{k}^{(2)} E\left\{\underline{y}_{k}\right\} \\
-  E\left\{\underline{x}_{k \mid 1: k}\right\}&=\mathbf{K}_{k}^{(1)} E\left\{\underline{x}_{k \mid 1: k-1}\right\}+\mathbf{K}_{k}^{(2)} E\left\{\mathbf{H}_{k} \cdot x_{k}+\underline{y}_{k}\right\} \\
+  E\left\{\underline{x}_{k \mid 1: k}\right\}&=\mathbf{K}_{k}^{(1)} E\left\{\underline{x}_{k \mid 1: k-1}\right\}+\mathbf{K}_{k}^{(2)} E\left\{\mathbf{H}_{k} \cdot x_{k}+\underline{v}_{k}\right\} \\
   E\left\{\underline{x}_{k \mid 1: k}\right\}&=\mathbf{K}_{k}^{(1)} E\left\{\underline{x}_{k \mid 1: k-1}\right\}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k} E\left\{\underline{x}_{k}\right\} \quad \mid \text { Erwartungstreu } \\
   \underline{\tilde{x}}&=\mathbf{K}_{k}^{(1)} \underline{\tilde{x}}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k} \cdot \underline{\tilde{x}} \\
   \Rightarrow \mathbf{I} &=\mathbf{K}_{k}^{(1)}+\mathbf{K}_{k}^{(2)} \mathbf{H}_{k}
@@ -251,13 +248,13 @@ $$
 
 Aber der Schätzert ist noch nicht vollständig festgelegt, da $\mathbf{K}_{k}$ noch nicht festgelegt ist. 
 
-$\Rightarrow$ Wiri suche $\mathbf{K}_{k}$ so, dass der resultierende Schätzer MINIMAL kovarianz aufweist. ("Minimalvarianz Schätzer")
+$\Rightarrow$ Wir suche $\mathbf{K}_{k}$ so, dass der resultierende Schätzer MINIMAL kovarianz aufweist. ("Minimalvarianz Schätzer")
 
 Nehme an, dass Messung unkorreliert mit priorer Schätzung. Aus $(\ast\ast)$ gilt
 
 {{< math >}}
 $$
-\underbrace{\mathbf{C}_{k \mid 1: k}\left(\mathbf{K}_{k}\right)}_{=: \mathbf{C}_{k}^{e}\left(\mathbf{K}_{k}\right)}=\left(\mathbf{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right) \underbrace{\mathbf{C}_{k \mid 1: k-1}^{x}}_{=: \mathbf{C}_{k}^{p}}\left(\mathbf{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right)^{\top}+\mathbf{K}_{k} C_{k}^{y} \mathbf{K}_{k}^{\top} \qquad(\ast\ast\ast)
+\underbrace{\mathbf{C}_{k \mid 1: k}\left(\mathbf{K}_{k}\right)}_{=: \mathbf{C}_{k}^{e}\left(\mathbf{K}_{k}\right)}=\left(\mathbf{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right) \underbrace{\mathbf{C}_{k \mid 1: k-1}^{x}}_{=: \mathbf{C}_{k}^{p}}\left(\mathbf{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right)^{\top}+\mathbf{K}_{k} C_{k}^{v} \mathbf{K}_{k}^{\top} \qquad(\ast\ast\ast)
 $$
 {{< /math >}} 
 
@@ -311,7 +308,7 @@ Ableitung mit der [Matrizen Differenzregeln]({{< relref "../math/matrix_differen
 {{< math >}}
 $$
 \begin{aligned}
-\frac{\partial}{\partial \mathbf{K}} P(\mathbf{K}) &=\frac{\partial}{\partial \mathbf{K}}\left\{\underline{e}^{\top}\left[(\mathbf{I}-\mathbf{K} \mathbf{H}) \mathbf{C}_{p}(\mathbf{I}-\mathbf{K} \mathbf{H})^{\top}+\mathbf{K} \mathbf{C}_{y} \mathbf{K}^{\top}\right] \underline{e}^{\top}\right\} \\
+\frac{\partial}{\partial \mathbf{K}} P(\mathbf{K}) &=\frac{\partial}{\partial \mathbf{K}}\left\{\underline{e}^{\top}\left[(\mathbf{I}-\mathbf{K} \mathbf{H}) \mathbf{C}_{p}(\mathbf{I}-\mathbf{K} \mathbf{H})^{\top}+\mathbf{K} \mathbf{C}_{y} \mathbf{K}^{\top}\right] \underline{e}\right\} \\
 &=\frac{\partial}{\partial \mathbf{K}}\left\{\underline{e}^{\top}\left[\mathbf{C}_{p}-\mathbf{C}_{p} \mathbf{H}^{\top} \mathbf{K}^{\top}-\mathbf{K} \mathbf{H} \mathbf{C}_{p}+\mathbf{K} \mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top} \mathbf{K}^{\top}+\mathbf{K} \mathbf{C}_{y} \mathbf{K}^{\top}\right] \underline{e}\right\} \\
 &=-\left[\mathbf{H} \mathbf{C}_{p} \underline{e} \underline{e}^{\top}\right]^{\top}-\underline{e} \underline{e}^{\top}\left(\mathbf{H} \mathbf{C}_{p}\right)^{\top}+2 \underline{e} \underline{e}^{\top} \mathbf{K} \mathbf{H} \mathbf{C}_{p} \mathbf{H}^{\top}+2 \underline{e} \underline{e}^{\top} \cdot \mathbf{K} \mathbf{C}_{y} \\
 &\overset{!}{=} \mathbf{0}
