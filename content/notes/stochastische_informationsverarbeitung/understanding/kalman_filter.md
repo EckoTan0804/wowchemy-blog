@@ -409,11 +409,11 @@ tr\left(\mathbf{P}\_{\boldsymbol{n}, \boldsymbol{n}}\right)=tr\left(\mathbf{P}\_
 tr\left(\mathbf{P}\_{n, n}\right)=tr\left(\mathbf{P}\_{n, n-1}\right)-{\color{DarkOrange}2 tr\left(\mathbf{K}\_{n} \mathbf{H} \mathbf{P}\_{n, n-1}\right)}\\\\
 +tr\left(\mathbf{K}\_{n}\left(\mathbf{H} \mathbf{P}\_{n, n-1} \mathbf{H}^{\boldsymbol{T}}+\mathbf{R}\_{n}\right) \mathbf{K}\_{n}^{T}\right)\\\\\\\\
 \frac{d}{d \mathbf{K}\_{n}}t r\left(\mathbf{P}\_{n, n}\right)={\color{DodgerBlue} \frac{d}{d \mathbf{K}\_{n}}t r\left(\mathbf{P}\_{n, n-1}\right)}-{\color{ForestGreen}\frac{d }{d \mathbf{K}\_{n}}2 t r\left(\mathbf{K}\_{n} \mathbf{H} \mathbf{P}\_{n, n-1}\right)} \\\\
-+{\color{MediumOrchid}\frac{d}{d\mathbf{K}\_{n}}tr(\mathbf{K}\_{n}(\mathbf{H}\mathbf{P}\_{n, n-1}\mathbf{H}^T + \mathbf{R}\_n)\mathbf{K}\_{n}^T)} \overset{!}{=} 0 \quad | \text{ } {\color{ForestGreen} \frac{d}{d \mathbf{A}}tr(\mathbf{A} \mathbf{B}) = \mathbf{B}^T},{\color{MediumOrchid} \frac{d}{d \mathbf{A}}tr(\mathbf{A} \mathbf{B} \mathbf{A}^T) = 2\mathbf{A} \mathbf{B}}\\\\\\\\
++{\color{MediumOrchid}\frac{d tr(\mathbf{K}\_{n}(\mathbf{H}\mathbf{P}\_{n, n-1}\mathbf{H}^T + \mathbf{R}\_n)\mathbf{K}\_{n}^T)}{d\mathbf{K}\_{n}}} \overset{!}{=} 0 \quad \mid {\color{ForestGreen} \frac{d}{d \mathbf{A}}tr(\mathbf{A} \mathbf{B}) = \mathbf{B}^T},{\color{MediumOrchid} \frac{d}{d \mathbf{A}}tr(\mathbf{A} \mathbf{B} \mathbf{A}^T) = 2\mathbf{A} \mathbf{B}}\\\\\\\\
 \frac{d\left(t r\left(\mathbf{P}\_{n, n}\right)\right)}{d \mathbf{K}\_{n}}={\color{DodgerBlue}0}-{\color{ForestGreen}2\left(\mathbf{H} \mathbf{P}\_{ n , n - 1 }\right)^{T}}\\\\
 +{\color{MediumOrchid}2 \mathbf{K}\_{n}\left(\mathbf{H} \mathbf{P}\_{n, n-1} \mathbf{H}^{T}+\mathbf{R}\_{n}\right)}=0\\\\\\\\
 {\color{ForestGreen}\left(\mathbf{H} \mathbf{P}\_{n, n-1}\right)^{T}}={\color{MediumOrchid}\mathbf{K}\_{n}\left(\mathbf{H} \mathbf{P}\_{n, n-1} \mathbf{H}^{T}+\mathbf{R}\_{n}\right)} \\\\\\\\
-\mathbf{K}\_{n}=\left(\mathbf{H} \mathbf{P}\_{n, n-1}\right)^{T}\left(\mathbf{H} \mathbf{P}\_{n, n-1} \mathbf{H}^{T}+\mathbf{R}\_{n}\right)^{-1} \quad | \text{ } (\mathbf{AB})^T = \mathbf{B}^T \mathbf{A}^T \\\\\\\\
+\mathbf{K}\_{n}=\left(\mathbf{H} \mathbf{P}\_{n, n-1}\right)^{T}\left(\mathbf{H} \mathbf{P}\_{n, n-1} \mathbf{H}^{T}+\mathbf{R}\_{n}\right)^{-1} \quad \mid (\mathbf{AB})^T = \mathbf{B}^T \mathbf{A}^T \\\\\\\\
 \mathbf{K}\_{n}=\mathbf{P}\_{n, n-1}^{T} \mathbf{H}^{T}\left(\mathbf{H} \mathbf{P}\_{n, n-1} \mathbf{H}^{T}+\mathbf{R}\_{n}\right)^{-1} \quad | \text{ covariance matrix } \mathbf{P} \text{ symmetric } (\mathbf{P}^T = \mathbf{P})\\\\\\\\
 \mathbf{K}\_{n}=\mathbf{P}\_{n, n-1} \mathbf{H}^{T}\left(\mathbf{H} \mathbf{P}\_{n, n-1} \mathbf{H}^{T}+\mathbf{R}\_{n}\right)^{-1}
 \end{array}

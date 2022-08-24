@@ -45,7 +45,7 @@ Linear systems do not exist in reality. We have to deal with nonlinear discrete-
 $$
 \begin{aligned}
 \underbrace{\mathbf{x}_{k}}_{\text{current state}}&=\mathbf{f}_{k-1}(\underbrace{\mathbf{x}_{k-1}}_{\text{previous state}}, \underbrace{\mathbf{u}_{k-1}}_{\text{inputs}}, \underbrace{\mathbf{w}_{k-1}}_{\text{process noise}}) \\\\
-\underbrace{\mathbf{y}_{k}}_{\text{measurement}}&=\mathbf{h}_{k}(\mathbf{x}_{k}, \underbrace{\mathbf{v}_{k}}_{\text{process noise}})
+\underbrace{\mathbf{y}_{k}}_{\text{measurement}}&=\mathbf{h}_{k}(\mathbf{x}_{k}, \underbrace{\mathbf{v}_{k}}_{\text{measurement noise}})
 
 \end{aligned}
 $$
