@@ -419,12 +419,6 @@ Uncertainties taken at different time steps are also independent
 
 ### System-Eigenschaften: dynamisch, statisch, linear, zeitinvariant 
 
-{{% callout note %}}
-
-Üb 5, A1
-
-{{% /callout %}}
-
 **Statisch**: Der aktuellen Ausgang $y_k$ ist abhängig von dem aktuellen Eingang $u_k$.
 
 **Dynamisch**: Der aktuellen Ausgang $y_k$ ist abhängig von 
@@ -432,25 +426,45 @@ Uncertainties taken at different time steps are also independent
 - dem aktuellen Eingang $u_k$
 - dem aktuellen Zustand $x_k$
 
-**Linear**:
+Bei wertkontinuierlicher linearer Systeme:
 
-{{< math >}}
-$$
-\mathcal{S}\left\{\sum_{i=1}^{N} c_{i} y_{\mathrm{e} i, n}\right\}=\sum_{i=1}^{N} c_{i} \mathcal{S}\left\{y_{\mathrm{e} i, n}\right\}
-$$
-{{< /math >}} 
+{{% callout note %}}
 
-(also höhste Exponent $\leq 1$)
+Üb 5, A1
 
-**Zeitinvariant**: Das System antwortet auf ein zeitlich verschobenes Eingangssignal {{< math >}}$y_{\mathrm{e}, n-n_{0}}${{< /math >}} mit dem entsprechend zeitlichverschobenen Ausgangssignal {{< math >}}$y_{\mathrm{a}, n-n_{0}}${{< /math >}} 
+{{% /callout %}}
 
-{{< math >}}
-$$
-y_{\mathrm{a}, n}=\mathcal{S}\left\{y_{\mathrm{e}, n}\right\} \quad \Longrightarrow \quad y_{\mathrm{a}, n-n_{0}}=\mathcal{S}\left\{y_{\mathrm{e}, n-n_{0}}\right\}.
-$$
-{{< /math >}} 
+- **Linear**
 
-(also unabhängig von dem Zeitindex $k$)
+  {{< math >}}
+  $$
+  \mathcal{S}\left\{\sum_{i=1}^{N} c_{i} y_{\mathrm{e} i, n}\right\}=\sum_{i=1}^{N} c_{i} \mathcal{S}\left\{y_{\mathrm{e} i, n}\right\}
+  $$
+  {{< /math >}} 
+
+  (also höhste Exponent $\leq 1$)
+
+
+
+- **Zeitinvariant**
+
+  Das System antwortet auf ein zeitlich verschobenes Eingangssignal {{< math >}}$y_{\mathrm{e}, n-n_{0}}${{< /math >}} mit dem entsprechend zeitlichverschobenen Ausgangssignal {{< math >}}$y_{\mathrm{a}, n-n_{0}}${{< /math >}} 
+
+  {{< math >}}
+  $$
+  y_{\mathrm{a}, n}=\mathcal{S}\left\{y_{\mathrm{e}, n}\right\} \quad \Longrightarrow \quad y_{\mathrm{a}, n-n_{0}}=\mathcal{S}\left\{y_{\mathrm{e}, n-n_{0}}\right\}.
+  $$
+  {{< /math >}} 
+
+  (also unabhängig von dem Zeitindex $k$)
+
+- **Kausalität**
+
+  Ein zeitdiskretes System S heißt **kausal**, wenn die Antwort NUR von *gegenwärtigen* oder *vergangenen*, NICHT jedoch von zukünftigen Werten des Eingangssignals abhängt.
+
+
+
+
 
 ### Dirac Funktion
 
