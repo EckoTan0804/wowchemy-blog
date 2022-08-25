@@ -204,7 +204,7 @@ Damit ist Update des Zustands in "combination form"
 
 {{< math >}}
 $$
-\mathcal{X}_{e}=(\mathbf{I}-\mathbf{k} \mathbf{H}) \mathcal{X}_{p}+\mathbf{k} \mathcal{\hat{Y}}
+\mathcal{X}_{e}=(\mathbf{I}-\mathbf{K} \mathbf{H}) \mathcal{X}_{p}+\mathbf{K} \mathcal{\hat{Y}}
 $$
 {{< /math >}} 
 
@@ -229,7 +229,7 @@ Alternative Herleitung
   \begin{aligned}
   \mathcal{X}_e &= \mathcal{X}_p + \mathbf{K}(\underbrace{\underline{\hat{y}} \cdot \underline{\mathbb{1}}^\top}_{\text{gemessen}} - \underbrace{\mathcal{Y}}_{\text{Prädiktion}}) \\\\
   &= \mathcal{X}_e + \mathbf{K}(\underline{\hat{y}} \cdot \underline{\mathbb{1}}^\top - \mathbb{H} \mathcal{X}_p - \mathcal{V})\\\\
-  &= (\mathbb{I} - \mathbf{K}\mathbf{H})\mathcal{X}_p + \mathbf{K}(\underbrace{\underline{\hat{y}} \cdot \underline{\mathbb{1}}^\top - \mathcal{V}}_{\hat{=\mathcal{Y}}})
+  &= (\mathbb{I} - \mathbf{K}\mathbf{H})\mathcal{X}_p + \mathbf{K}(\underbrace{\underline{\hat{y}} \cdot \underline{\mathbb{1}}^\top - \mathcal{V}}_{=\hat{\mathcal{Y}}})
   
   \end{aligned}
   $$
