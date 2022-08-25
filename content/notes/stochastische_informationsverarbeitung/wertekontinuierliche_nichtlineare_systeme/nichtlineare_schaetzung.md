@@ -232,7 +232,7 @@ $$
 
     {{< math >}}
     $$
-    \underline{\hat{x}}_{k}^{p}=\underline{a}_{k}\left(\underline{\hat{x}}_{k-1}^{e}, \hat{\underline{u}}_{k}\right)
+    \underline{\hat{x}}_{k+1}^{p}=\underline{a}_{k}\left(\underline{\hat{x}}_{k}^{e}, \hat{\underline{u}}_{k}\right)
     $$
     {{< /math >}} 
 
@@ -240,7 +240,7 @@ $$
 
     {{< math >}}
     $$
-    \mathbf{C}_{k}^{p} \approx \mathbf{A}_{k} \mathbf{C}_{k}^{e} \mathbf{A}_{k}^{\top}+\mathbf{C}_{k}^{w^{\prime}}=\mathbf{A}_{k} \mathbf{C}_{k}^{e} \mathbf{A}_{k}^{\top}+\mathbf{B}_{k}  \mathbf{C}_{k}^{w} \mathbf{B}_{k}^{\top}
+    \mathbf{C}_{k+1}^{p} \approx \mathbf{A}_{k} \mathbf{C}_{k}^{e} \mathbf{A}_{k}^{\top}+\mathbf{C}_{k}^{w^{\prime}}=\mathbf{A}_{k} \mathbf{C}_{k}^{e} \mathbf{A}_{k}^{\top}+\mathbf{B}_{k}  \mathbf{C}_{k}^{w} \mathbf{B}_{k}^{\top}
     $$
     {{< /math >}} 
     
@@ -277,7 +277,7 @@ $$
 
     {{< math >}}
     $$
-    \Delta \underline{y}_{k} \approx \mathbf{H}_{k} \cdot\left(\underline{x}_{k}^{e}-\hat{x}_{k}^{p}\right)+\underline{v}_{k}^{\prime}
+    \Delta \underline{y}_{k} \approx \mathbf{H}_{k} \cdot\left(\underline{x}_{k}^{e}-\underline{\hat{x}}_{k}^{p}\right)+\underline{v}_{k}^{\prime}
     $$
     {{< /math >}} 
     
@@ -297,7 +297,7 @@ $$
   \begin{aligned}
   \mathbf{K}_{k}&=\mathbf{C}_{k}^{p} \mathbf{H}_{k}^{\top}\left(\mathbf{L}_{k} \mathbf{C}_{k}^{v} \mathbf{L}_{k}^{\top}+\mathbf{H}_{k} \mathbf{C}_{k}^{p} \mathbf{H}_{k}^{T}\right)^{-1} \\\\
   
-  \hat{\underline{x}}_{k}^{e}&=\hat{\underline{x}}_{k}^{p}-\mathbf{K}_{k}\left[\hat{\underline{y}}_{k}-\underline{h}_{k}\left(\hat{\underline{x}}_{k}^{p}, \hat{\underline{v}}_{k}\right)\right] \\\\
+  \hat{\underline{x}}_{k}^{e}&=\hat{\underline{x}}_{k}^{p}+\mathbf{K}_{k}\left[\hat{\underline{y}}_{k}-\underline{h}_{k}\left(\hat{\underline{x}}_{k}^{p}, \hat{\underline{v}}_{k}\right)\right] \\\\
   
   \mathbf{C}_{k}^{e}&=\mathbf{C}_{k}^{p}-\mathbf{K}_{k} \mathbf{H}_{k} \mathbf{C}_{k}^{p} = (\mathbf{I} - \mathbf{K}_{k} \mathbf{H}_{k})\mathbf{C}_{k}^{p}
   \end{aligned}
@@ -306,9 +306,17 @@ $$
 
 ### Probleme bei Linearisierung
 
-- Berechnung der posterirre Verteilung nur gut für "schwache" Nichtlinearität
+- Berechnung der posteriore Verteilung nur gut für "schwache" Nichtlinearität
 
-  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-07-03%2021.43.45.png" alt="截屏2022-07-03 21.43.45" style="zoom: 20%;" />
+  $\rightarrow$ Induzierte Nichtlinearität durch die Unsicherheit in priorer Dichte
+
+  <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-24%2015.52.30.png" alt="截屏2022-08-24 15.52.30" style="zoom:50%;" />
+
+  > Wenn wir für priore Dichte kleines/schmales Rauschen (unten, schwarz) verwenden, dann funktioniert es gut.
+  >
+  > Wenn wir das Rauschen breiter machen (unten, grün), dann kommt ein Problem vor, dass die resultierende Dichte von $y$ nicht symmetrisch ist.
+  >
+  > Induzierte nichtlinearität heißt: wir können gar nicht sagen, die ist absolut betrachtet, besonders linear oder besonders nichtlinear. Es ist potential, Problem zu machen. Aber sie macht kein Problem, solange ich mich nur in den linken Bereich oder nur in den rechten Bereich des "Knickpunkt" aufhalten. Wenn wir die Dichte habe, die über den "Knickpunkt" weggeht, dann bekomme ich Problem. Das ist die induzierte nichtlinearität, die durch das Rauschen induziert wird.
 
 - Linearisierung nur um einen Punkt
 

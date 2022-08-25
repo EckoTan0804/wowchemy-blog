@@ -95,11 +95,11 @@ Dann
 {{< math >}}
 $$
 \operatorname{Cov}\{\underline{z}\}=\left[\begin{array}{ll}
-C_{x x} & C_{x y} \\
-C_{y x} & C_{y y}
+\mathbf{C}_{x x} & \mathbf{C}_{x y} \\
+\mathbf{C}_{y x} & \mathbf{C}_{y y}
 \end{array}\right]=\left[\begin{array}{cc}
 \sigma_{p}^{2} & E\left\{\left(x-\hat{x}_{p}\right) \bar{h}(x)\right\} \\
-E\left\{\left(x-\hat{x}_{p}\right) \bar{h}(x)\right\} & E\left\{h^{2}(x)\right\}+\sigma_{v}^{2}
+E\left\{\left(x-\hat{x}_{p}\right) \bar{h}(x)\right\} & E\left\{\overline{h}^{2}(x)\right\}+\sigma_{v}^{2}
 \end{array}\right]
 $$
 {{< /math >}} 
@@ -142,8 +142,8 @@ In der Kalmanfilter Filterungsgleichung einsetzen ergibt sich
 {{< math >}}
 $$
 \begin{array}{l}
-\hat{x}_{e}=\hat{x}_{p}+C_{xy}C_{yy}^{-1}(\hat{y}-E\{h(x)\}) \overset{\text{skalar}}{=} \hat{x}_{p}+\frac{c_{x y}}{C_{y y}}(\hat{y}-E\{h(x)\}) \\
-\sigma_{y}^{2}= \sigma_{p}^{2}-C_{xy}C_{yy}^{-1}C_{yx} \overset{\text{skalar}}{=} \sigma_{p}^{2}-\frac{c_{x y}^{2}}{c_{y y}}
+\hat{x}_{e}=\hat{x}_{p}+\mathbf{C}_{xy}\mathbf{C}_{yy}^{-1}(\hat{y}-E\{h(x)\}) \overset{\text{skalar}}{=} \hat{x}_{p}+\frac{\mathbf{C}_{x y}}{\mathbf{C}_{y y}}(\hat{y}-E\{h(x)\}) \\
+\sigma_{y}^{2}= \sigma_{p}^{2}-\mathbf{C}_{xy}\mathbf{C}_{yy}^{-1}\mathbf{C}_{yx} \overset{\text{skalar}}{=} \sigma_{p}^{2}-\frac{\mathbf{C}_{x y}^{2}}{\mathbf{C}_{y y}}
 \end{array}
 $$
 {{< /math >}} 
@@ -190,7 +190,7 @@ $$
 
 **Approximation der Prioren Gaußdichte durch Samples**
 
-Verschiedene Verfahrenmit unterschiedliche Komplexität, Effizienz, Genauigkeit
+Verschiedene Verfahren mit unterschiedliche Komplexität, Effizienz, Genauigkeit
 
 - **Zufälliges Sampling** mit Zufallszahlengenerator $\rightarrow$ unabhängige Samples
 
