@@ -506,11 +506,21 @@ $$
   $$
   {{< /math >}} 
 
-- Hintereinanderausführung (super wichtig!!!)
+- Hintereinanderausführung
 
   {{< math >}}
   $$
   \int_{-\infty}^{\infty} f(x) \delta(g(x)) \mathrm{d} x=\sum_{i=1}^{n} \frac{f\left(x_{i}\right)}{\left|g^{\prime}\left(x_{i}\right)\right|}
+  $$
+  {{< /math >}} 
+
+  wobei $g(x_i) = 0$ und $g^\prime(x_i) \neq 0$.
+  
+- Verkettung auflösen (super wichtig!!!)
+
+  {{< math >}}
+  $$
+  \delta(g(x)) = \sum_i \frac{1}{g^\prime(x_i)} \delta(x - x_i)
   $$
   {{< /math >}} 
 
