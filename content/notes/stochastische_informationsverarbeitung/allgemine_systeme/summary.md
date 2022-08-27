@@ -73,7 +73,7 @@ header:
    und setze die Unformung von $f(b \mid a)$ von Schritt 1 ein. Dann kriege die gesuchte Dichtefunktion $f_b(b)$ in Abhängigkeit von $f_a(a)$.
 
 {{% callout note %}}
-Bsp: Aufgabe 10.1
+Bsp: Aufgabe 9.1
 {{% /callout %}}
 
 ## Rückwartsinferenz
@@ -109,12 +109,12 @@ Bsp: Aufgabe 10.1
 
    {{< math >}}
    $$
-   f_a(a \mid b) = \frac{f_a(b \mid a) f_a(a)}{f_b(b)} = \frac{\delta(b - g(a)) f_a(a)}{f_b(b)}
+   f_a(a \mid b) = \frac{f_a(b \mid a) f_a(a)}{f_b(b)} = \frac{\overbrace{\delta(b - g(a))}^{\text{Schritt 1}} f_a(a)}{\underbrace{f_b(b)}_{\text{Schritt 2}}}
    $$
    {{< /math >}} 
 
 {{% callout note %}}
-Bsp: Aufgabe 10.2, 10.3
+Bsp: Aufgabe 9.2, 9.3
 {{% /callout %}}
 
 ### Unsichere Messung

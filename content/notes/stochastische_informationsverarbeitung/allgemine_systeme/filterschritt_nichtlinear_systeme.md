@@ -291,4 +291,4 @@ Beispiel
   $$
   {{< /math >}} 
 
-  $\Rightarrow$ Insgesamt isit Approximation unvermeidbar! 🤪
+  $\Rightarrow$ Insgesamt ist Approximation unvermeidbar! 🤪
