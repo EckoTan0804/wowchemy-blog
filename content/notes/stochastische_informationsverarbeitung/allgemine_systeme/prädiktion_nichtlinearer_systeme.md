@@ -192,12 +192,9 @@ $$
 
 > Z.B. Skalarer Fall
 >
-> {{< math >}}
 > $$
 > f(x)=\sum_{i \in \mathbb{Z}} w_{i} f_i(x), \quad f_i(x)=\exp \left(-\frac{1}{2} \frac{\left(x-\hat{x}_{i}\right)^{2}}{\sigma^{2}}\right)
 > $$
-> {{< /math >}} 
->
 > mit geeigneten $\sigma$.
 
 Betrachtung für jeweils ein Komponente $i$
