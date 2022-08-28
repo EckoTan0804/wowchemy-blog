@@ -89,13 +89,52 @@ f_{k+1}^{p}\left(\underline{x}_{k+1}\right)=\int_{\mathbb{R}^{N}} \underbrace{f\
 $$
 {{< /math >}} 
 
-‼️ <span style="color: Red">Problem: Es handelt sich um ein Parameterintegral!</span>
+### Erklärung
+
+{{% callout note %}}
+Üb A10.1
+{{% /callout %}}
+
+Die Chapman-Kolmogorov-Gleichung berechnet die Dichte von {{< math >}}$\underline{x}_{k+1}${{< /math >}} aus einer gegebenen *Dichte* {{< math >}}$f_{k}^{e}\left(\underline{x}_{k}\right)${{< /math >}} von {{< math >}}$\underline{x}_{k}${{< /math >}}, während die probabilistische Systembeschreibung {{< math >}}$f\left(\underline{x}_{k+1} \mid \underline{x}_{k}\right)${{< /math >}} die Dichte von {{< math >}}$\underline{x}_{k+1}${{< /math >}} für einen *konkreten Wert* von {{< math >}}$\underline{x}_{k}${{< /math >}} aus.
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-28%2017.02.13.png" alt="截屏2022-08-28 17.02.13" style="zoom:50%;" />
+
+- {{< math >}}$f\left(\underline{x}_{k+1} \mid \underline{x}_{k}\right)${{< /math >}} 
+
+  - das probablistische Systemmodell, welches eine Wahrscheinlichkeitsdichte für den nächsten Zustand {{< math >}}$\underline{x}_{k+1}${{< /math >}} zu einem gegebenen aktuellen Zustand {{< math >}}$\underline{x}_{k}${{< /math >}} ausgibt. 
+
+  - Diese Transitionsdichte {{< math >}}$f\left(\underline{x}_{k+1} \mid \underline{x}_{k}\right)${{< /math >}} können wir aus dem gegebenen Systemmodell {{< math >}}$\underline{x}_{k+1} = \underline{a}(\underline{x}_{k}, \underline{u}_{k}, \underline{v}_{k})${{< /math >}} berechnen - es ist einfach die probabilistische Darstellung davon
+
+    {{< math >}}
+    $$
+    f\left(\underline{x}_{k+1} \mid \underline{x}_{k}\right) = \int_{\mathbb{R}^N} \delta(\underline{x}_{k+1} - \underline{a}(\underline{x}_{k}, \underline{u}_{k}, \underline{v}_{k})) \cdot f_k^v(\underline{v}_k) d \underline{v}_k
+    $$
+    {{< /math >}} 
+
+
+
+- {{< math >}}$f_{k}^{e}\left(\underline{x}_{k}\right)${{< /math >}} 
+
+  die beste Schätzung, die wir über den Systemzustand zum Zeitpunkt $k$ haben, gegeben als Wahrscheinlichkeitsdichte
+
+- {{< math >}}$f_{k+1}^{p}\left(\underline{x}_{k+1}\right)${{< /math >}} 
+
+  - die beste Prädiktion des Zustands zum Zeitpunkt $(k+1)$, die sich aus dem Wissen über den Zustand {{< math >}}$f_{k}^{e}\left(\underline{x}_{k}\right)${{< /math >}} und dem Systemmodell {{< math >}}$\underline{x}_{k+1} = \underline{a}(\underline{x}_{k}, \underline{u}_{k}, \underline{v}_{k})${{< /math >}} (generative Darstellung) bzw. {{< math >}}$f\left(\underline{x}_{k+1} \mid \underline{x}_{k}\right)${{< /math >}} (probabilistische Darstellung) berechnen lässt. 
+  - Bei einer Prädiktion wird die (relative) Unsicherheit generell größer.
+
+
+
+
+
+### Problem
+
+‼️ <span style="color: Red">Es  handelt sich um ein Parameterintegral!</span>
 
 - <span style="color: Red">Integrand hängt von $\underline{x}_{k+1}$ ab (lässt sich i.Allg nicht herausziehen)</span>
 - <span style="color: Red">Erfordert Lösung des Integrals für alle $\underline{x}_{k+1}$</span>
 - <span style="color: Red">Nur möglich für analytische Lösung</span>
 
-Weiter nützliche Form der CK-Gleichung
+### Weiter nützliche Form der CK-Gleichung
 
 {{< math >}}
 $$
