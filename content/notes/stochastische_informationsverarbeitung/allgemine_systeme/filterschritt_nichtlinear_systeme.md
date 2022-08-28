@@ -213,7 +213,7 @@ $$
 
 ## Schwierigkeiten Filterschritt
 
-### Problem 1: Type der Dichte zur Beschreibung der Schätzung ändert Sicht.
+### Problem 1: Type der Dichte zur Beschreibung der Schätzung ändert sich.
 
 Beispiel:
 
@@ -261,7 +261,7 @@ Beispiel:
 
 Beispiel
 
-- Priror ist eine Mixture mit 2 Komponente
+- Prior ist eine Mixture mit 2 Komponente
 
   {{< math >}}
   $$
