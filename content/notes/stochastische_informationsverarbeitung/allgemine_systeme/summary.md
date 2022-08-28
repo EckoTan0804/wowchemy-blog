@@ -123,6 +123,8 @@ Bsp: Aufgabe 9.2, 9.3
 
 **Schritte**:
 
+0. Erweitere das System um eine zusätzliche stochastische Abbildung und einen festen Ausgang $\hat{z}$
+
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-08%2016.51.24.png" alt="截屏2022-08-08 16.51.24" style="zoom: 50%;" />
 
 1. Bestimme $f(\hat{z} \mid y)$
@@ -156,7 +158,7 @@ Bsp: Aufgabe 9.2, 9.3
    {{< math >}}
    $$
    \begin{aligned}
-   f(x \mid \hat{z}) &=\frac{1}{f\left(\hat{z}\right)} \cdot f(x, z) \\
+   f(x \mid \hat{z}) &=\frac{1}{f\left(\hat{z}\right)} \cdot f(x, z) \quad \mid \text{Marginalisierung nach } y\\
    &=\frac{1}{f(\hat{z})} \int f(x, y, z) d y \\
    &=\frac{1}{f(\hat{z})} \int f(\hat{z} \mid y, x) \cdot f(y , x) d y  \quad \mid \hat{z}, x \text{ sind unabhängig}\\
    &=\frac{1}{f(\hat{z})} \int f(\hat{z} \mid y) \cdot f(y \mid x) \cdot f(x) d y \\
@@ -178,5 +180,5 @@ Bsp: Aufgabe 9.2, 9.3
 
 
 {{% callout note %}}
-Bsp: Aufgabe 10.4
+Bsp: Aufgabe 9.4
 {{% /callout %}}
