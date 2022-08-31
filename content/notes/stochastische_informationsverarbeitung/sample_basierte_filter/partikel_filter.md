@@ -77,7 +77,7 @@ $\Rightarrow$
 
 {{< math >}}
 $$
-f_{k+1}^{p}\left(\underline{x}_{k+1}\right)=\sum_{i=1}^{L} w_{k+1}^{p, i} \delta\left(\underline{x}_{k+1}-\underline{\hat{x}}_{k+1}^{p_{1} i}\right)
+f_{k+1}^{p}\left(\underline{x}_{k+1}\right)=\sum_{i=1}^{L} w_{k+1}^{p, i} \delta\left(\underline{x}_{k+1}-\underline{\hat{x}}_{k+1}^{p, i}\right)
 $$
 {{< /math >}} 
 
@@ -210,6 +210,10 @@ Gewichte sind repräsentiert mit Kreise.
 
 #### Stochastic Universal Sampling
 
+{{% callout note %}}
+Üb A13.1 (a)
+{{% /callout %}}
+
 - Bisher
 
   - starkes Rauschen $\rightarrow$ Auswahl variiert stark
@@ -225,7 +229,7 @@ Gewichte sind repräsentiert mit Kreise.
     $$
     {{< /math >}} 
 
-    Für $\epsilon \in \frac{1}{2L}$:
+    Für $\epsilon = \frac{1}{2L}$:
 
     {{< math >}}
     $$
@@ -241,7 +245,7 @@ Gewichte sind repräsentiert mit Kreise.
 
 
 
-### Importance Sampling
+## Importance Sampling
 
 **🎯 Ziel: Berechung des Integrals**
 
@@ -307,9 +311,9 @@ Konvergenz gegen $E$ für $L \to \infty$
 Übungsblatt Aufg. 13.3
 {{% /callout %}}
 
-**🎯 Ziel: Systematische und korrekte Positionierung der Samples an Stellen hoher Likkelihood vor Filterschritt**
+**🎯 Ziel: Systematische und korrekte Positionierung der Samples an Stellen hoher Likelihood vor Filterschritt**
 
-Verwendung von Proposal statt Systemmodell {{< math >}}$f(\underline{x}_{k+1} \mid \underline{x}_k)${{< /math >}} 
+- Verwendung von Proposal statt Systemmodell {{< math >}}$f(\underline{x}_{k+1} \mid \underline{x}_k)${{< /math >}} 
 
 **💡Idee: Importance Sampling für {{< math >}}$f(\underline{x}_k, \underline{x}_{k-1} \mid \underline{y}_{1:k})${{< /math >}}** 
 
@@ -379,7 +383,7 @@ mit Normalisierung.
 
 ### Spezielle Proposal
 
-#### Standard Proposal
+#### **Standard Proposal**
 
 Einfache Verwendung der Systemdynamik:
 
@@ -399,7 +403,7 @@ $$
 
 Sehr einfach, aber KEINE verbesserte Performance 🤪
 
-#### Optimales Proposal
+#### **Optimales Proposal**
 
 Verwende
 
@@ -457,12 +461,10 @@ Wird als **optimales Proposal** genannt
 
   - Input 
 
-    {{< math >}}
-    $$
-    \underline{\hat{x}}_{k-1}^{e, i}, w_{k-1}^{e, i} = \frac{1}{L} \qquad  i \in \{1, \dots, L\}
-    $$
-    {{< /math >}} 
-
+    - {{< math >}}$\underline{\hat{x}}_{k-1}^{e, i}${{< /math >}} 
+    
+    - {{< math >}}$w_{k-1}^{e, i} = \frac{1}{L},  i \in \{1, \dots, L\}${{< /math >}} 
+    
   - For {{< math >}}$i \in \{1, \dots, L\}${{< /math >}} 
 
     - Ziehe 
@@ -472,7 +474,7 @@ Wird als **optimales Proposal** genannt
       \underline{\hat{x}}_{k-1}^{e, i} \sim f(\underline{x}_k \mid \underline{\hat{x}}_{k-1}^i)
       $$
       {{< /math >}} 
-
+  
     - Gewichtung 
 
       {{< math >}}
@@ -480,13 +482,13 @@ Wird als **optimales Proposal** genannt
       w_k^{e, i} \propto f(\underline{y}_k \mid \underline{\hat{x}}_{k}^{e, i})
       $$
       {{< /math >}} 
-
+  
   - Normalisierung Gewichte $w_k^{e, i}$
 
   - Resampling 
 
     {{< math >}}
     $$
-    \underline{\hat{x}}_{k}^{e, i}, w_{k}^{e, i} = \frac{1}{L} \qquad  i \in \{1, \dots, L\}
+    \underline{\hat{x}}_{k}^{e, i}, \quad w_{k}^{e, i} = \frac{1}{L} \qquad  i \in \{1, \dots, L\}
     $$
     {{< /math >}} 
