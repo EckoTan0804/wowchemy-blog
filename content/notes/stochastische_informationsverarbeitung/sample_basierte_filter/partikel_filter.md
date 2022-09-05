@@ -164,9 +164,11 @@ Gewichte sind repräsentiert mit Kreise.
 
   {{< math >}}
   $$
-  f_{k}^{e}\left(\underline{x}_{k}\right)=\sum_{i=1}^{L} w_{k}^{e, i} \cdot \delta\left(\underline{x}_{k}-\underline{\hat{x}}_{k}^{e, i}\right) \approx \sum_{i=1}^{L} \frac{1}{L} \delta\left(\underline{x}_{k}-\underline{\hat{x}}_{k}^{e, i}\right)
+  f_{k}^{e}\left(\underline{x}_{k}\right)=\sum_{i=1}^{L} w_{k}^{e, i} \cdot \delta\left(\underline{x}_{k}-\underline{\hat{x}}_{k}^{e, i}\right) \approx \sum_{i=1}^{L} \frac{1}{L} \delta\left(\underline{x}_{k}-\underline{\hat{\hat{x}}}_{k}^{e, i}\right)
   $$
   {{< /math >}} 
+
+  {{< math >}}$\underline{\hat{\hat{x}}}_{k}^{e, i}${{< /math >}} : i.d.R nicht die gleiche Orte wie $\underline{\hat{x}}_{k}^{e, i}$
 
 - Sehr einfaches Verfahren
   - Verwerfen von Samples mit kleinen Gewichten
@@ -178,7 +180,17 @@ Gewichte sind repräsentiert mit Kreise.
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-14%2018.04.26.png" alt="截屏2022-08-14 18.04.26" style="zoom:50%;" />
 
+- Fangen mit Samples der gleichen Gewichte an
+- In $k=1$
+  - Propagieren durch Prädiktionsschritt. Die Orte werden verändert, während die Geweichte gleich bleiben.
+  - In Filterschritt, verändert die Gewichte. Orte bleiben gleich.
+  - Die größeren Sample werden repliziert. Die ganz kleinere werden weg. 
+
 ### Verschiedene Techniken für Resampling 
+
+{{% callout note %}}
+This [video tutorial](https://youtu.be/DhxRxG5bSrg) gives a much clearer explanation. 👍
+{{% /callout %}}
 
 - Gegeben: $L$ Partikel mit Gewichten $w_i$
 - Gesucht: $L$ Partikel mit Geweichte $\frac{1}{L}$ (gleichgewichtet)
@@ -192,7 +204,7 @@ Gewichte sind repräsentiert mit Kreise.
 
 #### Rouletterad
 
-- Resampling proportional zu der Gewichten $w_i$
+- Resampling **proportional** zu der Gewichten $w_i$
 
 - Betrachtung der kumulative Verteilung $F(i)$
 
@@ -207,6 +219,25 @@ Gewichte sind repräsentiert mit Kreise.
 - Problem
   - Sehr kleine Gewichte nicht ausreichend proportional gezogen werden. 
   - Man bevorzugt ganz große Gewichte.
+
+> Given: Set $S$ of weighted samples
+>
+> Wanted: Random sample, where the probability of drawing $x_i$ is given by $w_i$
+>
+> Typically done $n$ times with replacement to generate new sample set $S^\prime$
+>
+>
+> We have a roulette ring, where the arc length is proportional to the weight.
+>
+> <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-31%2022.57.24.png" alt="截屏2022-08-31 22.57.24" style="zoom: 33%;" />
+>
+> We can think of the sampling as following:
+>
+> We just randomly pick a direction. If I hit $w_3$, then I will take sample Nr. 3
+>
+> <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-31%2023.00.05.png" alt="截屏2022-08-31 23.00.05" style="zoom: 33%;" />
+>
+> And repeat this for $n$ times.
 
 #### Stochastic Universal Sampling
 
@@ -242,6 +273,25 @@ Gewichte sind repräsentiert mit Kreise.
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-15%2010.01.04.png" alt="截屏2022-08-15 10.01.04" style="zoom:50%;" />
 
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-15%2010.01.22.png" alt="截屏2022-08-15 10.01.22" style="zoom: 67%;" />
+
+> We model the roulette wheel like a wagen wheel:
+>
+> <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-31%2023.01.47.png" alt="截屏2022-08-31 23.01.47" style="zoom:33%;" />
+>
+> We can make a set of spokes that are $\frac{1}{n}$ full rotation around.
+>
+> We can randomly put it down someplace, and read off, which $w$ did each spoke hit.
+>
+> <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-31%2023.05.06.png" alt="截屏2022-08-31 23.05.06" style="zoom:33%;" />
+>
+>
+> Compared to roulette wheel:
+>
+> <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-31%2023.06.19.png" alt="截屏2022-08-31 23.06.19" style="zoom: 25%;" />
+
+
+
+
 
 
 
