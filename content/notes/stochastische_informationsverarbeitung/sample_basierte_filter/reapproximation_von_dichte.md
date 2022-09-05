@@ -182,7 +182,7 @@ Gradient of the distance measure $D(\underline{\hat{x}})$:
 
 {{< math >}}
 $$
-\underline{G}(\underline{\hat{x}})=\nabla D(\underline{\hat{\hat{x}}})=\frac{\partial D(\underline{\hat{x}})}{\partial \underline{\hat{x}}}=\left[\frac{\partial D(\underline{\hat{x}})}{\partial \hat{x}_{1}}, \frac{\partial D(\underline{\hat{x}})}{\partial \hat{x}_{2}}, \ldots, \frac{\partial D(\underline{\hat{x}})}{\partial \hat{x}_{L}}\right]^{\top}
+\underline{G}(\underline{\hat{x}})=\nabla D(\underline{\hat{x}})=\frac{\partial D(\underline{\hat{x}})}{\partial \underline{\hat{x}}}=\left[\frac{\partial D(\underline{\hat{x}})}{\partial \hat{x}_{1}}, \frac{\partial D(\underline{\hat{x}})}{\partial \hat{x}_{2}}, \ldots, \frac{\partial D(\underline{\hat{x}})}{\partial \hat{x}_{L}}\right]^{\top}
 $$
 {{< /math >}} 
 
@@ -310,7 +310,7 @@ The resulting Newton step:
 
 {{< math >}}
 $$
-\Delta \underline{\hat{x}}=-\left[\frac{\tilde{F}\left(\hat{x}_{1}\right)-F\left(\hat{x}_{1}, \hat{\hat{x}}\right)}{\tilde{f}\left(\hat{x}_{1}\right)}, \frac{\tilde{F}\left(\hat{x}_{2}\right)-F\left(\hat{x}_{2}, \underline{\hat{x}}\right)}{\tilde{f}\left(\hat{x}_{2}\right)}, \ldots, \frac{\tilde{F}\left(\hat{x}_{L}\right)-F\left(\hat{x}_{L}, \underline{\hat{x}}\right)}{\tilde{f}\left(\hat{x}_{L}\right)}\right]^{\top}
+\Delta \underline{\hat{x}}=-\left[\frac{\tilde{F}\left(\hat{x}_{1}\right)-F\left(\hat{x}_{1}, \underline{\hat{x}}\right)}{\tilde{f}\left(\hat{x}_{1}\right)}, \frac{\tilde{F}\left(\hat{x}_{2}\right)-F\left(\hat{x}_{2}, \underline{\hat{x}}\right)}{\tilde{f}\left(\hat{x}_{2}\right)}, \ldots, \frac{\tilde{F}\left(\hat{x}_{L}\right)-F\left(\hat{x}_{L}, \underline{\hat{x}}\right)}{\tilde{f}\left(\hat{x}_{L}\right)}\right]^{\top}
 $$
 {{< /math >}} 
 
@@ -369,7 +369,7 @@ Thus, we require generalization of concept of CDF. 💪
 💡 Key idea
 
 - Compare local probability masses of $\tilde{f}(x)$ and $f(x)$
-- Integrate over intervals at all positions and all widths
+- Integrate over intervals at all positions $m$ and all widths $b$
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-11%2012.04.07.png" alt="截屏2022-08-11 12.04.07" style="zoom: 67%;" />
 
@@ -485,7 +485,7 @@ Solution
 
      - Projections onto all unit vectors $\underline{u} \in \mathbb{S}^{N-1}$
 
-     - We obtain sets of projections $\tilde{f}(r \mid \underline{u})$ and $f(r \mid u)$
+     - We obtain sets of projections $\tilde{f}(r \mid \underline{u})$ and $f(r \mid u)$ ($r$: the density along the unit vector)
 
      - These are the Radon transforms of $\tilde{f}(\underline{x})$ and $f(\underline{x})$ 
 
@@ -493,7 +493,7 @@ Solution
 
      - For comparison, we use the univariate cumulative distribution functions $\tilde{F}(r \mid \underline{u})$ and $F(r \mid u)$
 
-     - These are unique, well defined, and easy to calculate
+     - These are unique, well defined, and easy to calculate 👏
 
      - Resulting distance measures
 
@@ -505,7 +505,7 @@ Solution
 
        depend on the projection vector $\underline{u}$
 
-  3. We integrate these one-dimensional distance measures $D_1(\underline{u})$ over all all unit vectors $\underline{u} \in \mathbb{S}^{N-1}$
+  3. We integrate these one-dimensional distance measures $D_1(\underline{u})$ over all unit vectors $\underline{u} \in \mathbb{S}^{N-1}$
 
      - This gives multivariate distance measure $D(\tilde{f}(\underline{x}), f(\underline{x}))$
      - Typically a discretized subset of $\underline{u} \in \mathbb{S}^{N-1}$ is used
@@ -515,7 +515,7 @@ Solution
 
 - Represent general $N$-dimensional probability density functions via the set of all one-dimensional projections
 
-- Linear projection of random vector $\underline{\boldsymbol{x}} \in \mathbb{R}^{N}$ to to scalar random variable $\boldsymbol{r} \in \mathbb{R}$ onto line described by unit vector $\underline{u} \in \mathbb{S}^{N-1}$
+- Linear projection of random vector $\underline{\boldsymbol{x}} \in \mathbb{R}^{N}$ to scalar random variable $\boldsymbol{r} \in \mathbb{R}$ onto line described by unit vector $\underline{u} \in \mathbb{S}^{N-1}$
 
   {{< math >}}
   $$
@@ -536,6 +536,12 @@ Solution
 - $f_r(r \mid \underline{u})$ is Radon transform of $f(\underline{x})$ for all $\underline{u} \in \mathbb{S}^{N-1}$
 
 Visualization:
+
+> $u$ is the unit vector.
+>
+> We project the density on $u$ and we get the projection (yellow area).
+>
+> Then if we cut through the projection, it gives us the red line.
 
 <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-13%2012.11.44.png" alt="截屏2022-08-13 12.11.44" style="zoom: 33%;" />
 
@@ -725,7 +731,7 @@ Multivariate distance measure between two continuous and/or discrete probability
      $$
      {{< /math >}} 
 
-6. **Step 6 Assemble Multivariate Distance**
+6. **Assemble Multivariate Distance**
 
    - Individual 1D distances $D_1(\underline{r}, \underline{u})$ can be assembled to form multivariate distance measure
 
