@@ -54,7 +54,7 @@ Zustandschätzung für wertediskrete Systeme: **Wonham Filter**
 
   {{< math >}}
   $$
-  \underline{\xi}_{k}^{e} \overset{y_k = m}{=} \frac{\mathbf{B}(:, m) \odot \xi_{k}^{p}}{\mathbf{B}(:, m)^\top \cdot \xi_{k}^{p}}
+  \underline{\xi}_{k}^{e} \overset{y_k = m}{=} \frac{\mathbf{B}(:, m) \odot \underline{\xi}_{k}^{p}}{\mathbf{B}(:, m)^\top \cdot \underline{\xi}_{k}^{p}}
   $$
   {{< /math >}} 
 
