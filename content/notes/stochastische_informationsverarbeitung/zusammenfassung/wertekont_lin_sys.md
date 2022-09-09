@@ -171,7 +171,7 @@ Schritte
         \underline{w}_{k}
         \end{array}\right]\left[\begin{array}{ll}
         \underline{x}_{k}-\hat{\underline{x}}_{k} & \underline{w}_{k}
-        \end{array}\right]\right\} \cdot\left[\begin{array}{l}
+        \end{array}\right]^\top\right\} \cdot\left[\begin{array}{l}
         \mathbf{A}_{k}^{\top} \\
         \mathbf{B}_{k}^{\top}
         \end{array}\right] \\\\
@@ -240,7 +240,7 @@ Schritte
 
    {{< math >}}
    $$
-   \mathbf{C}_{k}^{e}\left(\mathbf{K}_{k}\right)=E\{\underline{x} - \underline{x}_k^e\} = \left(\mathbf{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right) \mathbf{C}_{k}^{p}\left(\mathbf{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right)^{\top}+\mathbf{K}_{k} C_{k}^{v} \mathbf{K}_{k}^{\top}
+   \mathbf{C}_{k}^{e}\left(\mathbf{K}_{k}\right)=\operatorname{Cov}\{\underline{x}_k^e - \underline{x}\} = \left(\mathbf{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right) \mathbf{C}_{k}^{p}\left(\mathbf{I}-\mathbf{K}_{k} \mathbf{H}_{k}\right)^{\top}+\mathbf{K}_{k} C_{k}^{v} \mathbf{K}_{k}^{\top}
    $$
    {{< /math >}} 
 

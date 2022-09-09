@@ -147,7 +147,7 @@ $$
   \underline{w}_{k}
   \end{array}\right]\left[\begin{array}{ll}
   \underline{x}_{k}-\hat{\underline{x}}_{k} & \underline{w}_{k}
-  \end{array}\right]\right\} \cdot\left[\begin{array}{l}
+  \end{array}\right]^\top\right\} \cdot\left[\begin{array}{l}
   \mathbf{A}_{k}^{\top} \\
   \mathbf{B}_{k}^{\top}
   \end{array}\right] \\\\

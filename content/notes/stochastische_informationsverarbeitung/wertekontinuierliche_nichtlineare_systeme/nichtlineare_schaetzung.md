@@ -427,7 +427,7 @@ Erwartungswert
 
 {{< math >}}
 $$
-\hat{x}_{k+1}^{p}=E\left\{\underline{a}_{n}\left(\underline{x}_{k}, \underline{u}_{k}\right)\right\}=\int_{\mathbb{R}^{N}} \int_{\mathbb{R}^{p}} \underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right) f_{k}^{x u}\left(\underline{x}_{k}, \underline{u}_{k}\right) d\underline{x}_{k} d\underline{u}_{k}
+\hat{x}_{k+1}^{p}=E\left\{\underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right)\right\}=\int_{\mathbb{R}^{N}} \int_{\mathbb{R}^{p}} \underline{a}_{k}\left(\underline{x}_{k}, \underline{u}_{k}\right) f_{k}^{x u}\left(\underline{x}_{k}, \underline{u}_{k}\right) d\underline{x}_{k} d\underline{u}_{k}
 $$
 {{< /math >}} 
 
