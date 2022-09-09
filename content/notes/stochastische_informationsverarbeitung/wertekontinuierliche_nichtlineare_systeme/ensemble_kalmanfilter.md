@@ -218,7 +218,7 @@ Alternative Herleitung
 
   {{< math >}}
   $$
-  \mathcal{Y} = \mathbb{H} \cdot \mathcal{X}_p + \mathcal{V}
+  \mathcal{Y} = \mathbf{H} \cdot \mathcal{X}_p + \mathcal{V}
   $$
   {{< /math >}} 
 
@@ -227,9 +227,9 @@ Alternative Herleitung
   {{< math >}}
   $$
   \begin{aligned}
-  \mathcal{X}_e &= \mathcal{X}_p + \mathbf{K}(\underbrace{\underline{\hat{y}} \cdot \underline{\mathbb{1}}^\top}_{\text{gemessen}} - \underbrace{\mathcal{Y}}_{\text{Prädiktion}}) \\\\
-  &= \mathcal{X}_e + \mathbf{K}(\underline{\hat{y}} \cdot \underline{\mathbb{1}}^\top - \mathbb{H} \mathcal{X}_p - \mathcal{V})\\\\
-  &= (\mathbb{I} - \mathbf{K}\mathbf{H})\mathcal{X}_p + \mathbf{K}(\underbrace{\underline{\hat{y}} \cdot \underline{\mathbb{1}}^\top - \mathcal{V}}_{=\hat{\mathcal{Y}}})
+  \mathcal{X}_e &= \mathcal{X}_p + \mathbf{K}(\underbrace{\underline{\hat{y}} \cdot \underline{\mathbf{1}}^\top}_{\text{gemessen}} - \underbrace{\mathcal{Y}}_{\text{Prädiktion}}) \\\\
+  &= \mathcal{X}_e + \mathbf{K}(\underline{\hat{y}} \cdot \underline{\mathbf{1}}^\top - \mathbb{H} \mathcal{X}_p - \mathcal{V})\\\\
+  &= (\mathbb{I} - \mathbf{K}\mathbf{H})\mathcal{X}_p + \mathbf{K}(\underbrace{\underline{\hat{y}} \cdot \underline{\mathbf{1}}^\top - \mathcal{V}}_{=\hat{\mathcal{Y}}})
   
   \end{aligned}
   $$

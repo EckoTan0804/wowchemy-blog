@@ -226,7 +226,7 @@ $$
 $$
    {{< /math >}} 
 
-3. Filterung in probabilistischer Form.
+3. Filterung in probabilistischer Form mit Messung {{< math >}}$\hat{\underline{y}}${{< /math >}}
 
    {{< math >}}
    $$
@@ -248,7 +248,7 @@ $$
 Unscented Prinzipien
 
 - Nichtlineare Transformation eines einzelnen Punktes ist einfach
-- Es ist einfach, eine Punktwolke zuu finden, deren Stichprobenmittelwert und -varianz mit den Momenten der gegebene Dichte übereinstimmen.
+- Es ist einfach, eine Punktwolke zu finden, deren Stichprobenmittelwert und -varianz mit den Momenten der gegebene Dichte übereinstimmen.
 - Es ist einfach, Mittelwert und Varianz einer Punktwolke zu bestimmen
 
 Bsp: additives Rauschen
@@ -272,7 +272,7 @@ $$
    $$
    {{< /math >}} 
 
-2. Mittelwert und Varianz berechnen 
+2. Mittelwert und Varianz basierend auf Samples berechnen 
 
    {{< math >}}
    $$
@@ -342,7 +342,7 @@ $$
    $$
    {{< /math >}} 
 
-3. Filterung in probabilistischer Form.
+3. Filterung in probabilistischer Form mit Messung {{< math >}}$\hat{\underline{y}}${{< /math >}}
 
    {{< math >}}
    $$
