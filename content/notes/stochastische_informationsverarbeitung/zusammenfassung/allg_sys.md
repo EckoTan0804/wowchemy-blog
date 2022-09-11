@@ -181,6 +181,16 @@ f(\underline{z} | \underline{x}) = \sum_{i \in \mathbb{Z}} f_i^z(\underline{z}) 
 $$
 {{< /math >}} 
 
+wobei {{< math >}}$f_i^z(\underline{z})${{< /math >}} und {{< math >}}$f_i^x(\underline{x})${{< /math >}} beliebige Dichte (z.B Gaußdichte) sein können.
+
+Schreibweise mit {{< math >}}$\underline{x}_{k+1}${{< /math >}} und {{< math >}}$\underline{x}_{k}${{< /math >}}:
+
+{{< math >}}
+$$
+f\left(\underline{x}_{k+1} \mid \underline{x}_k\right)=\sum_{i=1}^L w_k^{(i)} f_{k+1}^{(i)}\left(\underline{x}_{k+1}\right) f_k^{(i)}\left(\underline{x}_k\right)
+$$
+{{< /math >}} 
+
 ## Filterung
 
 ### Rückwartsinferenz
