@@ -394,7 +394,7 @@ Samples nur auf Hauptachsen: Insgesamt $2N$ btw. $2N+1$ ($N$: \#Dimensionen)
    $$
    {{< /math >}} 
 
-3. Differenz zwichen $h(x)$ und $E\{h(x)\}$ berechnen
+3. Differenz zwichen $h(x)$ und $E\\{h(x)\\}$ berechnen
 
    {{< math >}}
    $$
