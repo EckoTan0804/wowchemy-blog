@@ -318,7 +318,7 @@ E=\int_{\mathbb{R}^{N}} g(\underline{x}) \sum_{i=1}^{L} w_{i} \cdot \delta\left(
 $$
 {{< /math >}} 
 
-Aber: Oft Sampling von $f(\underline{x})$ nicht möglich 🤪
+Aber: Oft Sampling von $f(\underline{x})$ <u>nicht</u> möglich 🤪
 
 Abhilfe: **Proposal distribution** (a.k.a instrumental distribution, importance distribution) $p(\underline{x})$ mit 
 
@@ -328,11 +328,11 @@ $$
 $$
 {{< /math >}} 
 
-($\operatorname{supp}$ stehts für support)
+($\operatorname{supp}$ steht für support)
 
 d.h. $p(\underline{x}) > 0$ falls $f(\underline{x}) > 0$.
 
-$\rightarrow$ Sampling von $p(\underline{x})$ ist einfach 👏
+Für $p(\underline{x})$ müssen wir so auswählen, dass Sampling von $p(\underline{x})$ einfach ist (z.B. Gaußdichte).
 
 Einsetzen:
 
@@ -342,10 +342,17 @@ E=\int_{\mathbb{R}^{N}} g(\underline{x}) \cdot \frac{p(\underline{x})}{p(\underl
 $$
 {{< /math >}} 
 
+Jetzt würden wir *nicht* {{< math >}}$f(\underline{x})${{< /math >}} in eine Dirac Mixture entwickeln, sondern {{< math >}}$p(\underline{x})${{< /math >}}. Davon können wir samplen.
+
+{{< math >}}
+$$
+p(\underline{x}) \approx \sum_{i=1}^{L} w_{i} \cdot \delta\left(\underline{x}-\underline{\hat{x}}_{i}\right)
+$$
+{{< /math >}} 
+
 {{< math >}}
 $$
 \begin{aligned}
-p(\underline{x}) &\approx \sum_{i=1}^{L} w_{i} \cdot \delta\left(\underline{x}-\underline{\hat{x}}_{i}\right) \\\\
 \Rightarrow E &\approx \int_{\mathbb{R}^{N}} g(\underline{x}) \cdot \frac{f(\underline{x})}{p(\underline{x})} \cdot \sum_{i=1}^{L} w_{i} \delta\left(\underline{x}-\underline{\hat{x}}_{i}\right) d \underline{x} \\\\
 &= \sum_{i=1}^{L} g(\underline{\hat{x}}_{i}) \cdot \underbrace{\frac{f(\underline{\hat{x}}_i)}{p(\underline{\hat{x}}_{i})} \cdot w_i}_{=: w_{i}^\prime} \\\\
 &= \sum_{i=1}^{L} w_{i}^\prime \cdot g(\underline{\hat{x}}_{i})
@@ -355,17 +362,25 @@ $$
 
 Konvergenz gegen $E$ für $L \to \infty$
 
+I.e. Wir teilen den Ausdruck so auf, dass wir Sample {{< math >}}$\underline{\hat{x}}_i${{< /math >}} von der Proposal {{< math >}}$p(\underline{x})${{< /math >}} sampeln und ihr ursprüngliches Gewicht {{< math >}}$w_i${{< /math >}} mit "Importance" {{< math >}}$\frac{f(\underline{\hat{x}}_i)}{p(\underline{\hat{x}}_{i})} ${{< /math >}} anpassen.
+
+{{% callout note %}}
+Check [this video](https://youtu.be/C3p2wI4RAi8) for a clear explanation and visualization.
+{{% /callout %}}
+
 ### Sequential Importance Sampling
 
 {{% callout note %}}
 Übungsblatt Aufg. 13.3
 {{% /callout %}}
 
-**🎯 Ziel: Systematische und korrekte Positionierung der Samples an Stellen hoher Likelihood vor Filterschritt**
+**Vor-positionierung von Samples**
 
-- Verwendung von Proposal statt Systemmodell {{< math >}}$f(\underline{x}_{k+1} \mid \underline{x}_k)${{< /math >}} 
+**🎯 Ziel: Systematische und korrekte Positionierung der Samples an Stellen hoher Likelihood <u>vor</u> Filterschritt**
 
-**💡Idee: Importance Sampling für {{< math >}}$f(\underline{x}_k, \underline{x}_{k-1} \mid \underline{y}_{1:k})${{< /math >}}** 
+- Verwendung von **Proposal** statt Systemmodell {{< math >}}$f(\underline{x}_{k+1} \mid \underline{x}_k)${{< /math >}} 
+
+**💡Idee: Importance Sampling für {{< math >}}$f(\underline{x}_k, \underline{x}_{k-1} \mid \underline{y}_{1:k})${{< /math >}}** (die Messung wird auch in Berücksichtigung genommen)
 
 {{< math >}}
 $$

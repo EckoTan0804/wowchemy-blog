@@ -150,7 +150,7 @@ Represent general $N$-dimensional probability density functions via the set of a
 
 1. Represent the two densities $\tilde{f}(\underline{x})$ and $f(\underline{x})$ by their Radon transforms $\tilde{f}(r \mid \underline{u})$ and $f(r \mid u)$
 
-2. Compare the sets of projections $\tilde{f}(r \mid \underline{u})$ and $f(r \mid u)$ for every $\underline{u} \in \mathbb{S}^{N-1}. Resulting distance is
+2. Compare the sets of projections $\tilde{f}(r \mid \underline{u})$ and $f(r \mid u)$ for every $\underline{u} \in \mathbb{S}^{N-1}$. Resulting distance is
 
    {{< math >}}
    $$
@@ -263,7 +263,7 @@ $$
 - Varianz der Samples erhöht sich mit Filterschritten
 
 - Partikel sterben aus $\rightarrow$ Degenerierung des Filters
-- Aussterben schneller, je genauer die Messung (Paradox!)
+- Aussterben schneller, je genauer die Messung, da Likelihood schmaler (Paradox!)
 
 ## Resampling
 
@@ -278,5 +278,93 @@ $$
 - Gegeben: $L$ Partikel mit Gewichten $w_i$
 - Gesucht: $L$ Partikel mit Geweichte $\frac{1}{L}$ (gleichgewichtet)
 
+## Sequential Importance Sampling 
 
+0. {{< math >}}$f_{k}^{e}\left(\underline{x}_{k}\right)=f\left(\underline{x}_{k} \mid \underline{y}_{1: k}\right)${{< /math >}} auf {{< math >}}$\underline{x}_{1: k-1}${{< /math >}} marginalisieren
 
+   {{< math >}}
+   $$
+   f_{k}^{e}\left(\underline{x}_{k}\right)=f\left(\underline{x}_{k} \mid \underline{y}_{1: k}\right)=\int_{\mathbb{R}^{N}} \cdots \int_{\mathbb{R}^{N}} f\left(\underline{x}_{1: k} \mid \underline{y}_{1 : k}\right) d \underline{x}_{1: k-1}
+   $$
+   {{< /math >}}
+
+1. Importance Sampling für {{< math >}}$f(\underline{x}_k, \underline{x}_{k-1} \mid \underline{y}_{1:k})${{< /math >}} 
+
+   {{< math >}}
+   $$
+   f_{k}^{e}\left(\underline{x}_{k}\right) = \int_{\mathbb{R}^{N}} \cdots \int_{\mathbb{R}^{N}} \underbrace{\frac{f\left(\underline{x}_{1: k} \mid \underline{y}_{1 : k}\right)}{p\left(\underline{x}_{1: k} \mid \underline{y}_{1 : k}\right)}}_{=: w_k^{e, i}} p\left(\underline{x}_{1: k} \mid \underline{y}_{1 : k}\right) d \underline{x}_{1: k-1}
+   $$
+   {{< /math >}} 
+
+2. {{< math >}}$\frac{f\left(\underline{x}_{1: k} \mid \underline{y}_{1 : k}\right)}{p\left(\underline{x}_{1: k} \mid \underline{y}_{1 : k}\right)}${{< /math >}} umschreiben
+
+   - Zähler
+
+     {{< math >}}
+     $$
+     \begin{aligned}
+     f\left(\underline{x}_{1: k} \mid \underline{y}_{1: k}\right) &\propto f\left(\underline{y}_{k} \mid \underline{x}_{1: k}, \underline{y}_{1: k - 1}\right) \cdot f\left(\underline{x}_{1: k} \mid \underline{y}_{1: k-1}\right)\\
+     &=f\left(\underline{y}_{k} \mid \underline{x}_{k}\right) \cdot f\left(\underline{x}_{k} \mid \underline{x}_{1:k-1}, \underline{y}_{1:k-1}\right) \cdot f\left(\underline{x}_{1:k-1} \mid \underline{y}_{1: k-1}\right)\\
+     &=f\left(\underline{y}_{k} \mid \underline{x}_{k}\right) \cdot f\left(\underline{x}_{k} \mid \underline{x}_{k-1}\right) \cdot f\left(\underline{x}_{1: k-1} \mid \underline{y}_{1: k \cdot 1}\right)
+     \end{aligned}
+     $$
+     {{< /math >}} 
+
+   - Nenner
+
+     {{< math >}}
+     $$
+     p\left(\underline{x}_{1: k} \mid \underline{y}_{1: k}\right)=p\left(\underline{x}_{k} \mid \underline{x}_{1: k - 1}, \underline{y}_{1: k}\right) \cdot p\left(\underline{x}_{1: k -1} \mid \underline{y}_{1: k - 1}\right)
+     $$
+     {{< /math >}} 
+
+3. Einsetzen, $w_k^{e, i}$ in Rekursiven Form schreiben
+
+   {{< math >}}
+   $$
+   w_k^{e, i} = \frac{f\left(\underline{\hat{x}}_{1: k} \mid \underline{y}_{1 : k}\right)}{p\left(\underline{\hat{x}}_{1: k} \mid \underline{y}_{1 : k}\right)} \propto \frac{f\left(\underline{y}_{k} \mid \underline{x}_{k}^i\right) \cdot f\left(\underline{x}_{k}^i\mid \underline{x}_{k-1}^i\right)}{p\left(\underline{x}_{k}^i \mid \underline{x}_{1: k - 1}^i, \underline{y}_{1: k}\right)} \cdot \underbrace{\frac{f\left(\underline{x}_{1: k-1}^i \mid \underline{y}_{1: k \cdot 1}\right)}{p\left(\underline{x}_{1: k -1}^i \mid \underline{y}_{1: k - 1}\right)}}_{=w_{k-1}^{e, i}}
+   $$
+   {{< /math >}} 
+
+   und Normalisieren.
+
+### Spezielle Proposals
+
+- **Standard Proposal**
+
+  {{< math >}}
+  $$
+  p\left(\underline{x}_{k} \mid \underline{x}_{k-1}, \underline{y}_{k}\right) \stackrel{!}{=} f\left(\underline{x}_{k} \mid \underline{x}_{k-1}\right)
+  $$
+  {{< /math >}}
+
+  Dann ist
+
+  {{< math >}}
+  $$
+  w_{k}^{e, i} \propto \frac{f\left(\underline{y}_{k} \mid \hat{\underline{x}}_{k}^{i}\right) \cdot f\left(\hat{\underline{x}}_{k}^{i} \mid \hat{\underline{x}}_{k-1}^{i}\right)}{p\left(\underline{\hat{x}}_{k}^{i} \mid \hat{\underline{x}}_{k-1}^{i}, \underline{y}_k\right)} \cdot w_{k-1}^{e, i}=f\left(\underline{y}_{k} \mid \hat{\underline{x}}_{k}^{i}\right) \cdot w_{k - 1}^{e, i}
+  $$
+  {{< /math >}} 
+
+  Sehr einfach aber keine verbesserte Performance.
+
+- **Optimales Proposal**
+
+  {{< math >}}
+  $$
+  \begin{aligned}
+  p\left(\underline{x}_{k} \mid \underline{x}_{k-1}, \underline{y}_{k}\right) &=f\left(\underline{x}_{k} \mid \underline{x}_{k-1}, \underline{y}_{k}\right) \\
+  & \propto f\left(\underline{y}_{k} \mid \underline{x}_{k}\right) \cdot f\left(\underline{x}_{k} \mid \underline{x}_{k-1}\right)
+  \end{aligned}
+  $$
+  {{< /math >}} 
+
+  Dann ist
+
+  {{< math >}}
+  $$
+  w_k^{e, i} = w_{k-1}^{e, i}
+  $$
+  {{< /math >}} 
+
+  Minimierte Varianz der Gewichte aber nur in Spezialfällen verwendbar.

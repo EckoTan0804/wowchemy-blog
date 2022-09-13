@@ -504,7 +504,7 @@ Priore Schätzung: Gaußdichte {{< math >}}$\tilde{f}_{p}(x)=\mathcal{N}\left(x,
 
 Rauschen: {{< math >}}$v \sim \tilde{f}_v(v) = \mathcal{N}(v, 0, \sigma_v^2)${{< /math >}} 
 
-<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/wertkontinuierliche_nichtlineare_system-filter_mit_sampling.drawio.png" alt="wertkontinuierliche_nichtlineare_system-filter_mit_sampling.drawio" style="zoom:80%;" />
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-09-12%2022.29.08.png" alt="截屏2022-09-12 22.29.08" style="zoom: 33%;" />
 
 Approximation
 
@@ -535,3 +535,10 @@ $$
 y_{i j}=x_{i}^{3}+v_{j} \qquad i=1,2 , j=1,2
 $$
 {{< /math >}} 
+
+Wir sampeln für $x$ und $v$ jeweils 2 Samples. Dann kriegen wir 4 Paare $(x, y)$: $(x_1, y_{11}), (x_1, y_{12}), (x_2, y_{21}), (x_2, y_{22})$, also die 4 violette Punkte im Bild.
+
+Wir nehmen an, dass $x, y$ gemeinsam Gaußverteilt sind. Dann berechnen wir mit dieser 4 Punkte den Mittelwert und Kovarianz, und fitten wir eine Gaußdichte (Moment matching).
+
+Wir haben auch die Messung $\hat{y}$, die diese approximierte Gaußdichte schneidet. Mit $\hat{y}$ können wir jetzt den probabilistischen Kalman Filter durchführen.
+
