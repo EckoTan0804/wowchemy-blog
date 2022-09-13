@@ -234,11 +234,11 @@ $$
 
    mit Einsetzen der Unformung von $f(b \mid a)$ von Schritt 1 ein
 
-3. Berechne $f_a(a \mid b)$ mithilfe von Bayes Regeln
+3. Berechne $f_a(a \mid \hat{b})$ mithilfe von Bayes Regeln
 
    {{< math >}}
    $$
-   f_a(a \mid b) = \frac{f_a(b \mid a) f_a(a)}{f_b(b)} = \frac{\overbrace{\delta(b - g(a))}^{\text{Schritt 1}} f_a(a)}{\underbrace{f_b(b)}_{\text{Schritt 2}}}
+   f_a(a \mid \hat{b}) = \frac{f_a(\hat{b} \mid a) f_a(a)}{f_b(\hat{b})} = \frac{\overbrace{\delta(\hat{b} - g(a))}^{\text{Schritt 1}} f_a(a)}{\underbrace{f_b(\hat{b})}_{\text{Schritt 2}}}
    $$
    {{< /math >}} 
 
@@ -287,11 +287,27 @@ $$
    {{< math >}}
    $$
    \begin{aligned}
-   f(x \mid \hat{z}) &=\frac{1}{f\left(\hat{z}\right)} \cdot f(x, z) \quad \mid \text{Marginalisierung nach } y\\
-   &=\frac{1}{f(\hat{z})} \int f(x, y, z) d y \\
+   f(x \mid \hat{z}) &=\frac{1}{f\left(\hat{z}\right)} \cdot f(x, \hat{z}) \quad \mid \text{Marginalisierung nach } y\\
+   &=\frac{1}{f(\hat{z})} \int f(x, y, \hat{z}) d y \\
    &=\frac{1}{f(\hat{z})} \int f(\hat{z} \mid y, x) \cdot f(y , x) d y  \quad \mid \hat{z}, x \text{ sind unabhängig}\\
    &=\frac{1}{f(\hat{z})} \int f(\hat{z} \mid y) \cdot f(y \mid x) \cdot f(x) d y \\
    &=\frac{1}{f(\hat{z})} \int \underbrace{f(\hat{z} \mid y)}_{\text{Berechnet in Schritt 1}} \cdot \underbrace{f(y \mid x)}_{\text{Systemmodell}} \cdot f(x) d y 
    \end{aligned}
    $$
    {{< /math >}} 
+
+### Schwierigkeit vom Filterschritt
+
+1. Type der Dichte zur Beschreibung der Schätzung ändert sich
+2. Dichte wrid mit jedem Schritt komplexer
+
+### Vereinfachte Filterung
+
+Vereinfachung der Likelihood {{< math >}}$f(\underline{y} \mid \underline{x})${{< /math >}} durch Mixture (Analog zu vereinfachter Prädiktion)
+
+{{< math >}}
+$$
+f(\underline{y} \mid \underline{x}) = \sum_{i \in \mathbb{Z}} f_i^y(\underline{y}) f_i^x(\underline{x})
+$$
+{{< /math >}} 
+
