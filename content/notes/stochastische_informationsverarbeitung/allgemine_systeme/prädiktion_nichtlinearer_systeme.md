@@ -213,6 +213,8 @@ f\left(\underline{z} \mid \underline{\hat{x}}_{i}\right)=f_w\left(\underline{z}-
 $$
 {{< /math >}} 
 
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-09-13%2015.49.14.png" alt="截屏2022-09-13 15.49.14" style="zoom: 33%;" />
+
 In den "Zwischenräumen" gilt nun aber {{< math >}}$\int f(\underline{z} \mid \underline{x}) = 1${{< /math >}}  NICHT. Wir definiere eine "Füllfunktion" $f_i(\underline{x})$:
 
 {{< math >}}
@@ -296,6 +298,8 @@ $$
 f(\underline{z} | \underline{x}) = \sum_{i \in \mathbb{Z}} f_i^z(\underline{z}) \cdot f_i^x(\underline{x})
 $$
 {{< /math >}} 
+
+<img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-09-13%2016.11.08.png" alt="截屏2022-09-13 16.11.08" style="zoom:50%;" />
 
 Wichtig ist, dass die einzelnen Komponenten entkoppelt sind. 👏
 
