@@ -308,7 +308,7 @@ $$
 
 - Berechnung der posteriore Verteilung nur gut für "schwache" Nichtlinearität
 
-  $\rightarrow$ Induzierte Nichtlinearität durch die Unsicherheit in priorer Dichte
+  $\rightarrow$ Induzierte Nichtlinearität durch die Unsicherheit in priorer Dichte (Die Nichtlinearität ist induziert durch die Unsicherheit der priorer Dichte)
 
   <img src="https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-08-24%2015.52.30.png" alt="截屏2022-08-24 15.52.30" style="zoom:50%;" />
 
@@ -316,7 +316,7 @@ $$
   >
   > Wenn wir das Rauschen breiter machen (unten, grün), dann kommt ein Problem vor, dass die resultierende Dichte von $y$ nicht symmetrisch ist.
   >
-  > Induzierte nichtlinearität heißt: wir können gar nicht sagen, die ist absolut betrachtet, besonders linear oder besonders nichtlinear. Es ist potential, Problem zu machen. Aber sie macht kein Problem, solange ich mich nur in den linken Bereich oder nur in den rechten Bereich des "Knickpunkt" aufhalten. Wenn wir die Dichte habe, die über den "Knickpunkt" weggeht, dann bekomme ich Problem. Das ist die induzierte nichtlinearität, die durch das Rauschen induziert wird.
+  > Induzierte nichtlinearität heißt: wir können gar nicht sagen, die ist absolut betrachtet, besonders linear oder besonders nichtlinear. Es ist potential, Problem zu machen. Aber sie macht kein Problem, solange ich mich nur in den linken Bereich oder nur in den rechten Bereich des "Knickpunkt" aufhalten. Wenn wir die Dichte habe, die über den "Knickpunkt" weggeht, dann bekomme ich Problem. **Das ist die induzierte nichtlinearität, die durch das Rauschen induziert wird.**
 
 - Linearisierung nur um einen Punkt
 

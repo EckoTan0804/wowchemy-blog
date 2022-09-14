@@ -265,7 +265,7 @@ Beispiel
 
   {{< math >}}
   $$
-  f^p(x) = \sum_{1}^2 f^{p, i}(x)
+  f^p(x) = \sum_{i=1}^2 f^{p, i}(x)
   $$
   {{< /math >}} 
 
@@ -284,7 +284,7 @@ Beispiel
   {{< math >}}
   $$
   \begin{aligned}
-  f(x) & \propto f^{p}(x) \cdot f^{v}(\hat{y}-x) \\
+  f^e(x) & \propto f^{p}(x) \cdot f^{v}(\hat{y}-x) \\
   &=\left(\sum_{i=1}^{2} f^{p, i}(x)\right) \cdot\left(\sum_{j=1}^{2} f^{v, i}(\hat{y}-x)\right) \\
   &=\sum_{i=1}^{4} f^{e_{i} i}(x)
   \end{aligned}

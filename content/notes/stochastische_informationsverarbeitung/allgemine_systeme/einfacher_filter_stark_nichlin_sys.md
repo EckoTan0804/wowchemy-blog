@@ -83,7 +83,7 @@ Gaussian Mixtures sind universelle Approximators. Falls $L$ genügend groß, kan
 
 - **Ziel: Nutzung der Erkenntnisse zum Kalman Filter für schwach nichtlineare Systeme $\rightarrow$ stark nichtlinearer Fall**
 
-- Deshalb: Individuelle Verarbeitung der einzelnen Komponente $i (also Vernachlässigung der Überlappung) 
+- Deshalb: Individuelle Verarbeitung der einzelnen Komponente $i$ (also Vernachlässigung der Überlappung) 
 
 - Ergibt Bank von nichtlinearen Kalman Filter, die parallel arbeiten.
 
@@ -121,6 +121,8 @@ f^{p}(\underline{z})&=\int_{\mathbb{R}^{N}} f^{w}(\underline{z}-\underline{a}(\u
 $$
 {{< /math >}} 
 
+Also wir approximieren das Integral einfach mit einem lokalen Posterior für jedes $i$, die wieder  Gauß ist, da sie so schmal ist.
+
 {{< math >}} $\underline{z}_{i+1}^p, C_{i+1}^p${{< /math >}} durch Anwendung nichtlinearer Kalman Filter 
 
 ### Filterschritt
@@ -146,7 +148,7 @@ Filterschritt
 {{< math >}}
 $$
 \begin{aligned}
-f^{e}(\underline{x}) &=c^{e} f^{v}\left(\underline{\hat{y}}-\underline{h}(\underline{x})\right) \cdot \sum_{i=1}^{L} w_{i} \mathcal{N}\left(\underline{x}-\hat{\underline{x}}_{i}^{p}, C_{i}^{p}\right) \\
+f^{e}(\underline{x}) &= \underline{c^{e}}_{\text{Normalisierungskonstante}} f^{v}\left(\underline{\hat{y}}-\underline{h}(\underline{x})\right) \cdot \sum_{i=1}^{L} w_{i} \mathcal{N}\left(\underline{x}-\hat{\underline{x}}_{i}^{p}, C_{i}^{p}\right) \\
 &=c^{e} \sum_{i=1}^{L} w_{i} \underbrace{f^{v}(\underline{\hat{y}}-\underline{h}(\underline{x})) \cdot \mathcal{N} \left(\underline{x}-\underline{\hat{x}}_{i}^{p}, C_{i}^{p}\right)}_{\approx k_i \mathcal{N} \left(\underline{x}-\underline{\hat{x}}_{i}^{e}, C_{i}^{e}\right)} \\
 &= c^e \sum_{i=1}^{L} w_{i} k_i \mathcal{N} \left(\underline{x}-\underline{\hat{x}}_{i}^{e}, C_{i}^{e}\right)
 \end{aligned}

@@ -43,7 +43,7 @@ header:
 
   {{< math >}}
   $$
-  f_{p}(x)=\sum_{i=1}^{L} w_{i}^{p} \delta(\underline{x}-\underline{\hat{x}}_i^p)
+  f_{p}(\underline{x})=\sum_{i=1}^{L} w_{i}^{p} \delta(\underline{x}-\underline{\hat{x}}_i^p)
   $$
   {{< /math >}} 
 
@@ -51,7 +51,7 @@ header:
 
   {{< math >}}
   $$
-  \tilde{f}_e(x) \propto f_{p}(\underline{x}) \cdot f_{L}(\underline{x})=\sum_{i=1}^{L} \underbrace{w_{i}^{p} \cdot f_{L}\left(\hat{\underline{x}}_{i}^{p}\right)}_{w_{i}^{e}} \cdot \delta(\underline{x} - \underbrace{\underline{\hat{x}}_{i}^{p}}_{\underline{x}_{i}^{e}})
+  \tilde{f}_e(\underline{x}) \propto f_{p}(\underline{x}) \cdot f_{L}(\underline{x})=\sum_{i=1}^{L} \underbrace{w_{i}^{p} \cdot f_{L}\left(\hat{\underline{x}}_{i}^{p}\right)}_{w_{i}^{e}} \cdot \delta(\underline{x} - \underbrace{\underline{\hat{x}}_{i}^{p}}_{\underline{x}_{i}^{e}})
   $$
   {{< /math >}} 
 
@@ -178,7 +178,7 @@ $$
 $$
 {{< /math >}} 
 
-D.h., Für alle $\hat{x}$ mit $\tilde{x}_{1} \leq \hat{x} \leq \tilde{x}_{2}$, $D$ is immer minimiert $\rightarrow$ NICHT eindeutig!
+D.h., Für alle $\hat{x}$ mit {{< math >}}$\tilde{x}_{1} \leq \hat{x} \leq \tilde{x}_{2}${{< /math >}},  {{< math >}}$D${{< /math >}} is immer minimiert $\rightarrow$ NICHT eindeutig!
 
 ### Wasserstein-Distanz
 

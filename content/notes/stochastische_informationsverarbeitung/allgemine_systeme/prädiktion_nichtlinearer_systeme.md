@@ -69,7 +69,7 @@ Definition
 
   {{< math >}}
   $$
-  f_{k}^{e}\left(\underline{x}_{k}\right)=f\left(\underline{x}_{k} \mid \underline{\hat{y}}_{k}, \underline{\hat{y}}_{k-1}, \ldots, \underline{\hat{y}}_{1}, \underline{\hat{u}}_{k-1}, \underline{\hat{\hat{u}}}_{k-2}, \ldots, \underline{\hat{u}}_{0}\right)
+  f_{k}^{e}\left(\underline{x}_{k}\right)=f\left(\underline{x}_{k} \mid \underline{\hat{y}}_{k}, \underline{\hat{y}}_{k-1}, \ldots, \underline{\hat{y}}_{1}, \underline{\hat{u}}_{k-1}, \underline{\hat{u}}_{k-2}, \ldots, \underline{\hat{u}}_{0}\right)
   $$
   {{< /math >}} 
 
@@ -131,8 +131,8 @@ Die Chapman-Kolmogorov-Gleichung berechnet die Dichte von {{< math >}}$\underlin
 ‼️ <span style="color: Red">Es  handelt sich um ein Parameterintegral!</span>
 
 - <span style="color: Red">Integrand hängt von $\underline{x}_{k+1}$ ab (lässt sich i.Allg nicht herausziehen)</span>
-- <span style="color: Red">Erfordert Lösung des Integrals für alle $\underline{x}_{k+1}$</span>
 - <span style="color: Red">Nur möglich für analytische Lösung</span>
+- <span style="color: Red">Sonst erfordert (numerische) Lösung des Integrals für alle $\underline{x}_{k+1}$</span>
 
 ### Weiter nützliche Form der CK-Gleichung
 
@@ -295,7 +295,7 @@ Ergibt allgemeine Transitionsdichte $f(\underline{z} | \underline{x})$, auch dur
 
 {{< math >}}
 $$
-f(\underline{z} | \underline{x}) = \sum_{i \in \mathbb{Z}} f_i^z(\underline{z}) \cdot f_i^x(\underline{x})
+f(\underline{z} | \underline{x}) = \sum_{i \in \mathbb{Z}} w_i f_i^z(\underline{z}) \cdot f_i^x(\underline{x})
 $$
 {{< /math >}} 
 
@@ -315,10 +315,12 @@ $$
 f(\underline{z})&=\int_{\mathbb{R}^{N}}\left(\sum_{i \in \mathbb{Z}} w_{i} f_{i}^{z}(\underline{z}) \cdot f_{i}^{x}(\underline{x})\right) f(\underline{x}) d \underline{x}\\
 &=\sum_{i \in \mathbb{Z}} w_{i} f_{i}^{z}(\underline{z}) \underbrace{\int_{\mathbb{R}^{N}} f_{i}^{x}(\underline{x}) \cdot f(\underline{x}) d \underline{x}}_{\text{Konstante } c_{i}}\\
 &= \sum_{i \in \mathbb{Z}} \underbrace{w_{i} c_i}_{=: \bar{w}_i} f_{i}^{z}(\underline{z})\\
-&=\sum_{i \in \pi} \bar{w}_{i} f_{i}^{z}(\underline{z})
+&=\sum_{i \in \mathbb{Z}} \bar{w}_{i} f_{i}^{z}(\underline{z})
 \end{aligned}
 $$
 {{< /math >}} 
+
+>  Hier sieht man, dass $f_i^z(\underline{z})$ einfach aus dem Integral ausgezogen werden kann. Innerhalb des Integrals gibt es nur $\underline{x}$.
 
 Speizialfall: $f(\underline{x}) = \delta(\underline{x} - \underline{\hat{x}}) \Rightarrow$
 
@@ -350,3 +352,5 @@ f(\underline{z})&=\int_{\mathbb{R}^{N}}\left\{\sum_{i \in \mathbb{Z}} w_{i} f_{i
 \end{aligned}
 $$
 {{< /math >}} 
+
+![截屏2022-09-13 20.55.22](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2022-09-13%2020.55.22.png)
