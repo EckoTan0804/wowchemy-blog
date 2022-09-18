@@ -28,7 +28,7 @@ education:
   courses:
   - course: MSc in Computer Science
     institution: Karlsruhe Institute of Technology (KIT)
-    year: Now
+    year: 2022
   - course: BSc in Computer Science
     institution: Karlsruhe Institute of Technology (KIT)
     year: 2019
