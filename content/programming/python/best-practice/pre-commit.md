@@ -209,7 +209,7 @@ Sometimes the skip options do not work well, to skip some file for some reasons,
 - pycodestyle
 - Ned Batchelder's McCabe script.
 
-A good pratice to customized flake8 checking is to define custom configurations in `setup.cfg` and specify its path with `--args` in `.pre-commit-config.yaml`:
+A good practice to customized flake8 checking is to define custom configurations in `setup.cfg` and specify its path with `--args` in `.pre-commit-config.yaml`:
 
 `setup.cfg`
 
