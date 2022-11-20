@@ -26,14 +26,14 @@ date_format: Jan 2006
 #   Leave other parameters empty if not required.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
-- certificate_url: 
-  date_end: ""
-  date_start: "2018-12-08"
-  description: ""
-  organization: Continental \#Fiction2Science Hackathon
-  organization_url: https://www.continental.com/en/career/information-and-contact/events/retrospectives/
-  title: Winner of "Industry 4.0 & AR"-Challenge 🏆
-  url: ""
+  - certificate_url: 
+    date_end: ""
+    date_start: "2018-12-08"
+    description: ""
+    organization: Continental \#Fiction2Science Hackathon
+    organization_url: https://www.continental.com/en/career/information-and-contact/events/retrospectives/
+    title: Winner of "Industry 4.0 & AR"-Challenge 🏆
+    url: ""
 
 design:
   columns: '2' 
