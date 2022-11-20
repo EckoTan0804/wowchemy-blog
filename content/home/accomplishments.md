@@ -26,14 +26,23 @@ date_format: Jan 2006
 #   Leave other parameters empty if not required.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 item:
-- certificate_url: uploads/AiTalent-certificate.pdf
-  date_end: "2021-01-15"
-  date_start: "2020-11-09"
-  description: ""
-  organization: TechQuartier
-  organization_url: https://techquartier.com/aitalents/
-  title: AiTalents 2020 Entrepreneur Education Program
-  url: ""
+  - certificate_url: uploads/AiTalent-certificate.pdf
+    date_end: "2021-01-15"
+    date_start: "2020-11-09"
+    description: ""
+    organization: TechQuartier
+    organization_url: https://techquartier.com/aitalents/
+    title: AiTalents 2020 Entrepreneur Education Program
+    url: ""
+
+  - certificate_url: uploads/AWS_ML_Engineer_certificate.pdf
+    date_end: "2021-11-20"
+    date_start: "2022-06-21"
+    description: ""
+    organization: Udacity & AWS
+    organization_url: https://www.udacity.com/
+    title: AWS Machine Learning Foundations 2022
+    url: "https://www.udacity.com/scholarships/aws-machine-learning-scholarship-program"
 
 
 design:
