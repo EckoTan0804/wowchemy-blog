@@ -203,11 +203,11 @@ Sometimes the skip options do not work well, to skip some file for some reasons,
 
 ### flake8
 
-[flake8](https://github.com/PyCQA/flake8) is a command-line utility for enforcing style consistency across Python projects. It is a wrapper around these tools:
+[flake8](https://github.com/PyCQA/flake8) is a command-line utility for enforcing style consistency across Python projects. It is a popular lint wrapper for python. Under the hood, it runs three other tools and combines their results:
 
-- PyFlakes
-- pycodestyle
-- Ned Batchelder's McCabe script.
+- [pep8](http://pep8.readthedocs.io/en/latest/) for checking style
+- [pyflakes](https://github.com/pyflakes/pyflakes) for checking syntax
+- [mccabe](https://github.com/pycqa/mccabe) for checking complexity
 
 A good practice to customized flake8 checking is to define custom configurations in `setup.cfg` and specify its path with `--args` in `.pre-commit-config.yaml`:
 
