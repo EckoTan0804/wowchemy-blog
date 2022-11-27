@@ -157,8 +157,22 @@ main:
 
   # =============================
 
+  # =========== Online courses ===========
+  - name: 👨‍🏫 Online Courses
+    url: "online_courses/"
+    identifier: online_courses
+    weight: 700
+
+  - name: AWS ML Engineer Program
+    url: "online_courses/aws_ml_engineer_program"
+    identifier: aws_ML_engineer
+    parent: online_courses
+    weight: 701
+
+  # =============================
+
   # Link to a PDF of your resume/CV from the menu.
   # To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
-  - name: 🧾 CV
+  - name: 🧾 Résumé
     url: uploads/resume.pdf
     weight: 700
