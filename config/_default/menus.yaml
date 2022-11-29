@@ -105,6 +105,12 @@ main:
     parent: cs
     weight: 520
 
+  - name: Project Management
+    url: "cs/project_management"
+    identifier: project_management
+    parent: cs
+    weight: 530
+
   # ==========================
 
   # =========== Notes ===========
