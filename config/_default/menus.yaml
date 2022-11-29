@@ -57,7 +57,7 @@ main:
   # ==========================
 
   # =========== Programming ===========
-  - name: 🧑‍💻 Programming
+  - name: 🧑‍💻 Coding
     url: "programming/"
     identifier: programming
     weight: 400
