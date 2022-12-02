@@ -338,3 +338,6 @@ project/
 
 There are some tools for executing tests *automatically* when you make changes and commit them to a source-control repository like Git. Automated testing tools are often known as **CI/CD** tools, which stands for “Continuous Integration/Continuous Deployment.” They can run your tests, compile and publish any applications, and even deploy them into production.
 
+## Reference
+
+- [Getting Started With Testing in Python](https://realpython.com/python-testing/#automating-the-execution-of-your-tests)
