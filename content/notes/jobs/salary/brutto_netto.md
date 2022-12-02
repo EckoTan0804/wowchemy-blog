@@ -302,9 +302,11 @@ $\Rightarrow \sum = 558 + 72 + 317.55 + 73.95 + 10.875 = 1032.38$
 ## Glossar
 
 - **A = Abfindung** Einmalige Zahlung im Falle einer Kündigung ohne allgemeinen Anspruch.
+- **AZ = Arbeitszeit**
 - **AV = Arbeitslosenversicherung** Drei Prozent des Gehalts gehen in die Versicherung, um im Falle von Arbeitslosigkeit eine Versorgung zu gewährleisten.
 - **BGRS = Beitragsgruppenschlüssel** Numerischer Schlüssel, der auf Meldungen zur Sozialversicherung steht.
 - **E = Einmalbezug** Unregelmäßige Bezüge wie [Weihnachts](https://karrierebibel.de/weihnachtsgeld/)– oder [Urlaubsgeld](https://karrierebibel.de/urlaubsgeld/).
+- **EZ = Einmalzahlung**
 - **GB = Gesamtbrutto** Dazu gehört: Bruttogehalt, vermögenswirksame Leistungen, Zuschläge und Zulagen, geldwerte Vorteile und pauschal versteuerte Lohnbestandteile. Nicht identisch mit dem Steuerbrutto.
 - **H = Hinzurechnungsbetrag** Wird bei Mehrfachbeschäftigung angewendet und erfordert eine Anmeldung über das Lohnsteuer-Ermäßigungsverfahren beim Finanzamt.
 - **J = Bestandteil des Gesamtbruttos** Beträge, die zum Gesamtbrutto gezählt werden.
