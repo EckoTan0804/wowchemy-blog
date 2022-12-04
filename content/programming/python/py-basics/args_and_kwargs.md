@@ -31,6 +31,9 @@ header:
 
 `*args` and `**kwargs` allow you to pass multiple arguments or keyword arguments to a function. 
 
+- `args `will collect extra positional arguments as a tuple because the parameter name has a `*` prefix.
+- `kwargs `will collect extra keyword arguments as a dictionary because the parameter name has a `**` prefix
+
 For example, we neede to take a **various** numbers of arguments and compute their sum.
 
 
@@ -49,11 +52,7 @@ my_sum(list_of_integers)
 ```
 
 
-
-
     6
-
-
 
 This implementation works, but whenever you call this function you’ll also need to create a list of arguments to pass to it. This can be inconvenient, especially if you don’t know up front all the values that should go into the list. 🤪
 
@@ -74,11 +73,7 @@ my_sum(1, 2, 3)
 ```
 
 
-
-
     6
-
-
 
 
 ```python
@@ -138,9 +133,55 @@ def my_function(a, b, *args, **kwargs):
     pass
 ```
 
+## Forwarding Optional or Keyword Arguments
+
+To pass optional or keyword parameters from one function to another, use the argument-unpacking operators `*` and `**` when calling the function you want to forward arguments to.
+
+This also gives you an opportunity to modify the arguments before you pass them along. E.g.:
+
+```python
+def foo(x, *args, **kwargs): 
+    kwargs['name'] = 'Alice' 
+    new_args = args + ('extra', ) 
+    bar(x, *new_args, **kwargs)
+```
+
+One scenario where this technique is useful is **writing wrapper functions such as decorators**. There you typically also want to accept arbitrary arguments to be passed through to the wrapped function. If we can do it without having to copy and paste the original function’s signature, that might be more maintainable. E.g.:
+
+```python
+def trace(func):
+    @functools.wraps(func)
+    def wrapper_trace(*args, **kwargs):
+        print(func.__name__, args, kwargs)
+        result = func(*args, **kwargs)
+        print(result)
+
+    return wrapper_trace
+
+
+@trace
+def greet(greeting, name):
+    return(f"{greeting}, {name}!")
+```
+
+```python
+>>> greet("Hello", "Ecko")
+greet ('Hello', 'Ecko') {}
+Hello, Ecko!
+```
+
+
+
+
+
+
+
 ## Unpacking With the Asterisk Operators: * & **
 
-In short, the unpacking operators are operators that unpack the values from iterable objects in Python. The single asterisk operator `*` can be used on any iterable that Python provides, while the double asterisk operator `**` can only be used on dictionaries.
+In short, the unpacking operators are operators that **unpack the values from iterable objects in Python**. 
+
+- The single asterisk operator `*` can be used on any iterable that Python provides
+- The double asterisk operator `**` can only be used on dictionaries
 
 ### `*`
 
@@ -157,7 +198,7 @@ print(my_list)
     [1, 2, 3]
 
 
-THe list is printed, **along with the corresponding brackets and commas**.
+The list is printed, **along with the corresponding brackets and commas**.
 
 Now try to prepend the unpacking operator `*` to the name of the list: 
 
@@ -168,10 +209,9 @@ print(*my_list)
 
     1 2 3
 
+Putting a `*` before an iterable in a function call will *unpack* it and pass its elements as separate positional arguments to the called function.
 
-Here, the * operator tells print() to unpack the list first.
-
-In this case, the output is no longer the list itself, but rather the content of the list. The difference is: Instead of a list, `print()` has taken three separate arguments as the input.
+Here, the * operator tells `print() `to unpack the list first. In this case, the output is no longer the list itself, but rather the content of the list. The difference is: Instead of a list, `print()` has taken three separate arguments as the input.
 
 Another thing should be noticed is that we used the unpacking operator `*` to call a function, instead of in a function definition. In this case, `print()` takes all the items of a list as though they were single arguments.
 
@@ -259,7 +299,7 @@ There’s the unpacking operator `*`, followed by a variable, a comma, and an as
 
 **The comma after the `a` does the trick. When you use the unpacking operator with variable assignment, Python requires that your resulting variable is either a list or a tuple. With the trailing comma, you have actually defined a tuple with just one named variable `a`.**
 
-While this is a neat trick, many Pythonistas would not consider this code to be very readable. **As such, it’s best to use these kinds of constructions sparingly.**
+<span style="color: Red">While this is a neat trick, many Pythonistas would not consider this code to be very readable. **As such, it’s best to use these kinds of constructions sparingly.**</span>
 
 
 ### `**`
@@ -276,6 +316,28 @@ my_merged_dict
 ```
 
 
-
-
     {'A': 1, 'B': 2, 'C': 3, 'D': 4}
+
+The `**` operator also works for **function argument unpacking**. 
+
+For example:
+
+```python
+def print_vector(x, y, z):
+    print(f"<{x}, {y}, {z}>")
+    
+vec_dict = {
+    "y": 1,
+    "x": 0,
+    "z": 2,
+}
+```
+
+```python
+>>> print_vector(**vec_dict)
+<0, 1, 2>
+```
+
+Because dictionaries are unordered, this matches up dictionary values and function arguments **based on the dictionary keys**: the `x` argument receives the value associated with the `'x'` key in the dictionary.
+
+If you use the single asterisk (`*`) operator to unpack the dictionary, keys would be passed to the function in *random* order instead.
