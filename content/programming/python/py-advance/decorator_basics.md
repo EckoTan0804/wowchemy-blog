@@ -37,9 +37,28 @@ header:
   image:  
 ---
 
+**TL;DR**
+
+- Decorators define reusable building blocks you can apply to a callable to modify its behavior *without* permanently modifying the callable itself.
+- The @ syntax is just a shorthand (syntax sugar) for calling the decorator on an input function. 
+  - Multiple decorators on a single function are applied bottom to top (*decorator stacking*).
+- Use the `functools.wraps` helper in every decorator to carry over metadata from the undecorated callable to the decorated one.
+- Decorators are not a cure-all and they should not be overused
+
+------
+
+## What is decorator?
+
 Decorators provide a simple syntax for calling [higher-order functions](http://en.wikipedia.org/wiki/Higher-order_function).
 
-By definition, a decorator is a function that **takes another function and extends the behavior of the latter function without explicitly modifying it**.
+By definition, a decorator is a function that **takes another function and extends the behavior of the latter function *without* explicitly modifying it**. 
+
+In other words, decorators “decorate” or “wrap” another function and let you execute code before and after the wrapped function runs.
+
+- Allow you to define reusable building blocks that can change or extend the behavior of other functions
+- Let you do that without permanently modifying the wrapped function itself. The function’s behavior changes only when it’s *decorated*.
+
+**Under the hood, a decorator is *a callable that takes a callable as input and returns another callable*.**
 
 ## Functions
 
@@ -183,6 +202,10 @@ def do_twice(func):
 
 To allow the decorator accept an arbitrary number of positional and keyword arguments, use [`*args` and `**kwargs`](https://realpython.com/python-kwargs-and-args/) in the inner wrapper function.
 
+- It use the `*` and `**` operators in the `wrapper` closure definition to collect all positional and keyword arguments and stores them in variables (`args `and `kwargs`).
+
+-  The `wrapper  `closure then forwards the collected arguments to the original input function using the * and ** “argument unpacking” operators.
+
 Example:
 
 ```python
@@ -241,9 +264,54 @@ Creating greeting
 Hi Adam        
 ```
 
+Another example
+
+```python
+def uppercase(func):
+    def wrapper():
+        original_result = func()
+        modified_result = original_result.upper()
+        return modified_result
+    return wrapper
+
+@uppercase
+def greet():
+    return "Hello!"
+```
+
+
+
 ### Getting the Indentity Information
 
-Decorators should use the `@functools.wraps` decorator, which will preserve information about the original function.
+What a decorator do is replacing one function with another. One downside of this process is that it “hides” some of the metadata attached to the original (undecorated) function.
+
+For example, the original function name, its docstring, and parameter list are hidden by the wrapper closure:
+
+```python
+def greet():
+    """Return a friendly greeting.""" 
+    return 'Hello!'
+
+decorated_greet = uppercase(greet)
+```
+
+If you try to access any of that function metadata, you’ll see the wrap- per closure’s metadata instead:
+
+```python
+>>> greet.__name__
+'greet'
+>>> greet.__doc__
+'Return a friendly greeting.'
+
+>>> decorated_greet.__name__ 
+'wrapper'
+>>> decorated_greet.__doc__ 
+None
+```
+
+This makes debugging and working with the Python interpreter awkward and challenging 🤪.
+
+A quick fix for this is to use the `@functools.wraps` decorator in Python’s standard library, which will preserve information about the original function.
 
 {{% callout note %}}
 **Technical Detail**
@@ -275,6 +343,8 @@ Help on function say_hi in module __main__:
 
 say_hi()
 ```
+
+As a best practice, **you should use `functools.wraps` in all of the decorators you write yourself**. It doesn’t take much time and it will save you (and others) debugging headaches down the road.
 
 ## Real World Examples
 

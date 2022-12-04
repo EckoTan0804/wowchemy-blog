@@ -49,7 +49,7 @@ header:
   <tr>
     <td class="tg-0pky"><span style="font-weight:bold">Single Leading Underscore</span></td>
     <td class="tg-0pky"><code>_var</code></td>
-    <td class="tg-0pky">Naming convention indicating a name is meant for internal use. Generally not enforced by the Python interpreter (except in wildcard imports) and meant as a hint to the programmer only.</td>
+      <td class="tg-0pky"><li>Naming convention indicating a name is meant for internal use. </li> <li>Generally not enforced by the Python interpreter (except in wildcard imports) and meant as a hint to the programmer only.</li></td>
   </tr>
   <tr>
     <td class="tg-0pky"><span style="font-weight:bold">Single Trailing Underscore</span></td>
@@ -59,32 +59,24 @@ header:
   <tr>
     <td class="tg-0pky"><span style="font-weight:bold">Double Leading Underscore</span></td>
     <td class="tg-0pky"><code>__var</code></td>
-    <td class="tg-0pky">Triggers name mangling when used in a class context. Enforced by the Python interpreter.</td>
+      <td class="tg-0pky"><li>Triggers name mangling when used in a class context.</li> <li>Enforced by the Python interpreter.</li></td>
   </tr>
   <tr>
     <td class="tg-0pky"><span style="font-weight:bold">Double Leading and Trailing Underscore</span></td>
     <td class="tg-0pky"><span style="font-weight:bold"><code>__var__</code></span></td>
-    <td class="tg-0pky">Indicates special methods defined by the Python language. Avoid this naming scheme for your own attributes.</td>
+      <td class="tg-0pky"><li>Indicates special methods defined by the Python language. </li> <li>Avoid this naming scheme for your own attributes.</li></td>
   </tr>
   <tr>
     <td class="tg-0pky"><span style="font-weight:bold">Single Underscore</span></td>
     <td class="tg-0pky"><code>_</code></td>
-    <td class="tg-0pky">Sometimes used as a name for temporary or insignificant variables (“don’t care”). Also: The result of the last expression in a Python REPL.</td>
+      <td class="tg-0pky"><li>Sometimes used as a name for temporary or insignificant variables (“don’t care”).</li> <li>Also: The result of the last expression in a Python REPL.</li></td>
   </tr>
 </tbody>
 </table>
 
-<!-- | Pattern                                    | Example   | Meaning                                                      |
-| ------------------------------------------ | --------- | ------------------------------------------------------------ |
-| **Single Leading Underscore**              | `_var`    | Naming convention indicating a name is meant for internal use. Generally not enforced by the Python interpreter (except in wildcard imports) and meant as a hint to the programmer only. |
-| **Single Trailing Underscore**             | `var_`    | Used by convention to avoid naming conflicts with Python keywords. |
-| **Double Leading Underscore**              | `__var`   | Triggers name mangling when used in a class context. Enforced by the Python interpreter. |
-| **Double Leading and Trailing Underscore** | `__var__` | Indicates special methods defined by the Python language. Avoid this naming scheme for your own attributes. |
-| **Single Underscore**                      | `_`       | Sometimes used as a name for temporary or insignificant variables (“don’t care”). Also: The result of the last expression in a Python REPL. | -->
-
 ## Single Leading Underscore: `_var`
 
-When it comes to variable and method names, the single underscore prefix has a meaning by convention only.
+When it comes to variable and method names, the single underscore prefix has a meaning by *convention* only.
 
 - It is meant as a **hint** to another programmer that a variable or method starting with a single underscore is intended for internal use.
 - It does *NOT* affect the behavior of your programs and this isn't enforced by Python.
@@ -107,9 +99,9 @@ print(t._bar) # we can still access _bar
 23
 ```
 
-However, leading underscores do impact how names get imported from modules. If you use a wildcard import to import all names from the module, Python will NOT import names with a leading underscore (unless the module defines an **all** list that overrides this behavior).
+However, leading underscores do impact how names get imported from modules. If you use a wildcard import (should be avoided!) to import all names from the module, Python will NOT import names with a leading underscore (unless the module defines an `__all__` list that overrides this behavior).
 
-> By the way, wildcard imports should be avoided as they make it unclear which names are present in the namespace. It’s better to stick to regular imports for the sake of clarity.
+> Wildcard imports should be avoided as they make it unclear which names are present in the namespace. It’s better to stick to regular imports for the sake of clarity.
 
 Example
 
@@ -182,46 +174,16 @@ class Test:
 ```
 
 ```python
-t = Test()
-dir(t)
-```
-
-```txt
-['_Test__baz',
- '__class__',
- '__delattr__',
- '__dict__',
- '__dir__',
- '__doc__',
- '__eq__',
- '__format__',
- '__ge__',
- '__getattribute__',
- '__gt__',
- '__hash__',
- '__init__',
- '__init_subclass__',
- '__le__',
- '__lt__',
- '__module__',
- '__ne__',
- '__new__',
- '__reduce__',
- '__reduce_ex__',
- '__repr__',
- '__setattr__',
- '__sizeof__',
- '__str__',
- '__subclasshook__',
- '__weakref__',
- '_bar',
- 'foo']
+>>> t = Test() 
+>>> dir(t) # show the list with the object's attributes
+['_Test__baz', '__class__', '__delattr__', '__dict__',
+'__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bar', 'foo']
 ```
 
 This gives us a list with the object’s attributes. There're some interesting findings:
 
 - The `self.foo` variable appears unmodified as foo in the attribute list.
-- `self._bar` behaves the same way—it shows up on the class as _bar.
+- `self._bar` behaves the same way—it shows up on the class as `_bar`.
 - However with `self.__baz`, things look a little different. When you search for `__baz` in that list you’ll see that there is no variable with that name.
 
 If you look closely you’ll see there’s an attribute called `_Test__baz` on this object. This is the name mangling that the Python interpreter applies. **It does this to protect the variable from getting overridden in subclasses.**
@@ -238,81 +200,35 @@ class ExtendedTest(Test):
 ```
 
 ```python
-t2 = ExtendedTest()
-print(t2.foo)
-print(t2._bar)
-print(t2.__baz)
-```
-
-```txt
-overridden
-overridden
----------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-<ipython-input-20-b3cbedcc6234> in <module>()
-      2 print(t2.foo)
-      3 print(t2._bar)
-----> 4 print(t2.__baz)
-
-AttributeError: 'ExtendedTest' object has no attribute '__baz'
+>>> t2 = ExtendedTest() 
+>>> t2.foo
+'overridden'
+>>> t2._bar 
+'overridden'
+>>> t2.__baz
+AttributeError:
+"'ExtendedTest' object has no attribute '__baz'"
 ```
 
 It turns out this object doesn’t even have a `__baz` attribute. Let's check the list of object's attributes:
 
 ```python
-dir(t2)
-```
-
-```txt
-['_ExtendedTest__baz',
- '_Test__baz',
- '__class__',
- '__delattr__',
- '__dict__',
- '__dir__',
- '__doc__',
- '__eq__',
- '__format__',
- '__ge__',
- '__getattribute__',
- '__gt__',
- '__hash__',
- '__init__',
- '__init_subclass__',
- '__le__',
- '__lt__',
- '__module__',
- '__ne__',
- '__new__',
- '__reduce__',
- '__reduce_ex__',
- '__repr__',
- '__setattr__',
- '__sizeof__',
- '__str__',
- '__subclasshook__',
- '__weakref__',
- '_bar',
- 'foo']
+>>> dir(t2)
+['_ExtendedTest__baz', '_Test__baz', '__class__',
+'__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__le__', '__lt__', '__module__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__', '__weakref__', '_bar', 'foo', 'get_vars']
 ```
 
 `__baz` got turned into `_ExtendedTest__baz` to prevent accidental modification.
 
 ```python
-print(t2._ExtendedTest__baz)
-```
-
-```txt
-overridden
+>>> t2._ExtendedTest__baz 
+'overridden'
 ```
 
 The original `_Test__baz` is also still around:
 
 ```python
-t2._Test__baz
-```
-
-```txt
+>>> t2._Test__baz
 42
 ```
 
@@ -334,44 +250,23 @@ class ManglingTest:
 ```
 
 ```python
-ManglingTest().get_mangled()
-```
+>>> ManglingTest().get_mangled() 
+'hello'
 
-```txt
-"hello"
-```
-
-```python
-ManglingTest().__mangled
-```
-
-```txt
----------------------------------------------------------------------------
-AttributeError                            Traceback (most recent call last)
-<ipython-input-27-14d8b1db7c4f> in <module>()
-----> 1 ManglingTest().__mangled
-
-AttributeError: 'ManglingTest' object has no attribute '__mangled'
+>>> ManglingTest().__mangled 
+AttributeError:
+"'ManglingTest' object has no attribute '__mangled'"
 ```
 
 ```python
-MangledMethod().call_it()
-```
-
-```txt
+>>> MangledMethod().call_it()
 42
-```
 
-```python
-MangledMethod().__method()
-```
-
-```txt
+>>> MangledMethod().__method()
 ---------------------------------------------------------------------------
 AttributeError                            Traceback (most recent call last)
 <ipython-input-29-3a27f66f344d> in <module>()
 ----> 1 MangledMethod().__method()
-
 AttributeError: 'MangledMethod' object has no attribute '__method'
 ```
 
