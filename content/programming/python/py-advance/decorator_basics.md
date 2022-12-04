@@ -366,6 +366,8 @@ def decorator(func):
 ### Timing Functions
 
 ```python
+import time
+
 def timer(func):
     """Print the runtime of the decorated function"""
     @functools.wraps(func)
@@ -489,7 +491,7 @@ Using 'say_hello'
 Hello Alice
 ```
 
-👍 Main benefit: **You do not need to maintain a list of which plugins exist**. That list is created when the plugins register themselves. This makes it trivial to add a new plugin: just define the function and decorate it with `@register`.
+👍 Main benefit: **You do not need to maintain a list of which plugins exist**. That list is created when the plugins register themselves. This makes it trivial to add a new plugin: **just define the function and decorate it with `@register`**.
 
 
 
