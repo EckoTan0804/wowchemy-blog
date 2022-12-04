@@ -291,7 +291,9 @@ Finished 'TimeWaster' in 0.0000 secs
 
 ## Nesting Decorators
 
-**Apply several decorators** to a function by stacking them on top of each other.
+You can apply more than one decorator to a function. This accumulates their effects and it’s what makes decorators so helpful as reusable building blocks.
+
+The order of application of decorators is **from bottom to top**. It is sometimes called **decorator stacking**: You start building the stack at the bottom and then keep adding new blocks on top to work your way upwards.
 
 {{< spoiler text="Example" >}}
 ```python
@@ -331,6 +333,39 @@ Hello Eva
 Calling greet('Eva')
 Hello Eva
 'greet' returned None
+```
+
+{{< /spoiler >}}
+
+{{< spoiler text="Example" >}}
+
+We define two decorators which wrap the output string of the decorated function in HTML tags.
+
+```python
+def strong(func):
+    def wrapper():
+        return f"<strong> {func()} </strong>"
+    return wrapper
+
+
+def emphasis(func):
+    def wrapper():
+        return f"<em> {func} </em>"
+    return wrapper
+```
+
+Apply them to the `greet()` function at the sme time:
+
+```python
+@strong
+@emphasis
+def greet():
+    return "Hello!"
+```
+
+```python
+>>> greet() 
+'<strong><em>Hello!</em></strong>'
 ```
 
 {{< /spoiler >}}
