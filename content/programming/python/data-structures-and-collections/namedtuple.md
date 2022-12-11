@@ -28,7 +28,7 @@ header:
   image: ''
 ---
 
-## TL;DR
+**TL;DR**
 
 - `collection.namedtuple` is a memory-efficient shortcut to defining an immutable class in Python manually.
 - Namedtuples can help clean up your code by enforcing an easier to understand structure on your data, which also improves readability.
@@ -43,8 +43,14 @@ Python’s tuple is a simple immutable data structure for grouping arbitrary obj
 
 `namedtuple` aims to solve these two problems. [namedtuple](http://docs.python.org/2/library/collections.html#collections.namedtuple) is a **factory function** for making a tuple class. With that class we can create tuples that are callable by name also.
 
-- `namedtuple` is immutable just like regular tuple
-- Each object stored in them can be accessed through a unique (human-readable) string identifier. This frees you from having to remember integer indexes, or resorting to workarounds like defining integer constants as mnemonics for your indexes. 👏
+- `namedtuple` is *immutable* just like regular tuple
+
+  - Once you store data in top-level attribute on a namedtuple, you can’t modify it by updating the attribute.
+  - All attributes on a namedtuple object follow the **“write once, read many” principle**.
+
+- Each object stored in them can be accessed through a unique (human-readable) string identifier. 
+
+  → This frees you from having to remember integer indexes, or resorting to workarounds like defining integer constants as mnemonics for your indexes. 👏
 
 ## How `namedtuple` works?
 
@@ -55,14 +61,16 @@ from collections import namedtuple
 
 User = namedtuple("User", ["name", "id", "gender"])
 user = User("Ecko", 1, "male")
-user
 ```
 
-```txt
+```python
+>>> user
 User(name='Ecko', id=1, gender='male')
 ```
 
-This is equivalent to
+- `"User"` as the first argument to the `namedtuple `factory function is referred to as the “typename” in the Python docs. It’s the name of the new class that’s being created by calling the `namedtuple `function, which needs to be *explicitly* specified.
+
+The code above is equivalent to
 
 ```python
 class User:
@@ -73,6 +81,12 @@ class User:
 
 user = User("Ecko", 1, "male")
 ```
+
+## Why `namedtuple`?
+
+Namedtuple objects are implemented as regular Python classes internally. <span style="color:  ForestGreen">When it comes to memory usage, they are also “better” than regular classes and just as memory efficient as regular tuples. 👍</span>
+
+A good way to view them is to think that ***namedtuples are a memory-efficient shortcut to defining an immutable class in Python manually***.
 
 ## Operations
 
@@ -104,28 +118,22 @@ Values can be accessed either by identifier or by index.
 By identifier:
 
 ```python
-user.name
-```
-
-```txt
+>>> user.name
 Ecko
 ```
 
 By index:
 
 ```python
-user[0]
-```
-
-```ftxt
+>>> user[0]
 Ecko
 ```
 
 ### Built-in Helper Functions
 
-- `namedtuple` has some useful helper methods. 
+`namedtuple` has some useful helper methods. 
 
-- Their names all start with an underscore character (`_`). 
+- Their names all start with an underscore character `_`
   - With `namedtuples` the underscore naming convention has a different meaning though: These helper methods and properties are part of namedtuple’s public interface. 
   - The helpers were named that way to avoid naming collisions with user-defined tuple fields.
 
@@ -134,21 +142,25 @@ Ecko
 Returns the contents of a `namedtuple `as a dictionary
 
 ```python
-user._asdict()
-```
-
-```txt
+>>> user._asdict()
 OrderedDict([('name', 'Ecko'), ('id', 1), ('gender', 'male')])
 ```
+
+This is great for avoiding typos in the field names when generating JSON-output, for example:
+
+```python
+>>> import json
+>>> json.dumps(user._asdict())
+'{"name": "Ecko", "id": 1, "gender": "male"}'
+```
+
+
 
 We can convert a dictionary into a `namedtuple` with `**` operator
 
 ```python
-user_dict = {"name": "Ben", "id": 2, "gender": "male"}
-User(**user_dict)
-```
-
-```txt
+>>> user_dict = {"name": "Ben", "id": 2, "gender": "male"}
+>>> User(**user_dict)
 User(name='Ben', id=2, gender='male')
 ```
 
@@ -176,11 +188,12 @@ User._make(["Ilona", 3, "female"])
 User(name='Ilona', id=3, gender='female')
 ```
 
-## When Use `namedtuple`?
+## When to Use `namedtuple`?
 
 - If you're going to create a bunch of instances of a class and NOT change the attributes after you set them in `__init__`, you can consider to use `namedtuple`.
   - Example: Definition of classes in [`torchvision.datasets.cityscapes`](https://pytorch.org/vision/stable/_modules/torchvision/datasets/cityscapes.html)
 - Namedtuples can be an easy way to clean up your code and to make it more readable by enforcing a better structure for your data. You should use `namedtuple` **anywhere you think object notation will make your code more pythonic and more easily readable**
+- But try NOT to use namedtuples for their own sake if they don’t help you write “cleaner” and more maintainable code.
 
 ## Reference
 
