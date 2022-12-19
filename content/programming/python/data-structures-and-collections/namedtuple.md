@@ -1,7 +1,7 @@
 ---
 linktitle: '[Collections] Namedtuple'
 summary: ''
-weight: 240
+weight: 280
 title: Namedtuple
 date: 2020-05-02
 draft: false
