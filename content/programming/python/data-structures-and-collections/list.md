@@ -2,11 +2,11 @@
 # ===== Title, summary, and position in the left sidebar =====
 linktitle: 
 summary: 
-weight: 210
+weight: 291
 # =========================================================
 
 # ========== Basic metadata ==========
-title: List
+title: "[Issues] List"
 date: 2020-07-08
 draft: false
 type: book # page type

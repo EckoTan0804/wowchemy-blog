@@ -1,5 +1,5 @@
 ---
-linktitle: 'Collections: Namedtuple'
+linktitle: '[Collections] Namedtuple'
 summary: ''
 weight: 240
 title: Namedtuple

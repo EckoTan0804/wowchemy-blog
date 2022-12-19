@@ -2,11 +2,11 @@
 # ===== Title, summary, and position in the left sidebar =====
 linktitle: 
 summary: 
-weight: 220
+weight: 292
 # =========================================================
 
 # ========== Basic metadata ==========
-title: Dictionary
+title: "[Issues] Dictionary"
 date: 2020-07-08
 draft: false
 type: book # page type
@@ -186,6 +186,6 @@ print(person_info)
 Using dictionary comprehension, the a new dict will be created, and the original dict won't be affected.
 
 
-### Reference
+#### Reference
 
-- [How to remove a key from a Python dictionary?](
+- [How to remove a key from a Python dictionary?](https://stackoverflow.com/questions/11277432/how-can-i-remove-a-key-from-a-python-dictionary)
