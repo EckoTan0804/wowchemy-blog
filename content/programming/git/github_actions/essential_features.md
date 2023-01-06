@@ -122,3 +122,7 @@ jobs:
         with:
           name: output-log-file
 ```
+
+## Reference
+
+- [Essential features of GitHub Actions](https://docs.github.com/en/actions/learn-github-actions/essential-features-of-github-actions)

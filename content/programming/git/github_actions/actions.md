@@ -188,3 +188,7 @@ outputs:
 
 - The `inputs` keyword defines a required input called `file-path`, and includes a default value that will be used if none is specified.
 - The `outputs` keyword defines an output called `results-file`, which tells you where to locate the results.
+
+## Reference
+
+- [Finding and customizing actions](https://docs.github.com/en/actions/learn-github-actions/finding-and-customizing-actions)
