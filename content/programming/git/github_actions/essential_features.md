@@ -16,6 +16,7 @@ tags:
   - Coding
   - Git
   - GitHub
+  - GitHub Actions
 categories:
   - Coding
 toc: true # Show table of contents
