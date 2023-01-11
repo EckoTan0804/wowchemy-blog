@@ -10,9 +10,12 @@ title: argparse
 date: 2023-01-04
 draft: false
 type: book # page type
-authors:
+authors: 
+  - admin
+tags:
   - Python
   - Packages
+  - argparse
 categories:
   - Coding
 toc: true # Show table of contents
