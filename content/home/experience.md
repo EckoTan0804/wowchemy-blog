@@ -25,6 +25,14 @@ date_format: Jan 2006
 #   Leave `date_end` empty if it's your current employer.
 #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
 experience:
+  - title: Software Concept Developer / Innovation Manager for Algorithms
+    company: Continental
+    company_url: 'https://www.continental.com/en/'
+    company_logo: continental
+    location: Lindau, Germany
+    date_start: '2022-11-01'
+    date_end: ''
+
   - title: Working Student
     company: abas Software GmbH
     company_url: 'https://abas-erp.com/de'

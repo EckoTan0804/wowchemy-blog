@@ -36,7 +36,7 @@ item:
     url: ""
 
   - certificate_url: uploads/AWS_ML_Engineer_certificate.pdf
-    date_end: "2021-11-20"
+    date_end: "2022-11-20"
     date_start: "2022-06-21"
     description: ""
     organization: Udacity & AWS
