@@ -2,15 +2,15 @@
 # Title, summary, and position in the list
 # linktitle: ""
 summary: ""
-weight: 405
+weight: 501
 
 # Basic metadata
-title: "YACS for Configuration Management"
+title: "YACS"
 date: 2021-05-12
 draft: false
 type: book # page type
 authors: ["admin"]
-tags: ["Deep Learning", "PyTorch", "NN Training"]
+tags: ["Deep Learning", "PyTorch", "Config Management"]
 categories: ["Deep Learning"]
 toc: true # Show table of contents?
 
