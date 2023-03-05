@@ -6,12 +6,12 @@ title: Haobin Tan
 superuser: true
 
 # Role/position/tagline
-role: Computer Science Master Student
+role: Software Concept Developer / Innovation Manager for Algorithms
 
 # Organizations/Affiliations to show in About widget
 organizations:
-- name: Karlsruhe Institute of Technology
-  url: "http://www.kit.edu/english/index.php"
+- name: Continental
+  url: "https://www.continental.com/en/"
 
 # Short bio (displayed in user profile at end of posts)
 bio: Keep it simple stupid
@@ -69,4 +69,7 @@ email: ""
 highlight_name: true
 ---
 
-I am a master student of Computer Science at Karlsruhe Institute of Technology (KIT), Germany. Having great interest in Artificial Intelligence (AI), I am a curious and passionate deep learning practitioner in the field of Computer Vision. I am also a huge fan of the *Keep It Simple Stupid (KISS) principle* and the *Feynman Technique*.
+- Passionate AI and Deep Learning practitioner
+- Software developer (most of the time Pythonist)
+- Lifelong learner, always exploring
+- Keep it simple stupid (KISS)
