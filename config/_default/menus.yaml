@@ -111,6 +111,12 @@ main:
     parent: cs
     weight: 530
 
+  - name: Practical Skills
+    url: "cs/practical_skills"
+    identifier: practical_skills
+    parent: cs
+    weight: 540
+
   # ==========================
 
   # =========== Notes ===========
