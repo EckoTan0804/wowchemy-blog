@@ -2,7 +2,7 @@
 linktitle: ''
 summary: ''
 weight: 203
-title: 'Command: chmod'
+title: 'chmod'
 date: 2021-01-05
 draft: false
 type: book

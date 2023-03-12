@@ -2,7 +2,7 @@
 linktitle: ''
 summary: ''
 weight: 200
-title: Linux Learn
+title: Linux Commands
 date: 2020-12-17
 draft: false
 type: book

@@ -2,7 +2,7 @@
 linktitle: ''
 summary: ''
 weight: 201
-title: 'Command: export'
+title: 'export'
 date: 2020-12-17
 draft: false
 type: book

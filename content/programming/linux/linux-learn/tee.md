@@ -2,7 +2,7 @@
 linktitle: ''
 summary: ''
 weight: 202
-title: 'Command: tee'
+title: 'tee'
 date: 2020-12-18
 draft: false
 type: book
