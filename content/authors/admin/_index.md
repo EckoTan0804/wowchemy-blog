@@ -69,7 +69,10 @@ email: ""
 highlight_name: true
 ---
 
-- Passionate AI and Deep Learning practitioner
-- Software developer (most of the time Pythonist)
-- Lifelong learner, always exploring
-- Keep it simple stupid (KISS)
+- 🔥 Passionate AI and Deep Learning practitioner
+
+- 🧑‍💻 Software developer (most of the time Pythonist)
+
+- 👨‍🎓 Lifelong learner, always exploring
+
+- 🤙 Keep it simple stupid (KISS)
