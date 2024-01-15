@@ -80,7 +80,7 @@ There are two types of results
 - **Casks**: An extension of `Homebrew` that allows us to install MacOS native applications (*e.g.*, Google Chrome)
 
 {{% callout note %}}
-We can also search in browser: [Homebrew Formulae](https://formulae.brew.sh/).
+We can also search in browser: [Homebrew Formular](https://formulae.brew.sh/).
 {{% /callout %}}
 
 ### Install packages
@@ -102,8 +102,6 @@ If we want to get more information about an (installed) package, we can use
 ```bash
 brew info <package>
 ```
-
-.
 
 ### Install packages
 
