@@ -9,6 +9,9 @@ node_modules/
 go.sum
 .hugo_build.lock
 
+# OS
+**/.DS_Store
+
 
 ########## VisualStudioCode ##########
 .vscode/*
