@@ -1,6 +1,6 @@
 ---
 # ===== Title, summary, and position in the left sidebar =====
-linktitle: Shell Commands  # Title shown in the left sidebar menu
+linktitle:  # Title shown in the left sidebar menu
 summary:  # Summary of this post
 weight: 102 # Position in the left sidebar
 # ============================================================
