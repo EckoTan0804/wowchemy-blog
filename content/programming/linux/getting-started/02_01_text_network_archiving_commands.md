@@ -101,6 +101,27 @@ header:
 
 `paste`: Merge lines from different files
 
+`tr`: Trim repeated characters to a single character.
+
+```bash
+$ echo "There are    too    many spaces in this    sentence." | tr -s " "
+There are too many spaces in this sentence.
+```
+
+`xargs`: Trim leading and trailing spaces from a string.
+
+```bash
+$ echo " Never start or end a sentence with a space. " | xargs
+Never start or end a sentence with a space.
+```
+
+`rev` : Reverse the order of characters on a line of text.
+
+```bash
+$ echo ".sdrawkcab saw ecnetnes sihT" | rev
+This sentence was backwards.
+```
+
 ## Networking Commands
 
 ### Brief introduction to networking
