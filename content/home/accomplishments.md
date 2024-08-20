@@ -39,10 +39,19 @@ item:
     date_end: "2022-11-20"
     date_start: "2022-06-21"
     description: ""
-    organization: Udacity & AWS
+    organization: AWS
     organization_url: https://www.udacity.com/
     title: AWS Machine Learning Foundations 2022
     url: "https://www.udacity.com/scholarships/aws-machine-learning-scholarship-program"
+
+  - certificate_url: uploads/2024-08-20_hands-on_intro_to_linux_commands_and_shell_scripting.pdf
+    date_end: "2024-08-10"
+    date_start: "2024-08-20"
+    description: ""
+    organization: IBM
+    organization_url: https://coursera.org
+    title: Hands-on Introduction to Linux Commands and Shell Scripting
+    url: "https://www.coursera.org/learn/hands-on-introduction-to-linux-commands-and-shell-scripting"
 
 
 design:
