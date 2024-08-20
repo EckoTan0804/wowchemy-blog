@@ -167,7 +167,7 @@ ls
 
 - Example:
 
-  ![截屏2024-08-16 17.21.33](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/截屏2024-08-16 17.21.33.png)
+  ![截屏2024-08-16 17.21.33](https://raw.githubusercontent.com/EckoTan0804/upic-repo/master/uPic/%E6%88%AA%E5%B1%8F2024-08-16%2017.21.33-20240820124520725-20240820124535626.png)
 
   - `iname`: case insensitive
 
