@@ -1,190 +1,144 @@
-# Navigation Links
-#   To link a homepage widget, specify the URL as a hash `#` followed by the filename of the
-#     desired widget in your `content/home/` folder.
-#   The weight parameter defines the order that the links will appear in.
-
 main:
-  # - name: Home
-  #   url: "#about"
-  #   weight: 10
-
-  - name: 🗒 Posts
-    url: "post/"
-    weight: 200
-
-  # =========== AI ===========
-  - name: 🤖 AI
-    url: "ai/"
-    identifier: ai
-    weight: 300
-
-  - name: Machine Learning
-    url: ai/machine-learning
-    identifier: ml
-    parent: ai
-    weight: 310
-
-  - name: Deep Learning
-    url: ai/deep-learning
-    identifier: dl
-    parent: ai
-    weight: 320
-
-  - name: Computer Vision
-    url: ai/computer-vision
-    identifier: cv
-    parent: ai
-    weight: 330
-
-  - name: Computer Vision
-    url: ai/computer-vision
-    identifier: cv
-    parent: ai
-    weight: 330
-
-  - name: Natural Language Processing
-    url: ai/natural-language-processing
-    identifier: mlp
-    parent: ai
-    weight: 340
-
-  - name: PyTorch
-    url: ai/pytorch
-    identifier: pytorch
-    parent: ai
-    weight: 350
-
-  # ==========================
-
-  # =========== Programming ===========
-  - name: 🧑‍💻 Coding
-    url: "programming/"
-    identifier: programming
-    weight: 400
-
-  - name: Python
-    url: "programming/python"
-    identifier: python
-    parent: programming
-    weight: 410
-
-  - name: Docker
-    url: "programming/docker"
-    identifier: docker
-    parent: programming
-    weight: 420
-
-  - name: Linux
-    url: "programming/linux"
-    identifier: linux
-    parent: programming
-    weight: 430
-
-  - name: Git
-    url: "programming/git"
-    identifier: git
-    parent: programming
-    weight: 440
-  # ===================================
-
-  # =========== CS ===========
-  - name: 💻 CS
-    url: "cs/"
-    identifier: cs
-    weight: 500
-
-  - name: Algorithm
-    url: "cs/algorithm"
-    identifier: algo
-    parent: cs
-    weight: 510
-
-  - name: Software Engineering
-    url: "cs/software-engineering"
-    identifier: software-engineering
-    parent: cs
-    weight: 520
-
-  - name: Project Management
-    url: "cs/project_management"
-    identifier: project_management
-    parent: cs
-    weight: 530
-
-  - name: Practical Skills
-    url: "cs/practical_skills"
-    identifier: practical_skills
-    parent: cs
-    weight: 540
-
-  # ==========================
-
-  # =========== Notes ===========
-  - name: 📝 Notes
-    url: "notes/"
-    identifier: notes
-    weight: 600
-
-  - name: GIE
-    url: "notes/gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme"
-    identifier: gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme
-    parent: notes
-    weight: 610
-
-  - name: Rechnerstruktur
-    url: "notes/rechner-struktur"
-    identifier: rechner-struktur
-    parent: notes
-    weight: 620
-
-  - name: Telematics
-    url: "notes/telematics"
-    identifier: telematics
-    parent: notes
-    weight: 630
-
-  - name: MMWAB
-    url: "notes/mmwab"
-    identifier: mmwab
-    parent: notes
-    weight: 640
-
-  - name: Thesis
-    url: "notes/thesis"
-    identifier: thesis
-    parent: notes
-    weight: 650
-
-  - name: Jobs
-    url: "notes/jobs"
-    identifier: jobs
-    parent: notes
-    weight: 660
-
-  - name: SI
-    url: "notes/stochastische_informationsverarbeitung"
-    identifier: si
-    parent: notes
-    weight: 670
-
-  # =============================
-
-  # =========== Online courses ===========
-  - name: 👨‍🏫 Online Courses
-    url: "online_courses/"
-    identifier: online_courses
-    weight: 700
-
-  - name: AWS ML Engineer Program
-    url: "online_courses/aws_ml_engineer_program"
-    identifier: aws_ML_engineer
-    parent: online_courses
-    weight: 701
-
-  # =============================
-
-  # Link to a PDF of your resume/CV from the menu.
-  # To enable, copy your resume/CV to `static/uploads/resume.pdf` and uncomment the lines below.
-  - name: 🧾 Résumé
-    url: uploads/resume.pdf
-    weight: 700
+- name: "\U0001F5D2 Posts"
+  url: post/
+  identifier: post
+  weight: 200
+- name: "\U0001F916 AI"
+  url: ai/
+  identifier: ai
+  weight: 300
+- name: Machine Learning
+  url: ai/machine-learning
+  identifier: ml
+  parent: ai
+  weight: 301
+- name: Deep Learning
+  url: ai/deep-learning
+  identifier: dl
+  parent: ai
+  weight: 302
+- name: Computer Vision
+  url: ai/computer-vision
+  identifier: cv
+  parent: ai
+  weight: 303
+- name: Computer Vision
+  url: ai/computer-vision
+  identifier: cv
+  parent: ai
+  weight: 304
+- name: Natural Language Processing
+  url: ai/natural-language-processing
+  identifier: nlp
+  parent: ai
+  weight: 305
+- name: PyTorch
+  url: ai/pytorch
+  identifier: pytorch
+  parent: ai
+  weight: 306
+- name: "\U0001F9D1\u200D\U0001F4BB Coding"
+  url: programming/
+  identifier: programming
+  weight: 400
+- name: Python
+  url: programming/python
+  identifier: python
+  parent: programming
+  weight: 401
+- name: Docker
+  url: programming/docker
+  identifier: docker
+  parent: programming
+  weight: 402
+- name: Linux
+  url: programming/linux
+  identifier: linux
+  parent: programming
+  weight: 403
+- name: Git
+  url: programming/git
+  identifier: git
+  parent: programming
+  weight: 404
+- name: C++
+  url: programming/c++
+  identifier: c++
+  parent: programming
+  weight: 405
+- name: "\U0001F4BB CS"
+  url: cs/
+  identifier: cs
+  weight: 500
+- name: Algorithm
+  url: cs/algorithm
+  identifier: algo
+  parent: cs
+  weight: 501
+- name: Software Engineering
+  url: cs/software-engineering
+  identifier: software-engineering
+  parent: cs
+  weight: 502
+- name: Project Management
+  url: cs/project_management
+  identifier: project-management
+  parent: cs
+  weight: 503
+- name: Practical Skills
+  url: cs/practical_skills
+  identifier: practical-skills
+  parent: cs
+  weight: 504
+- name: "\U0001F4DD Notes"
+  url: notes/
+  identifier: notes
+  weight: 600
+- name: GIE
+  url: notes/gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme
+  identifier: gestaltungsgrundsaetze-fuer-interaktive-echtzeitsysteme
+  parent: notes
+  weight: 601
+- name: Rechnerstruktur
+  url: notes/rechner-struktur
+  identifier: rechner-struktur
+  parent: notes
+  weight: 602
+- name: Telematics
+  url: notes/telematics
+  identifier: telematics
+  parent: notes
+  weight: 603
+- name: MMWAB
+  url: notes/mmwab
+  identifier: mmwab
+  parent: notes
+  weight: 604
+- name: Thesis
+  url: notes/thesis
+  identifier: thesis
+  parent: notes
+  weight: 605
+- name: Jobs
+  url: notes/jobs
+  identifier: jobs
+  parent: notes
+  weight: 606
+- name: SI
+  url: notes/stochastische_informationsverarbeitung
+  identifier: si
+  parent: notes
+  weight: 607
+# - name: "\U0001F468\u200D\U0001F3EB Online Courses"
+#   url: online_courses/
+#   identifier: online-courses
+#   weight: 700
+# - name: AWS ML Engineer Program
+#   url: online_courses/aws_ml_engineer_program
+#   identifier: aws-ML-engineer
+#   parent: online-courses
+#   weight: 701
+- name: "\U0001F9FE R\xE9sum\xE9"
+  url: uploads/resume.pdf
+  identifier: resume
+  weight: 800
